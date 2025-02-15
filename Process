@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>OYSTER PERSONAL FINANCE (PTY) LTD</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="loans HTML Template">
+	<meta name="keywords" content="loans, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+ 
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/flaticon.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header Section -->
+	<header class="header-section">
+		<a href="index.html" class="site-logo">
+			<img src="img/logo.png" alt="">
+		</a>
+		<nav class="header-nav">
+			<ul class="main-menu">
+				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="about-us.html">About Us</a></li>
+				<li><a href="#">Apply</a>
+					<ul class="sub-menu">
+						<li><a href="about-us.html">About Us</a></li>
+						<li><a href="loans.html">Loans</a></li>
+					</ul>
+				</li>
+				<li><a href="Reviews.html">Reviews</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="header-right">
+				<a href="#" class="hr-btn"><i class="flaticon-029-telephone-1"></i>Whatsapp us now! </a>
+				<div class="hr-btn hr-btn-2">+27698480097</div>
+			</div>
+		</nav>
+	</header>
+	<!-- Header Section end -->
+
+	<!-- Page top Section end -->
+	<section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">
+		<div class="container">
+			<h2>About us</h2>
+			<nav class="site-breadcrumb">
+				<a class="sb-item" href="#">Home</a>
+				<span class="sb-item active">Application Process</span>
+			</nav>
+		</div>
+	</section>
+	<!-- Page top Section end -->
+
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Under Review</title>
+    <style>
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #00d4ff;
+        }
+        .application-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .contact-button {
+            display: inline-block;
+            background-color: #00d4ff;
+            color: #121212;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Under Review...</h1>
+        <p>Your loan application is being evaluated.</p>
+        <p>Evaluation will take 1-2 working days. Please be patient.</p>
+        <p>We will inform you via SMS and app notification when the result is ready.</p>
+        <p class="application-number">Application Number: <span id="appNumber">28EA</span></p>
+        <p>If you need to finalize your application, contact our customer care on WhatsApp.</p>
+        <a href="https://wa.me/27698480097" class="contact-button" target="_blank">Contact Customer Care</a>
+    </div>
+</body>
+</html>
+
+	
+	<!-- Authorities Section end -->
+	<section class="authorities-section spad">
+		<div class="container">
+			<div class="text-center">
+				<h2>We’re regulated by these authorities</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="authoritie-item">
+						<img src="img/brands/1.png" alt="">
+						<h4>Financial Conduct Authority</h4>
+						<p>At Oyster Personal Finance, we are committed to empowering individuals with transparent, reliable, and responsible financial solutions. Regulated by the Financial Conduct Authority (FCA), we prioritize your financial well-being, offering tailored advice and services to help you achieve your goals with confidence.</p>
+						<a href="#" class="readmore">Apply for a loan now <img src="img/arrow.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="authoritie-item">
+						<img src="img/brands/2.png" alt="">
+						<h4>Prudential Regulation Authority</h4>
+						<p>At Oyster Personal Finance, we are dedicated to providing secure and dependable financial solutions. Regulated by the Prudential Regulation Authority (PRA) in South Africa & in England, we adhere to the highest standards of stability and integrity, ensuring your financial journey is safe and sustainable.</p>
+						<a href="#" class="readmore">Apply for a loan now <img src="img/arrow.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="authoritie-item">
+						<img src="img/brands/3.png" alt="">
+						<h4>NCR Registered/Regulated</h4>
+						<p>At Oyster Personal Finance, we are proud to be registered and regulated by the National Credit Regulator (NCR), ensuring that every service we offer aligns with the highest standards of transparency, responsibility, and customer protection. Our registration with the NCR reflects our commitment to promoting ethical financial practices and providing solutions that are not only tailored to your needs but also designed to safeguard your financial future.</p>
+						<a href="#" class="readmore">Apply for a loan now <img src="img/arrow.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Authorities Section end -->
+
+	<!-- Score Section end -->
+	<section class="score-section text-white set-bg" data-setbg="img/score-bg.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-8">
+					<h2>Calculate my Score</h2>
+					<h4>Check if you can qualify for a loan, it won't affect your Credit History.</h4>
+					<a href="#" class="site-btn sb-big">show my score</a>
+				</div>
+			</div>
+			<img src="img/hand.png" alt="" class="hand-img">
+		</div>
+	</section>
+	<!-- Score Section end -->
+
+	<!-- Footer Section -->
+	<footer class="footer-section">
+		<div class="container">
+			<a href="index.html" class="footer-logo">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>What we do</h2>
+						<ul>
+							<li><a href="#">Personal Loans</a></li>
+							<li><a href="#">Car loans</a></li>
+							<li><a href="#">Debt consolidation loans</a></li>
+							<li><a href="#">Home improvement loans</a></li>
+							<li><a href="#"> Wedding loans</a></li>
+							<li><a href="#">Medical Finance ISA</a></li>
+							<li><a href="#">Innovative Finance ISA</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>About us</h2>
+						<ul>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Our story</a></li>
+							<li><a href="#">Meet the board</a></li>
+							<li><a href="#">Meet the leadership team</a></li>
+							<li><a href="#">Awards</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>Legal</h2>
+						<ul>
+							<li><a href="#">Privacy policy</a></li>
+							<li><a href="#">Loans2go principles</a></li>
+							<li><a href="#">Website terms</a></li>
+							<li><a href="#">Cookie policy</a></li>
+							<li><a href="#">Conflicts policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h2>Site Info</h2>
+						<ul>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Sitemap</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p>Oyster Personal Finance is committed to helping you achieve your financial goals with fast, flexible, and reliable loan solutions.</p>
+                <p>&copy; 2025 Oyster Personal Finance. All Rights Reserved.</p>
+			<div class=Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by OYSTER FINANCE</a>
+</div>
+	</footer>
+	<!-- Footer Section end -->
+	
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
