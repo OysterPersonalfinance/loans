@@ -150,114 +150,149 @@ We’re here for you. Our dedicated support team is available via phone, chat, o
 			<a href="#" class="site-btn sb-dark sb-big">Find out More</a>
 		</div>
 	</section>
-	<!-- CTA Section end -->
-	<div class="element">
-				<h3 class="el-title">Loaders</h3>	
-				<div class="row">
-					<div class="col-lg-3 col-sm-6">
-						<div class="circle-progress" data-cptitle="Proffesionals" data-cpid="id-1" data-cpvalue="100" data-cpcolor="#f43f00"></div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="circle-progress" data-cptitle="Approval Rate" data-cpid="id-2" data-cpvalue="75" data-cpcolor="#f43f00"></div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="circle-progress" data-cptitle="Quick Loans" data-cpid="id-3" data-cpvalue="25" data-cpcolor="#f43f00"></div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="circle-progress" data-cptitle="HWedding Loans" data-cpid="id-4" data-cpvalue="50" data-cpcolor="#f43f00"></div>
-					</div>
-				</div>
-			</div>
-			<div class="element">
-				<h3 class="el-title">Milestones</h3>	
-				<div class="row">
-					<div class="col-lg-3 col-sm-6">
-						<div class="milestone">
-							<div class="milestone-icon">
-								<i class="flaticon-004-assistance"></i>
-							</div>
-							<div class="milestone-text">
-								<h3>25K</h3>
-								<p>Happy Clients</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="milestone">
-							<div class="milestone-icon">
-								<i class="flaticon-003-like"></i>
-							</div>
-							<div class="milestone-text">
-								<h3>55K</h3>
-								<p>Social Media Followers</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="milestone">
-							<div class="milestone-icon">
-								<i class="flaticon-010-contract"></i>
-							</div>
-							<div class="milestone-text">
-								<h3>1790</h3>
-								<p>Contracts / Year</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="milestone">
-							<div class="milestone-icon">
-								<i class="flaticon-015-worldwide-1"></i>
-							</div>
-							<div class="milestone-text">
-								<h3>25K</h3>
-								<p>Awards Won</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="element">
-				<h3 class="el-title">Icon Boxes</h3>	
-				<div class="row">
-					<div class="col-md-4">
-						<div class="icon-box-item">
-							<div class="ib-icon">
-								<i class="flaticon-012-24-hours"></i>
-							</div>
-							<div class="ib-text">
-								<h5>Money in 1 Hour!</h5>
-								<p>Lorem ipsum dolor sit amet, consecte-tur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua. </p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="icon-box-item">
-							<div class="ib-icon">
-								<i class="flaticon-036-customer-service"></i>
-							</div>
-							<div class="ib-text">
-								<h5>Helpfull Staff</h5>
-								<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per incep-tos himenaeos. Suspendisse potenti. Ut gravida mattis.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="icon-box-item">
-							<div class="ib-icon">
-								<i class="flaticon-039-info"></i>
-							</div>
-							<div class="ib-text">
-								<h5>Credit History Considered</h5>
-								<p>Conubia nostra, per inceptos himenae os. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Elements Section end -->
+	<section class="stats-section">
+  <div class="stat-box">
+    <h2 class="counter" data-target="15000000">0</h2>
+    <p>💸 Paid Out in Loans</p>
+  </div>
+
+  <div class="stat-box">
+    <h2 class="counter" data-target="60000">0</h2>
+    <p>✅ Loans Approved</p>
+  </div>
+
+  <div class="stat-box">
+    <h2 class="counter" data-target="78">0</h2>
+    <p>👥 Active Users Online</p>
+  </div>
+</section>
+
+<style>
+  /* Background Gradient Animation */
+  @keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Glowing Pulse Animation */
+  @keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4); }
+    50% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.5); }
+  }
+
+  /* Section Styling */
+  .stats-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    padding: 18px 18px;
+    background: linear-gradient(45deg, #f70521, #ff00d4, #7700ff);
+    background-size: 1900% 200%;
+    animation: backgroundAnimation 6s infinite alternate;
+  }
+
+  /* Stat Box */
+  .stat-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding:20px;
+    border-radius: 18px;
+    width: 100px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 5, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    animation: glowPulse 2s infinite alternate;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Hover Effect */
+  .stat-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 50px rgba(0, 255, 255, 0.6);
+  }
+
+  /* Glow Line */
+  .stat-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, cyan, transparent);
+    top: 0;
+    left: 0;
+    animation: glowMove 3s linear infinite;
+  }
+
+  /* Glow Animation */
+  @keyframes glowMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Counter Text */
+  .counter {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00f5ff;
+    text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff;
+  }
+
+  /* Bouncing Effect */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .counter {
+    animation: bounce 1.5s infinite;
+  }
+
+  /* Subtitle */
+  p {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 0px;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach(counter => {
+      counter.innerText = "0";
+      const updateCounter = () => {
+        const target = +counter.getAttribute("data-target");
+        const count = +counter.innerText;
+        const increment = target / 80; // Faster animation
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+
+      // Activate on Scroll
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateCounter();
+          }
+        });
+      });
+
+      observer.observe(counter);
+    });
+  });
+</script>
+
 
 
 	<!-- Feature Section -->
