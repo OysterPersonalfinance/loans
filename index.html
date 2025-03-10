@@ -162,7 +162,7 @@ We’re here for you. Our dedicated support team is available via phone, chat, o
   </div>
 
   <div class="stat-box">
-    <h2 class="counter" data-target="78">0</h2>
+    <h2 class="counter" data-target="78">60</h2>
     <p>👥 Active Users Online</p>
   </div>
 </section>
@@ -197,7 +197,7 @@ We’re here for you. Our dedicated support team is available via phone, chat, o
   /* Stat Box */
   .stat-box {
     background: rgba(255, 255, 255, 0.1);
-    padding:50px;
+    padding:0px;
     border-radius: 18px;
     width: 100px;
     backdrop-filter: blur(12px);
@@ -235,7 +235,7 @@ We’re here for you. Our dedicated support team is available via phone, chat, o
 
   /* Counter Text */
   .counter {
-    font-size: 22px;
+    font-size: 14px;
     font-weight: bold;
     color: #00f5ff;
     text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff;
@@ -253,7 +253,7 @@ We’re here for you. Our dedicated support team is available via phone, chat, o
 
   /* Subtitle */
   p {
-    font-size: 12px;
+    font-size: 8px;
     color: #fff;
     font-weight: 500;
     margin-top: 0px;
@@ -265,7 +265,7 @@ We’re here for you. Our dedicated support team is available via phone, chat, o
     const counters = document.querySelectorAll(".counter");
 
     counters.forEach(counter => {
-      counter.innerText = "0";
+      counter.innerText = "10";
       const updateCounter = () => {
         const target = +counter.getAttribute("data-target");
         const count = +counter.innerText;
@@ -275,7 +275,6 @@ We’re here for you. Our dedicated support team is available via phone, chat, o
           counter.innerText = Math.ceil(count + increment);
           setTimeout(updateCounter, 20);
         } else {
-          counter.innerText = target.toLocaleString();
         }
       };
 
