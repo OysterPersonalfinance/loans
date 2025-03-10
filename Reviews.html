@@ -138,7 +138,131 @@
         </div>
     </div>
 </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistent Popup Notification</title>
+    <style>
+        /* Popup container */
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            z-index: 1000;
+        }
 
+        /* Show popup */
+        .popup.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Popup message -->
+    <div id="popup" class="popup"></div>
+
+    <script>
+        // Messages array (Full List)
+        const messages = [
+            "Ms G Loan amount of 40,000 Paid out Successfully.",
+            "Your loan application for 25,000 is being processed.",
+            "Reminder: Your next repayment is due in 3 days.",
+            "Dewald.Y : Your loan application for 178,000 has been approved.",
+            "Pieter.V : just applied for a loan amount of 57,000.",
+            "Frederik.B : just applied for a loan amount of 47,000.",
+            "Charlize.K : Your loan application for 31,000 has been approved.",
+            "Thabo.M : Your loan application for 175,000 has been approved.",
+            "Roelof.J : Your loan application for 106,000 has been approved.",
+            "Cornelius.V : Your approved loan amount of 19,000 was paid out successfully.",
+            "Gugu.N : Your approved loan amount of 12,000 was paid out successfully.",
+            "Themba.L : Your approved loan amount of 190,000 was paid out successfully.",
+            "Mpho.S : Your approved loan amount of 164,000 was paid out successfully.",
+            "Hendrik.D : just applied for a loan amount of 165,000.",
+            "Charlize.R : just applied for a loan amount of 110,000.",
+            "Zanele.P : Your approved loan amount of 31,000 was paid out successfully.",
+            "Sipho.T : Your approved loan amount of 36,000 was paid out successfully.",
+            "Gerrit.H : Your loan application for 85,000 has been approved.",
+            "Xolani.B : Your approved loan amount of 134,000 was paid out successfully.",
+            "Jacobus.W : just applied for a loan amount of 88,000.",
+            "Lerato.M : Your loan application for 52,000 has been approved.",
+            "Bongiwe.K : Your approved loan amount of 60,000 was paid out successfully.",
+            "Jan-Hendrik.S : Your loan application for 137,000 has been approved.",
+            "Mandla.Z : Your approved loan amount of 54,000 was paid out successfully.",
+            "Anika.F : just applied for a loan amount of 123,000.",
+            "Bonang.L : Your approved loan amount of 76,000 was paid out successfully.",
+            "Nomvula.D : Your loan application for 98,000 has been approved.",
+            "Dineo.C : Your loan application for 54,000 has been approved.",
+            "Sibusiso.K : Your loan application for 30,000 has been approved.",
+            "Wilhelmina.V : Your loan application for 72,000 has been approved.",
+            "Cornelius.J : just applied for a loan amount of 95,000.",
+            "Thandeka.O : Your approved loan amount of 140,000 was paid out successfully.",
+            "Roelof.M : Your approved loan amount of 50,000 was paid out successfully.",
+            "Annemarie.D : Your loan application for 61,000 has been approved.",
+            "Stefan.N : Your loan application for 144,000 has been approved.",
+            "Kobus.P : Your approved loan amount of 26,000 was paid out successfully.",
+            "Madelief.H : Your loan application for 128,000 has been approved.",
+            "Mandla.R : Your loan application for 143,000 has been approved.",
+            "Mieke.V : Your loan application for 93,000 has been approved.",
+            "Thabo.K : Your approved loan amount of 39,000 was paid out successfully.",
+            "Pieter.J : Your approved loan amount of 14,000 was paid out successfully.",
+            "Tshepo.S : Your approved loan amount of 48,000 was paid out successfully.",
+            "Leandri.W : just applied for a loan amount of 179,000.",
+            "Kobus.M : Your loan application for 112,000 has been approved.",
+            "Noluthando.P : Your loan application for 132,000 has been approved.",
+            "Wilhelmina.J : Your approved loan amount of 23,000 was paid out successfully.",
+            "Zanele.F : Your loan application for 64,000 has been approved.",
+            "Bongiwe.R : Your loan application for 115,000 has been approved.",
+            "Themba.C : Your loan application for 47,000 has been approved.",
+            "Anika.H : Your approved loan amount of 43,000 was paid out successfully.",
+            "Sipho.V : Your loan application for 126,000 has been approved.",
+            "Gugu.O : Your approved loan amount of 57,000 was paid out successfully.",
+            "Elzabeth.M : just applied for a loan amount of 132,000.",
+            "Simphiwe.N : Your approved loan amount of 29,000 was paid out successfully.",
+            "Simphiwe.L : Your approved loan amount of 119,000 was paid out successfully.",
+            "Frederik.K : Your approved loan amount of 32,000 was paid out successfully.",
+            "Mieke.T : Your loan application for 28,000 has been approved.",
+            "Dineo.S : Your approved loan amount of 145,000 was paid out successfully.",
+            "Xolani.P : Your approved loan amount of 59,000 was paid out successfully.",
+            "Marthinus.G : Your approved loan amount of 46,000 was paid out successfully.",
+            "Stefan.C : Your approved loan amount of 17,000 was paid out successfully."
+        ];
+
+        let currentIndex = localStorage.getItem("popupIndex") ? parseInt(localStorage.getItem("popupIndex"), 10) : 0;
+
+        function showPopup() {
+            const popup = document.getElementById("popup");
+            popup.textContent = messages[currentIndex]; 
+
+            popup.classList.add("show");
+
+            setTimeout(() => {
+                popup.classList.remove("show");
+            }, 15000); // Hide after 15 seconds
+
+            currentIndex = (currentIndex + 1) % messages.length; // Loop messages
+
+            localStorage.setItem("popupIndex", currentIndex); // Save last message index
+        }
+
+        setInterval(showPopup, 15000); // Change every 15 seconds
+        showPopup(); // Show first message immediately
+    </script>
+
+</body>
+</html>
 <!-- CSS Styling -->
 <style>
     
