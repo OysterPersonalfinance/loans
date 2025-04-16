@@ -1,332 +1,1894 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-	<title>OYSTER PERSONAL FINANCE (PTY) LTD | Loans HTML Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="loans HTML Template">
-	<meta name="keywords" content="loans, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Oyster Finance</title>
+<meta name="theme-color" content="#0066ff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="img/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    /* Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    }
 
-	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+    :root {
+        --primary: #0066ff;
+        --primary-dark: #0055cc;
+        --primary-light: #4d94ff;
+        --primary-gradient: linear-gradient(135deg, #0066ff, #5e17eb);
+        --secondary: #e60023;
+        --secondary-dark: #cc0000;
+        --secondary-light: #ff3355;
+        --secondary-gradient: linear-gradient(135deg, #e60023, #ff5c8a);
+        --success: #00cc66;
+        --success-dark: #00aa55;
+        --success-light: #33dd87;
+        --success-gradient: linear-gradient(135deg, #00cc66, #00e673);
+        --warning: #ffcc00;
+        --warning-gradient: linear-gradient(135deg, #ffcc00, #ffaa00);
+        --light: #f8f9fa;
+        --dark: #212529;
+        --gray: #6c757d;
+        --gray-light: #e9ecef;
+        --gray-dark: #343a40;
+        --body-bg: #f5f7fa;
+        --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        --card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.1);
+        --bottom-nav-height: 65px;
+        --header-height: 60px;
+        --safe-area-top: env(safe-area-inset-top, 0px);
+        --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+        --safe-area-left: env(safe-area-inset-left, 0px);
+        --safe-area-right: env(safe-area-inset-right, 0px);
+    }
 
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
- 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/flaticon.css"/>
-	<link rel="stylesheet" href="css/slicknav.min.css"/>
+    html, body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        background-color: var(--body-bg);
+        color: var(--dark);
+        position: fixed;
+        overscroll-behavior: none;
+    }
 
-	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="css/style.css"/>
+    /* App Container */
+    .app-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
 
+    /* App Header */
+    .app-header {
+        height: calc(var(--header-height) + var(--safe-area-top));
+        padding-top: var(--safe-area-top);
+        background: var(--primary-gradient);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: max(16px, var(--safe-area-left));
+        padding-right: max(16px, var(--safe-area-right));
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
 
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+    .logo-container {
+        display: flex;
+        align-items: center;
+        height: 40px;
+    }
 
-</head>
-<body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
+    .logo-container img {
+        height: 32px;
+        width: auto;
+        margin-right: 10px;
+    }
 
-	<!-- Header Section -->
-	<header class="header-section">
-		<a href="index.html" class="site-logo">
-			<img src="img/logo.png" alt="">
-		</a>
-		<nav class="header-nav">
-			<ul class="main-menu">
-				<li><a href="index.html" class="active">Home</a></li>
-				<li><a href="about-us.html">About Us</a></li>
-				<li><a href="#">Apply</a>
-					<ul class="sub-menu">
-						<li><a href="about-us.html">About Us</a></li>
-						<li><a href="loans.html">Loans</a></li>
-					</ul>
-				</li>
-				<li><a href="Reviews.html">Reviews</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			<div class="header-right">
-				<a href="#" class="hr-btn"><i class="flaticon-029-telephone-1"></i>Whatsapp us now! </a>
-				<div class="hr-btn hr-btn-2">+27698480097</div>
-			</div>
-		</nav>
-	</header>
-	<!-- Header Section end -->
+    .app-header h1 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
 
-	<!-- Hero Section end -->
-	<style>
-         <title>Loan Application</title>
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .header-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+    }
+
+    .header-icon:active {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(0.95);
+    }
+
+    .header-icon .badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        background-color: var(--secondary);
+        color: white;
+        border-radius: 50%;
+        font-size: 10px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--primary);
+        animation: pulse 2s infinite;
+    }
+
+    /* App Content */
+    .app-content {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: calc(var(--bottom-nav-height) + var(--safe-area-bottom) + 20px);
+        scroll-behavior: smooth;
+        position: relative;
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: calc(var(--bottom-nav-height) + var(--safe-area-bottom));
+        padding-bottom: var(--safe-area-bottom);
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.05);
+        z-index: 100;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        height: 100%;
+        color: var(--gray);
+        transition: all 0.3s;
+        cursor: pointer;
+        min-width: 60px;
+        max-width: 80px;
+        position: relative;
+    }
+
+    .nav-item.active {
+        color: var(--primary);
+        transform: translateY(-5px);
+    }
+
+    .nav-item.active::after {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 5px;
+        background-color: var(--primary);
+        border-radius: 50%;
+    }
+
+    .nav-item i {
+        font-size: 22px;
+        margin-bottom: 6px;
+        transition: transform 0.3s;
+    }
+
+    .nav-item.active i {
+        transform: scale(1.2);
+    }
+
+    .nav-item span {
+        font-size: 12px;
+        font-weight: 500;
+        transition: opacity 0.3s;
+    }
+
+    /* Pages */
+    .page {
+        display: none;
+        animation: fadeIn 0.3s ease-in-out;
+        min-height: 100%;
+    }
+
+    .page.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Advanced Hero Section with Grid Layout */
+    .hero-section {
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+        border-radius: 0 0 30px 30px;
+        margin-bottom: 30px;
+        height: 65vh;
+        max-height: 550px;
+        min-height: 450px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--primary-gradient);
+        z-index: 1;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff' fill-opacity='0.1'/%3E%3C/svg%3E"),
+                         radial-gradient(circle at 25% 25%, rgba(94, 23, 235, 0.1) 0%, transparent 50%),
+                         radial-gradient(circle at 75% 75%, rgba(0, 102, 255, 0.1) 0%, transparent 50%);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 3;
+        padding: 30px 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-column: 1;
+    }
+
+    .hero-image-container {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 2;
+        padding: 20px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .hero-title::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: white;
+        border-radius: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 25px;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .hero-highlight {
+        position: relative;
+        display: inline-block;
+        padding: 0 5px;
+        z-index: 1;
+    }
+
+    .hero-highlight::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+        border-radius: 4px;
+    }
+
+    .hero-highlight.green {
+        color: #00ff88;
+    }
+
+    .hero-highlight.yellow {
+        color: #ffdd00;
+    }
+
+    .hero-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 30px;
+        background-color: white;
+        color: var(--primary);
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: none;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        margin-top: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: 0.5s;
+    }
+
+    .hero-cta:active {
+        transform: scale(0.98);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-cta:active::before {
+        left: 100%;
+    }
+
+    .hero-cta i {
+        margin-left: 10px;
+        transition: transform 0.3s;
+    }
+
+    .hero-cta:active i {
+        transform: translateX(5px);
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 300px;
+        z-index: 4;
+        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.25));
+        animation: float 6s ease-in-out infinite;
+        transform-origin: center center;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        25% { transform: translateY(-10px) rotate(2deg); }
+        50% { transform: translateY(-15px) rotate(0deg); }
+        75% { transform: translateY(-10px) rotate(-2deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    /* Animated Elements in Hero */
+    .hero-shapes-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    .hero-shape {
+        position: absolute;
+        z-index: 2;
+        opacity: 0.5;
+    }
+
+    .hero-shape-1 {
+        top: 20%;
+        left: 10%;
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: pulse 4s infinite;
+    }
+
+    .hero-shape-2 {
+        bottom: 20%;
+        left: 5%;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        transform: rotate(45deg);
+        animation: pulse 5s infinite 1s;
+    }
+
+    .hero-shape-3 {
+        top: 10%;
+        right: 20%;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        animation: pulse 6s infinite 2s;
+    }
+
+    .hero-shape-4 {
+        bottom: 30%;
+        right: 10%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        transform: rotate(30deg);
+        animation: float 8s infinite 1s ease-in-out;
+    }
+
+    .hero-shape-5 {
+        top: 40%;
+        right: 30%;
+        width: 25px;
+        height: 25px;
+        background-color: rgba(255, 255, 255, 0.1);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        animation: spin 12s infinite linear;
+    }
+
+    .hero-shape-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        animation: pulse-opacity 3s infinite ease-in-out;
+    }
+
+    .hero-circle-1 {
+        top: 15%;
+        left: 15%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s;
+    }
+
+    .hero-circle-2 {
+        top: 25%;
+        right: 20%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 0.5s;
+    }
+
+    .hero-circle-3 {
+        bottom: 15%;
+        left: 25%;
+        width: 25px;
+        height: 25px;
+        animation-delay: 1s;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); opacity: 0.5; }
+        50% { transform: scale(1.2); opacity: 0.8; }
+        100% { transform: scale(1); opacity: 0.5; }
+    }
+
+    @keyframes pulse-opacity {
+        0% { opacity: 0.3; }
+        50% { opacity: 0.8; }
+        100% { opacity: 0.3; }
+    }
+
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    /* Feature Icons Section */
+    .feature-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin: -60px 20px 30px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .feature-icon-item {
+        background: white;
+        border-radius: 15px;
+        padding: 15px 10px;
+        text-align: center;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s;
+    }
+
+    .feature-icon-item:active {
+        transform: scale(0.97);
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+    }
+
+    .icon-blue {
+        background: var(--primary-gradient);
+        box-shadow: 0 5px 15px rgba(0, 102, 255, 0.2);
+    }
+
+    .icon-red {
+        background: var(--secondary-gradient);
+        box-shadow: 0 5px 15px rgba(230, 0, 35, 0.2);
+    }
+
+    .icon-green {
+        background: var(--success-gradient);
+        box-shadow: 0 5px 15px rgba(0, 204, 102, 0.2);
+    }
+
+    .icon-yellow {
+        background: var(--warning-gradient);
+        box-shadow: 0 5px 15px rgba(255, 204, 0, 0.2);
+    }
+
+    .feature-icon-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--gray-dark);
+    }
+
+    /* Loan Form */
+    .loan-form-container {
+        margin: 30px 20px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .loan-form {
+        background-color: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .loan-form::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(135deg, transparent 0%, transparent 50%, rgba(0, 102, 255, 0.05) 50%, rgba(0, 102, 255, 0.05) 100%);
+        z-index: 0;
+        border-radius: 0 0 0 150px;
+    }
+
+    .loan-form:active {
+        box-shadow: var(--card-shadow-hover);
+    }
+
+    .loan-form-title {
+        text-align: center;
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 25px;
+        letter-spacing: -0.5px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .loan-form-title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background: var(--primary-gradient);
+        border-radius: 3px;
+    }
+
+    .input-with-icon {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--gray-light);
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        transition: all 0.3s;
+        position: relative;
+        z-index: 1;
+    }
+
+    .input-with-icon:focus-within {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+    }
+
+    .icon-container {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 20px;
+    }
+
+    .icon-yellow {
+        background: var(--warning-gradient);
+    }
+
+    .icon-green {
+        background: var(--success-gradient);
+    }
+
+    .icon-blue {
+        background: var(--primary-gradient);
+    }
+
+    .input-with-icon input,
+    .input-with-icon select {
+        flex: 1;
+        border: none;
+        padding: 15px;
+        font-size: 16px;
+        outline: none;
+        color: var(--dark);
+        background: transparent;
+    }
+
+    .input-with-icon select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        padding-right: 40px;
+    }
+
+    /* Card Styles */
+    .card {
+        background-color: white;
+        border-radius: 20px;
+        padding: 25px;
+        margin: 0 20px 20px;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(0, 102, 255, 0.05);
+        z-index: 0;
+    }
+
+    .card:active {
+        transform: scale(0.98);
+        box-shadow: var(--card-shadow-hover);
+    }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: var(--dark);
+        letter-spacing: -0.5px;
+        position: relative;
+    }
+
+    .card-title.with-line::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--primary-gradient);
+        border-radius: 3px;
+    }
+
+    .card-subtitle {
+        font-size: 16px;
+        color: var(--gray);
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+    
+            /* Loan Calculator */
+        .calculator-container {
+            margin: 0 20px 30px;
         }
 
-        body {
-            background-color: #f4f4f4;
-        }
-
-        /* Navbar and logo */
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Dropdown menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 4px;
-        }
-
-        .dropdown-content a {
-            color: #14315b;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Auth buttons */
-        .auth-buttons {
-            display: flex;
-            align-items: center;
-        }
-
-        .sign-in {
-            color: #ffd700;
-            text-decoration: none;
-            margin-right: 1rem;
-        }
-
-        .sign-up {
-            background-color: #ffd700;
-            color: #14315b;
-            padding: 0.6rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Hero section */
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 2rem 5%;
-            align-items: center;
-            justify-content: center;
-            background-color: #14315b;
-            color: white;
-            text-align: center;
-            margin-top: 5rem
-        }
-
-        .hero-content {
-            max-width: 500px;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-            margin: 1rem 0;
-            line-height: 1.2;
-            color: white;
-        }
-
-        .hero-green {
-            color: #2ecc71;
-        }
-
-        .hero-yellow {
-            color: #ffd700;
-        }
-
-        .hero p {
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 400px;
-            margin-top: 11rem 0;
-        }
-
-        /* Form styles */
-        .form-container {
+        .calculator-card {
             background-color: white;
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 5%;
-            color: #333;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: var(--card-shadow);
         }
 
-        .form-title {
-            color: #14315b;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
+        .calculator-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary);
             text-align: center;
         }
 
-        .form-row {
+        .slider-container {
+            margin-bottom: 25px;
+        }
+
+        .slider-label {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             justify-content: space-between;
+            margin-bottom: 10px;
         }
 
-        .form-group {
-            flex: 1;
-            min-width: 250px;
+        .slider-label span {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-dark);
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            color: #666;
+        .slider-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
         }
 
-        .input-with-icon {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 0.5rem;
-            background-color: white;
-        }
-
-        .icon-container {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 5px;
-            margin-right: 10px;
-            color: white;
-        }
-
-        .yellow-bg { background-color: #ffd700; }
-        .green-bg { background-color: #2ecc71; }
-        .blue-bg { background-color: #14315b; }
-
-        .input-with-icon input, .input-with-icon select {
-            border: none;
-            flex: 1;
-            font-size: 1rem;
+        .range-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: var(--gray-light);
             outline: none;
         }
 
-        .submit-btn {
-            background-color: #ffd700;
-            color: #14315b;
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            border: none;
-            font-weight: bold;
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
             cursor: pointer;
-            font-size: 1rem;
-            width: 100%;
-            margin-top: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-image {
-                width: 80%;
-            }
-
-            .form-row {
-                flex-direction: column;
-            }
-
-            .submit-btn {
-                width: 100%;
-            }
+        .range-slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-    </style>
+
+        .calculator-result {
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .result-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .result-amount {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .result-details {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+    /* Button Styles */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 25px;
+        border-radius: 15px;
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        min-height: 50px;
+        min-width: 50px;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: 0.5s;
+    }
+
+    .btn:active::before {
+        left: 100%;
+    }
+
+    .btn-primary {
+        background: var(--primary-gradient);
+        color: white;
+        box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+    }
+
+    .btn-primary:active {
+        background: var(--primary-dark);
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(0, 102, 255, 0.2);
+    }
+
+    .btn-secondary {
+        background: var(--secondary-gradient);
+        color: white;
+        box-shadow: 0 5px 15px rgba(230, 0, 35, 0.3);
+    }
+
+    .btn-secondary:active {
+        background: var(--secondary-dark);
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(230, 0, 35, 0.2);
+    }
+
+    .btn-success {
+        background: var(--success-gradient);
+        color: white;
+        box-shadow: 0 5px 15px rgba(0, 204, 102, 0.3);
+    }
+
+    .btn-success:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 8px rgba(0, 204, 102, 0.2);
+    }
+
+    .btn-outline {
+        background-color: transparent;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+    }
+
+    .btn-outline:active {
+        background-color: rgba(0, 102, 255, 0.05);
+        transform: scale(0.98);
+    }
+
+    .btn-block {
+        display: flex;
+        width: 100%;
+    }
+
+    .btn-icon {
+        margin-right: 10px;
+    }
+
+    /* Stats Section */
+    .stats-section {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px 30px;
+        gap: 10px;
+    }
+
+    .stat-box {
+        background: var(--secondary-gradient);
+        border-radius: 20px;
+        padding: 20px 15px;
+        color: white;
+        text-align: center;
+        flex: 1;
+        box-shadow: 0 10px 20px rgba(230, 0, 35, 0.15);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    .stat-box:active {
+        transform: scale(0.98);
+        box-shadow: 0 5px 15px rgba(230, 0, 35, 0.1);
+    }
+
+    .stat-box::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .stat-box::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+    }
+
+    .stat-box h3 {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 5px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .stat-box p {
+        font-size: 14px;
+        opacity: 0.9;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+    }
+
+    /* Why Choose Us Section */
+    .why-item {
+        display: flex;
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .why-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .why-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 18px;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 24px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .why-icon::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .why-icon.red {
+        background: var(--secondary-gradient);
+        color: white;
+    }
+
+    .why-icon.blue {
+        background: var(--primary-gradient);
+        color: white;
+    }
+
+    .why-icon.green {
+        background: var(--success-gradient);
+        color: white;
+    }
+
+    .why-content h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+
+    .why-content p {
+        font-size: 15px;
+        color: var(--gray);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Process Steps */
+    .process-steps {
+        margin: 30px 0;
+        position: relative;
+    }
+
+    .step {
+        display: flex;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .step:last-child {
+        margin-bottom: 0;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--primary-gradient);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin-right: 20px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 5px 15px rgba(0, 102, 255, 0.2);
+    }
+
+    .step:not(:last-child) .step-number::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 2px;
+        height: 40px;
+        background-color: var(--gray-light);
+        transform: translateX(-50%);
+        z-index: 0;
+    }
+
+    .step-content h4 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+
+    .step-content p {
+        font-size: 15px;
+        color: var(--gray);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Reviews Section */
+    .review-card {
+        background-color: white;
+        border-radius: 20px;
+        padding: 25px;
+        margin-bottom: 20px;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .review-card:active {
+        transform: scale(0.98);
+        box-shadow: var(--card-shadow-hover);
+    }
+
+    .review-card::before {
+        content: '"';
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 80px;
+        color: rgba(0, 102, 255, 0.05);
+        font-family: Georgia, serif;
+        line-height: 1;
+    }
+
+    .review-rating {
+        color: var(--warning);
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .review-text {
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: var(--gray-dark);
+    }
+
+    .review-author {
+        display: flex;
+        align-items: center;
+    }
+
+    .review-avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: var(--primary-gradient);
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+        box-shadow: 0 5px 15px rgba(0, 102, 255, 0.2);
+    }
+
+    .review-info h5 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0 0 5px;
+        letter-spacing: -0.5px;
+    }
+
+    .review-info span {
+        font-size: 14px;
+        color: var(--gray);
+    }
+
+    /* Recent Reviews */
+    .recent-reviews {
+        background-color: rgba(0, 102, 255, 0.05);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 0 20px 20px;
+    }
+
+    .recent-reviews h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        letter-spacing: -0.5px;
+    }
+
+    .recent-reviews ul {
+        list-style: none;
+    }
+
+    .recent-reviews li {
+        font-size: 15px;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+    }
+
+    .recent-reviews li:last-child {
+        border-bottom: none;
+    }
+
+    .recent-reviews li strong {
+        margin-right: 5px;
+        color: var(--dark);
+    }
+
+    /* Contact Form */
+    .contact-info {
+        margin-bottom: 30px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        background: var(--primary-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        flex-shrink: 0;
+        color: white;
+        box-shadow: 0 5px 15px rgba(0, 102, 255, 0.2);
+    }
+
+    .contact-icon i {
+        font-size: 22px;
+    }
+
+    .contact-text {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .contact-text strong {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    /* Form Styles */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--gray-dark);
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 15px 20px;
+        border-radius: 15px;
+        border: 2px solid var(--gray-light);
+        font-size: 16px;
+        transition: all 0.3s;
+        background-color: white;
+        appearance: none;
+        min-height: 50px;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+    }
+
+    textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    /* Popup Notification */
+    .popup-notification {
+        position: fixed;
+        bottom: calc(var(--bottom-nav-height) + var(--safe-area-bottom) + 20px);
+        left: 20px;
+        right: 20px;
+        background: var(--success-gradient);
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transform: translateY(150%);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 90;
+        display: flex;
+        align-items: center;
+    }
+
+    .popup-notification.show {
+        transform: translateY(0);
+    }
+
+    .popup-icon {
+        margin-right: 15px;
+        font-size: 24px;
+    }
+
+    .popup-text {
+        flex: 1;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    /* Floating Action Button */
+    .fab {
+        position: fixed;
+        bottom: calc(var(--bottom-nav-height) + var(--safe-area-bottom) + 20px);
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--success-gradient);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 25px rgba(0, 204, 102, 0.3);
+        z-index: 90;
+        cursor: pointer;
+        transition: all 0.3s;
+        animation: pulse 2s infinite;
+    }
+
+    .fab:active {
+        transform: scale(0.95);
+        box-shadow: 0 5px 15px rgba(0, 204, 102, 0.2);
+    }
+
+    .fab i {
+        font-size: 26px;
+    }
+
+    /* Animated Progress Bar */
+    .progress-container {
+        height: 6px;
+        background-color: var(--gray-light);
+        border-radius: 3px;
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background: var(--primary-gradient);
+        width: 0;
+        transition: width 0.5s ease;
+        border-radius: 3px;
+    }
+
+    /* App Features Section */
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .feature-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--primary-gradient);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:active {
+        transform: translateY(-5px);
+    }
+
+    .feature-card:active::before {
+        transform: scaleX(1);
+    }
+
+    .feature-icon-large {
+        font-size: 32px;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--light);
+        color: var(--primary);
+        transition: all 0.3s;
+    }
+
+    .feature-card:active .feature-icon-large {
+        transform: scale(1.1);
+        color: white;
+        background: var(--primary-gradient);
+    }
+
+    .feature-title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--dark);
+    }
+
+    .feature-text {
+        font-size: 14px;
+        color: var(--gray);
+        line-height: 1.5;
+    }
+
+    /* Loader */
+    .loader {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .loader.show {
+        display: flex;
+    }
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(0, 102, 255, 0.1);
+        border-radius: 50%;
+        border-top-color: var(--primary);
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    /* New Testimonial Slider */
+    .testimonial-slider {
+        position: relative;
+        overflow: hidden;
+        margin: 0 20px 30px;
+        padding: 20px 0;
+    }
+
+    .testimonial-slides {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .testimonial-slide {
+        min-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .testimonial-card {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: var(--card-shadow);
+        text-align: center;
+        position: relative;
+    }
+
+    .testimonial-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: var(--primary-gradient);
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        box-shadow: 0 8px 20px rgba(0, 102, 255, 0.2);
+    }
+
+    .testimonial-stars {
+        color: var(--warning);
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-text {
+        font-size: 15px;
+        color: var(--gray-dark);
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-name {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 5px;
+    }
+
+    .testimonial-date {
+        font-size: 14px;
+        color: var(--gray);
+    }
+
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .slider-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--gray-light);
+        margin: 0 5px;
+    }
+
+    .slider-dot.active {
+        background: var(--primary);
+    }
+
+    /* Promotional Cards */
+    .promo-card {
+        border-radius: 20px;
+        padding: 20px;
+        margin: 0 20px 20px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        background: var(--primary-gradient);
+        color: white;
+        box-shadow: 0 10px 25px rgba(0, 102, 255, 0.2);
+    }
+
+    .promo-content {
+        flex: 1;
+    }
+
+    .promo-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .promo-text {
+        font-size: 15px;
+        opacity: 0.9;
+        margin-bottom: 15px;
+    }
+
+    .promo-button {
+        background: white;
+        color: var(--primary);
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 14px;
+        display: inline-block;
+        border: none;
+    }
+
+    .promo-image {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .promo-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .promo-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        opacity: 0.3;
+    }
+
+    /* Authority Cards */
+    .authority-card {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+    }
+
+    .authority-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--primary-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        color: white;
+        font-size: 24px;
+        box-shadow: 0 8px 20px rgba(0, 102, 255, 0.2);
+    }
+
+    .authority-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--dark);
+    }
+
+    .authority-text {
+        font-size: 15px;
+        color: var(--gray);
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    /* Form Steps */
+    .form-step {
+        display: none;
+    }
+
+    .form-step.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .form-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    /* Map Container */
+    .map-container {
+        border-radius: 20px;
+        overflow: hidden;
+        height: 250px;
+        box-shadow: var(--card-shadow);
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    /* Utility Classes */
+    .text-center { text-align: center; }
+    .mb-10 { margin-bottom: 10px; }
+    .mb-20 { margin-bottom: 20px; }
+    .mt-20 { margin-top: 20px; }
+    .p-0 { padding: 0; }
+    .text-primary { color: var(--primary); }
+    .text-success { color: var(--success); }
+    .text-warning { color: var(--warning); }
+    .text-danger { color: var(--secondary); }
+    .fw-bold { font-weight: 700; }
+    .d-flex { display: flex; }
+    .align-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .flex-column { flex-direction: column; }
+    .w-100 { width: 100%; }
+    .h-100 { height: 100%; }
+
+    /* Animated Background Elements */
+    .animated-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .animated-circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.05;
+        animation: floatAround 15s infinite linear;
+    }
+
+    .circle-1 {
+        width: 150px;
+        height: 150px;
+        background: var(--primary);
+        top: 10%;
+        left: 10%;
+        animation-duration: 20s;
+    }
+
+    .circle-2 {
+        width: 100px;
+        height: 100px;
+        background: var(--secondary);
+        bottom: 20%;
+        right: 10%;
+        animation-duration: 25s;
+    }
+
+    .circle-3 {
+        width: 70px;
+        height: 70px;
+        background: var(--success);
+        top: 40%;
+        right: 20%;
+        animation-duration: 30s;
+    }
+
+    @keyframes floatAround {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(50px, 25px) rotate(90deg); }
+        50% { transform: translate(25px, 50px) rotate(180deg); }
+        75% { transform: translate(-25px, 25px) rotate(270deg); }
+        100% { transform: translate(0, 0) rotate(360deg); }
+    }
+</style>
 </head>
 <body>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Instant Loans Up to 200K<br>Easy <span class="hero-green">LOAN</span>, easy <span class="hero-yellow">MONEY</span></h1>
-            <p>You can get the money you need with easy terms and conditions and pay them back based on your payment ability.</p>
+<div class="app-container">
+    <!-- App Header -->
+    <div class="app-header">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Oyster Finance">
         </div>
-        
-        <img src="img/screenshot-2025-03-19-10-04-04-removebg-preview (1).png" alt="Financial illustration" class="hero-image">
-    </section>
-    
-    <!-- Form Section -->
-    <div class="form-container">
-        <h2 class="form-title">LOAN APPLICATION FORM</h2>
-        
-        <form id="loanForm">
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Loan Amount</label>
-                    <div class="input-with-icon">
-                        <div class="icon-container yellow-bg">💰</div>
-                        <input type="text" value="R1000 to R200k" id="loanAmount">
-                    </div>
+        <h1>Oyster Finance</h1>
+        <div class="header-icon">
+            <i class="fas fa-bell"></i>
+            <div class="badge">3</div>
+        </div>
+    </div>
+
+    <!-- App Content -->
+    <div class="app-content">
+        <!-- Home Page -->
+        <div class="page active" id="home">
+            <div class="hero-section">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                
+                <div class="hero-shapes-container">
+                    <div class="hero-shape hero-shape-1"></div>
+                    <div class="hero-shape hero-shape-2"></div>
+                    <div class="hero-shape hero-shape-3"></div>
+                    <div class="hero-shape hero-shape-4"></div>
+                    <div class="hero-shape hero-shape-5"></div>
+                    <div class="hero-shape-circle hero-circle-1"></div>
+                    <div class="hero-shape-circle hero-circle-2"></div>
+                    <div class="hero-shape-circle hero-circle-3"></div>
                 </div>
                 
-                <div class="form-group">
-                    <label>Annual Income</label>
-                    <div class="input-with-icon">
-                        <div class="icon-container green-bg">💵</div>
-                        <input type="text" value="Income" id="annualIncome">
-                    </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Instant Loans<br>Up to R200K</h1>
+                    <p class="hero-subtitle">Easy <span class="hero-highlight green">LOAN</span>, easy <span class="hero-highlight yellow">MONEY</span> with flexible terms</p>
+                    <a href="#" class="hero-cta">Apply Now <i class="fas fa-arrow-right"></i></a>
                 </div>
+                
+                <div class="hero-image-container">
+                    <img src="img/screenshot-2025-03-19-10-04-04-removebg-preview (1).png" alt="Financial illustration" class="hero-image">
+                </div>
+            </div>
 
-                <div class="form-group">
-                    <label>Loan Purpose</label>
+            <div class="feature-icons">
+                <div class="feature-icon-item">
+                    <div class="feature-icon icon-blue">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-icon-title">Fast Approval</div>
+                </div>
+                <div class="feature-icon-item">
+                    <div class="feature-icon icon-red">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-icon-title">Secure</div>
+                </div>
+                <div class="feature-icon-item">
+                    <div class="feature-icon icon-green">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="feature-icon-title">Flexible</div>
+                </div>
+                <div class="feature-icon-item">
+                    <div class="feature-icon icon-yellow">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="feature-icon-title">Low Rates</div>
+                </div>
+            </div>
+
+            <div class="loan-form-container">
+                <div class="loan-form">
+                    <h3 class="loan-form-title">LOAN APPLICATION FORM</h3>
                     <div class="input-with-icon">
-                        <div class="icon-container blue-bg">🏦</div>
+                        <div class="icon-container icon-yellow">💰</div>
+                        <input type="text" placeholder="R1000 to R200k" id="loanAmount">
+                    </div>
+                    <div class="input-with-icon">
+                        <div class="icon-container icon-green">💵</div>
+                        <input type="text" placeholder="Annual Income" id="annualIncome">
+                    </div>
+                    <div class="input-with-icon">
+                        <div class="icon-container icon-blue">🏦</div>
                         <select id="loanPurpose">
                             <option>Personal Loan</option>
                             <option>Education Loan</option>
@@ -335,583 +1897,1014 @@
                             <option>Consolidation Loan</option>
                         </select>
                     </div>
+                    <button class="btn btn-secondary btn-block" id="submitToWhatsapp">
+                        <i class="fab fa-whatsapp btn-icon"></i> Submit To Whatsapp
+                    </button>
+                </div>
+            </div>
+ <!-- Loan Calculator Section -->
+                <div class="calculator-container">
+                    <div class="calculator-card">
+                        <div class="calculator-title">Loan Calculator</div>
+                        <div class="slider-container">
+                            <div class="slider-label">
+                                <span>Loan Amount</span>
+                                <span class="slider-value" id="loanAmountValue">R50,000</span>
+                            </div>
+                            <input type="range" min="1000" max="500000" value="50000" class="range-slider" id="loanAmountSlider">
+                        </div>
+                        <div class="slider-container">
+                            <div class="slider-label">
+                                <span>Loan Term (months)</span>
+                                <span class="slider-value" id="loanTermValue">24</span>
+                            </div>
+                            <input type="range" min="3" max="160" value="24" class="range-slider" id="loanTermSlider">
+                        </div>
+                        <div class="slider-container">
+                            <div class="slider-label">
+                                <span>Interest Rate (%)</span>
+                                <span class="slider-value" id="interestRateValue">10%</span>
+                            </div>
+                            <input type="range" min="3" max="5" value="3" class="range-slider" id="interestRateSlider">
+                        </div>
+                        <div class="calculator-result">
+                            <div class="result-title">Monthly Payment</div>
+                            <div class="result-amount" id="monthlyPayment">R2,307</div>
+                            <div class="result-details">Total Repayment: <span id="totalRepayment">R55,368</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Why Choose Us?</div>
+                    <div class="why-item">
+                        <div class="why-icon red">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="why-content">
+                            <h3>Money in 1 Hour!</h3>
+                            <p>Fast loans with quick approval. Get the financial support you need within an hour!</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon blue">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="why-content">
+                            <h3>24/7 Support</h3>
+                            <p>Our dedicated support team is available via phone, chat, or email to assist you at any time.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon green">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="why-content">
+                            <h3>Earn Rewards</h3>
+                            <p>Every smart money move earns you points. Redeem for cash, loan payments, and more.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-block mt-20">Apply Now!</button>
+                </div>
+                
+            <div class="stats-section">
+                <div class="stat-box">
+                    <h3 id="paidOutCounter">0</h3>
+                    <p>💸 Paid Out in Loans</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="approvedCounter">0</h3>
+                    <p>✅ Loans Approved</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="onlineCounter">0</h3>
+                    <p>👥 Active Users Online</p>
                 </div>
             </div>
 
-            <button type="button" class="submit-btn" onclick="window.location.href='https://wa.me/+27698480097';">
-                Submit To Whatsapp
-            </button>
-        </form>
+            <div class="promo-card">
+                <div class="promo-content">
+                    <h3 class="promo-title">Special Offer!</h3>
+                    <p class="promo-text">Apply now and get reduced interest rates for the first 3 months!</p>
+                    <button class="promo-button">Learn More</button>
+                </div>
+                <div class="promo-image">
+                    <img src="img/discount.png" alt="Special offer">
+                </div>
+                <div class="promo-pattern"></div>
+            </div>
+
+            <div class="card">
+                <div class="card-title with-line">Why Choose Us?</div>
+                <div class="why-item">
+                    <div class="why-icon red">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Money in 1 Hour!</h3>
+                        <p>Fast loans with quick approval. Get the financial support you need within an hour!</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon blue">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>24/7 Support</h3>
+                        <p>Our dedicated support team is available via phone, chat, or email to assist you at any time.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon green">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Earn Rewards</h3>
+                        <p>Every smart money move earns you points. Redeem for cash, loan payments, and more.</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-block mt-20">Apply Now!</button>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-slides" id="testimonialSlides">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">JD</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"I received my loan within just 45 minutes after approval. The process was incredibly smooth and hassle-free."</p>
+                            <h4 class="testimonial-name">John Doe</h4>
+                            <p class="testimonial-date">15 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">MS</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Fantastic service! I couldn't believe how quickly they processed my application and transferred the funds."</p>
+                            <h4 class="testimonial-name">Maria Smith</h4>
+                            <p class="testimonial-date">25 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">RJ</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"The customer service is exceptional. They guided me through every step and made sure I understood everything."</p>
+                            <h4 class="testimonial-name">Robert Johnson</h4>
+                            <p class="testimonial-date">1 hour ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title with-line">Get a personal loan from just 3% Interest rate</div>
+                <p>We're a Top South Africa's specialist credit provider. It's all we do. We work with you to find the best solution to your personal, business and home loan needs.</p>
+                <p class="mt-20">OYSTER PERSONAL FINANCE (PTY) LTD is flexible, approachable and service oriented. We've pioneered a new way of providing loans by linking you directly to the money markets and passing the savings on to you.</p>
+                <p class="mt-20">
+                    <strong>FSP No:</strong> 50801<br>
+                    <strong>NCR Registration No:</strong> NCRCP11356<br>
+                    <strong>Legal Registration No:</strong> 2018/317490/07
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-large">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="feature-title">Loan Calculator</h3>
+                    <p class="feature-text">Calculate your repayments easily</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3 class="feature-title">Payment Options</h3>
+                    <p class="feature-text">Multiple payment methods</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Refer Friends</h3>
+                    <p class="feature-text">Earn bonuses for referrals</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="feature-title">Secure Process</h3>
+                    <p class="feature-text">Your data is always safe</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apply Page -->
+        <div class="page" id="apply">
+            <div class="hero-section">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-shapes-container">
+                    <div class="hero-shape hero-shape-1"></div>
+                    <div class="hero-shape hero-shape-2"></div>
+                </div>
+                
+                <div class="hero-content">
+                    <h1 class="hero-title">Apply for a Loan</h1>
+                    <p class="hero-subtitle">Complete the form below to get started with your loan application</p>
+                </div>
+                
+                <div class="hero-image-container">
+                    <img src="img/apply.png" alt="Apply for loan" class="hero-image">
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: -50px;">
+                <div class="progress-container">
+                    <div class="progress-bar" id="applyProgress"></div>
+                </div>
+                
+                <div class="form-step active" id="step1">
+                    <div class="form-group">
+                        <label class="form-label">Loan Amount</label>
+                        <input type="text" class="form-control" placeholder="R1,000 - R200,000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Loan Purpose</label>
+                        <select class="form-control">
+                            <option>Personal Loan</option>
+                            <option>Debt Consolidation</option>
+                            <option>Home Improvement</option>
+                            <option>Business Loan</option>
+                            <option>Education</option>
+                            <option>Medical Expenses</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Loan Term</label>
+                        <select class="form-control">
+                            <option>3 months</option>
+                            <option>6 months</option>
+                            <option>12 months</option>
+                            <option>24 months</option>
+                            <option>36 months</option>
+                            <option>48 months</option>
+                            <option>60 months</option>
+                        </select>
+                    </div>
+                    <div class="form-navigation">
+                        <button class="btn btn-outline" disabled>Back</button>
+                        <button class="btn btn-primary" id="nextStep1">Next</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" id="step2">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ID Number</label>
+                        <input type="text" class="form-control" placeholder="Your ID number">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mobile Number</label>
+                        <input type="tel" class="form-control" placeholder="Your mobile number">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Your email address">
+                    </div>
+                    <div class="form-navigation">
+                        <button class="btn btn-outline" id="prevStep2">Back</button>
+                        <button class="btn btn-primary" id="nextStep2">Next</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" id="step3">
+                    <div class="form-group">
+                        <label class="form-label">Employment Status</label>
+                        <select class="form-control">
+                            <option>Full-time employed</option>
+                            <option>Part-time employed</option>
+                            <option>Self-employed</option>
+                            <option>Unemployed</option>
+                            <option>Retired</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Monthly Income</label>
+                        <input type="text" class="form-control" placeholder="Your monthly income">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Bank Name</label>
+                        <select class="form-control">
+                            <option>ABSA</option>
+                            <option>Standard Bank</option>
+                            <option>FNB</option>
+                            <option>Nedbank</option>
+                            <option>Capitec</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-navigation">
+                        <button class="btn btn-outline" id="prevStep3">Back</button>
+                        <button class="btn btn-primary" id="submitApplication">Submit Application</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title with-line">Application Process</div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Submit Application</h4>
+                            <p>Fill out the form with your details and submit</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Quick Verification</h4>
+                            <p>We'll verify your information within minutes</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Approval</h4>
+                            <p>Receive your loan approval notification</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Funds Transfer</h4>
+                            <p>Get funds transferred to your account within 1 hour</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div class="page" id="about">
+            <div class="hero-section">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-shapes-container">
+                    <div class="hero-shape hero-shape-1"></div>
+                    <div class="hero-shape hero-shape-2"></div>
+                </div>
+                
+                <div class="hero-content">
+                    <h1 class="hero-title">About Us</h1>
+                    <p class="hero-subtitle">Learn more about Oyster Finance and our mission</p>
+                </div>
+                
+                <div class="hero-image-container">
+                    <img src="img/about.png" alt="About us" class="hero-image">
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: -50px;">
+                <img src="img/about-img.jpg" alt="Team photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 20px;">
+                <div class="card-title with-line">A Team to Help You</div>
+                <p>We're flexible, approachable and service oriented. We've pioneered a new way of providing affordable loans by fixing durable repayment plans to suit our clients' needs.</p>
+                <p class="mt-20">In a market full of options, Oyster Personal Finance stands out as your trusted partner for financial success.</p>
+                <button class="btn btn-primary btn-block mt-20">Find Out More</button>
+            </div>
+            
+            <div class="card">
+                <div class="card-title with-line">What Our Clients Say</div>
+                <div class="review-card p-0 mb-10">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"Fantastic Service! I recently got a loan through Oyster Personal Finance, and the process was incredibly smooth and fast! The team was very helpful, and they guided me step-by-step through the application."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">MS</div>
+                        <div class="review-info">
+                            <h5>Maria Smith</h5>
+                            <span>25 min ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card p-0">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"I was in need of a loan urgently, and Oyster Personal Finance made the whole experience hassle-free. Their customer support was excellent, answering all my queries promptly."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">MB</div>
+                        <div class="review-info">
+                            <h5>Marta Black</h5>
+                            <span>1 hour ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title with-line">We're Regulated By These Authorities</div>
+                <div class="authority-card">
+                    <div class="authority-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="authority-title">Financial Conduct Authority</h3>
+                    <p class="authority-text">At Oyster Personal Finance, we are committed to empowering individuals with transparent, reliable, and responsible financial solutions.</p>
+                    <button class="btn btn-primary btn-block">Apply for a loan now</button>
+                </div>
+                <div class="authority-card">
+                    <div class="authority-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="authority-title">Prudential Regulation Authority</h3>
+                    <p class="authority-text">We are dedicated to providing secure and dependable financial solutions, adhering to the highest standards of stability and integrity.</p>
+                    <button class="btn btn-primary btn-block">Apply for a loan now</button>
+                </div>
+                <div class="authority-card">
+                    <div class="authority-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="authority-title">NCR Registered/Regulated</h3>
+                    <p class="authority-text">We are proud to be registered and regulated by the National Credit Regulator (NCR), ensuring that every service we offer aligns with the highest standards.</p>
+                    <button class="btn btn-primary btn-block">Apply for a loan now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Page -->
+        <div class="page" id="reviews">
+            <div class="hero-section">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-shapes-container">
+                    <div class="hero-shape hero-shape-1"></div>
+                    <div class="hero-shape hero-shape-2"></div>
+                </div>
+                
+                <div class="hero-content">
+                    <h1 class="hero-title">Reviews</h1>
+                    <p class="hero-subtitle">See what our clients have to say about us</p>
+                </div>
+                
+                <div class="hero-image-container">
+                    <img src="img/reviews.png" alt="Customer reviews" class="hero-image">
+                </div>
+            </div>
+
+            <div class="text-center" style="margin: -30px 20px 30px; position: relative; z-index: 10;">
+                <h2 class="card-title" style="color: white;">🌟 What Our Clients Say 🌟</h2>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">"Fantastic Service! I recently got a loan through Oyster Personal Finance, and the process was incredibly smooth and fast! The team was very helpful, and they guided me step-by-step through the application. Highly recommend!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">MS</div>
+                    <div class="review-info">
+                        <h5>Maria Smith</h5>
+                        <span>25 min ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">"I was in need of a loan urgently, and Oyster Personal Finance made the whole experience hassle-free. Their customer support was excellent. Thanks again!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">MB</div>
+                    <div class="review-info">
+                        <h5>Marta Black</h5>
+                        <span>1 hour ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">"I had a great experience with Oyster Personal Finance. The application process was straightforward, and I appreciated the transparency in their terms. The loan was processed quickly. I'm so glad I chose them!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">CB</div>
+                    <div class="review-info">
+                        <h5>Carl Brown</h5>
+                        <span>2 hours ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">"I was skeptical about getting a loan online, but Oyster Personal Finance made me feel secure every step of the way. Highly recommend!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">PD</div>
+                    <div class="review-info">
+                        <h5>Paul David</h5>
+                        <span>3 hours ago</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recent-reviews">
+                <h3>Recent Reviews</h3>
+                <ul>
+                    <li>💬 <strong>Jessica A.</strong> - "Super fast and reliable!"</li>
+                    <li>💬 <strong>James K.</strong> - "Highly recommended!"</li>
+                    <li>💬 <strong>Linda M.</strong> - "Best loan service ever!"</li>
+                    <li>💬 <strong>David O.</strong> - "Quick approval process!"</li>
+                </ul>
+            </div>
+            
+            <button class="btn btn-outline btn-block" style="margin: 0 20px 20px;">Load More Reviews</button>
+        </div>
+
+        <!-- Contact Page -->
+        <div class="page" id="contact">
+            <div class="hero-section">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-shapes-container">
+                    <div class="hero-shape hero-shape-1"></div>
+                    <div class="hero-shape hero-shape-2"></div>
+                </div>
+                
+                <div class="hero-content">
+                    <h1 class="hero-title">Contact Us</h1>
+                    <p class="hero-subtitle">Get in touch with our team</p>
+                </div>
+                
+                <div class="hero-image-container">
+                    <img src="img/contact.png" alt="Contact us" class="hero-image">
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: -50px;">
+                <div class="card-title with-line">Get in touch</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Address</strong>
+                            20 Georgian Crescent, Bryanston East Hampton Office Park, Johannesburg 2191
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Phone</strong>
+                            +27698480097
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Email</strong>
+                            oysterfinanceltd@gmail.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Working Hours</strong>
+                            Everyday: 06:00am - 7:00pm
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline" style="margin-right: 8px; flex: 1;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline" style="margin-right: 8px; flex: 1;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline" style="margin-right: 8px; flex: 1;">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline" style="flex: 1;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title with-line">Send Us a Message</div>
+                <div class="form-group">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Subject</label>
+                    <input type="text" class="form-control" placeholder="Enter subject">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="4" placeholder="Enter your message"></textarea>
+                </div>
+                <button class="btn btn-primary btn-block">Send Message</button>
+            </div>
+            
+            <div class="map-container" style="margin: 0 20px 20px;">
+                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=20%20Georgian%20Crescent%20Bryanston%20East%20Hampton%20Office%20Park%20Johannesburg%202191+(Oyster%20Finance)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+            
+            <div class="card">
+                <div class="card-title text-center">Calculate my Score</div>
+                <p class="text-center mb-20">Check if you can qualify for a loan, it won't affect your Credit History.</p>
+                <button class="btn btn-primary btn-block">Show My Score</button>
+            </div>
+        </div>
     </div>
-    
-    
-	<!-- Hero Section end -->
 
-	<!-- Why Section end -->
-	<section class="why-section spad">
-		<div class="container">
-			<div class="text-center mb-5 pb-4">
-				<h2>Why Choose us?</h2>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="icon-box-item">
-						<div class="ib-icon">
-							<i class="flaticon-012-24-hours"></i>
-						</div>
-						<div class="ib-text">
-							<h5>Money in 1 Hour!</h5>
-							<p>Fast Loans in 1 Hour Get the financial support you need quickly! With Oyster, your loan approval and disbursement process is streamlined to ensure funds are in your account within an hour. </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="icon-box-item">
-						<div class="ib-icon">
-							<i class="flaticon-036-customer-service"></i>
-						</div>
-						<div class="ib-text">
-							<h5>24/7 Support</h5>
-							<p>24/7 Support When You Need It
-We’re here for you. Our dedicated support team is available via phone, chat, or email to assist you at any time.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="icon-box-item">
-						<div class="ib-icon">
-							<i class="flaticon-039-info"></i>
-						</div>
-						<div class="ib-text">
-							<h5>Earn Rewards While You Borrow</h5>
-							<p>Every smart money move earns you points. Redeem your rewards for cash, loan payments, and more, making every transaction with us more rewarding.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="text-center pt-3">
-				<a href="#" class="site-btn sb-big">Apply Now!</a>
-			</div>
-		</div>
-	</section>
-	<!-- Why Section end -->
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item active" data-page="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+        <div class="nav-item" data-page="apply">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>Apply</span>
+        </div>
+        <div class="nav-item" data-page="about">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </div>
+        <div class="nav-item" data-page="reviews">
+            <i class="fas fa-star"></i>
+            <span>Reviews</span>
+        </div>
+        <div class="nav-item" data-page="contact">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </div>
+    </div>
 
+    <!-- Floating WhatsApp Button -->
+    <div class="fab" id="whatsappButton">
+        <i class="fab fa-whatsapp"></i>
+    </div>
 
-	<!-- CTA Section end -->
-	<section class="cta-section set-bg" data-setbg="img/cta-bg.jpg">
-		<div class="container">
-			<h2>Already have a <strong>OYSTER FINANCE</strong> </h2>
-			<h5>If you're thinking about borrowing more, we're here to help.</h5>
-			<a href="#" class="site-btn sb-dark sb-big">Find out More</a>
-		</div>
-	</section>
-	<section class="stats-section">
-  <div class="stat-box">
-    <h2 class="counter" data-target="15000000">0</h2>
-    <p>💸 Paid Out in Loans</p>
-  </div>
+    <!-- Popup Notification -->
+    <div class="popup-notification" id="popupNotification">
+        <div class="popup-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="popup-text" id="popupText"></div>
+    </div>
 
-  <div class="stat-box">
-    <h2 class="counter" data-target="60000">0</h2>
-    <p>✅ Loans Approved</p>
-  </div>
-
-  <div class="stat-box">
-    <h2 class="counter" data-target="78">60</h2>
-    <p>👥 Active Users Online</p>
-  </div>
-</section>
-
-<style>
-  /* Background Gradient Animation */
-  @keyframes backgroundAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  /* Glowing Pulse Animation */
-  @keyframes glowPulse {
-    0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4); }
-    50% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.5); }
-  }
-
-  /* Section Styling */
-  .stats-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    text-align: center;
-    padding: 18px 18px;
-    background: linear-gradient(45deg, #f70521, #ff00d4, #7700ff);
-    background-size: 1900% 200%;
-    animation: backgroundAnimation 6s infinite alternate;
-  }
-
-  /* Stat Box */
-  .stat-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding:8px;
-    border-radius: 18px;
-    width: 100px;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 5, 0.2);
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
-    animation: glowPulse 2s infinite alternate;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Hover Effect */
-  .stat-box:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 50px rgba(0, 255, 255, 0.6);
-  }
-
-  /* Glow Line */
-  .stat-box::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, cyan, transparent);
-    top: 0;
-    left: 0;
-    animation: glowMove 3s linear infinite;
-  }
-
-  /* Glow Animation */
-  @keyframes glowMove {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-  }
-
-  /* Counter Text */
-  .counter {
-    font-size: 14px;
-    font-weight: bold;
-    color: #00f5ff;
-    text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff;
-  }
-
-  /* Bouncing Effect */
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-  }
-
-  .counter {
-    animation: bounce 1.5s infinite;
-  }
-
-  /* Subtitle */
-  p {
-    font-size: 8px;
-    color: #fff;
-    font-weight: 500;
-    margin-top: 0px;
-  }
-</style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const counters = document.querySelectorAll(".counter");
-
-    counters.forEach(counter => {
-      counter.innerText = "10";
-      const updateCounter = () => {
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
-        const increment = target / 80; // Faster animation
-
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCounter, 20);
-        } else {
-        }
-      };
-
-      // Activate on Scroll
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            updateCounter();
-          }
-        });
-      });
-
-      observer.observe(counter);
-    });
-  });
-</script>
-
-
-
-	<!-- Feature Section -->
-	<section class="feature-section spad">
-		<div class="container">
-			<div class="feature-item">
-				<div class="row">
-					<div class="col-lg-6">
-						<img src="img/feature-1.jpg" alt="">
-					</div>
-					<div class="col-lg-6">
-						<div class="feature-text">
-							<h2>Get a personal loan from just 3% Interest rate</h2>
-							<p>We’re a Top South Africa’s specialist credit provider. It’s all we do. We work with you to find the best solution to your personal , business and home loan needs. OYSTER PERSONAL FINANCE (PTY) LTD Loan is flexible, approachable and service orientated. We’ve pioneered a new way of providing loans by linking you directly to the money markets and passing the savings on to you. FSP No 50801 
-NCR Registration No.	NCRCP11356
- Legal Registration No. :	2018/317490/07</p>
-							<a href="#" class="readmore">Apply for a loan now <img src="img/arrow.png" alt=""></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="feature-item">
-				<div class="row">
-					<div class="col-lg-6 order-lg-2">
-						<img src="img/feature-2.jpg" alt="">
-					</div>
-					<div class="col-lg-6 order-lg-1">
-						<div class="feature-text">
-							<h2>Get aproved in minutes after you apply online</h2>
-							<p>Fast, effective funding programs. Simple online process. Get approved in minutes, and funded in as little as 24 hours. Fuel your growth, and invest in your future.</p>
-							<a href="#" class="readmore">Apply for a loan now <img src="img/arrow.png" alt=""></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Feature Section end -->
-
-
-	<!-- Help Section -->
-	<section class="help-section spad">
-		<div class="container">
-			<div class="text-center text-white mb-5 pb-4">
-				<h2>How a personal loan can help</h2>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<p>We Say Yes When Others Don’t
-Don’t let your credit history hold you back. At Oyster, we consider all credit backgrounds and provide tailored solutions to help you achieve your goals..</p>
-				</div>
-				<div class="col-md-6">
-					<p>Get your loan approved and disbursed within just 1 hour! Whether it's an emergency or an opportunity, Oyster ensures you never have to wait for the financial support you need.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<ul class="help-list">
-						<li>Buying a car</li>
-						<li>Take control of your finances</li>
-						<li>Emergency Finance</li>
-						<li>Adding value to your home</li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<ul class="help-list">
-						<li>business Finance</li>
-						<li>Have a day to remember</li>
-						<li>Consolidation Finance</li>
-						<li>Go on a holliday</li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<ul class="help-list">
-						<li>Get an Insurance</li>
-						<li>Take a trip</li>
-						<li>Help your kids</li>
-						<li>Renovate your home</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Help Section end -->
-
-
-	<!-- Info Section -->
-	<section class="info-section spad">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5">
-					<img src="img/info-img.jpg" alt="">
-				</div>
-				<div class="col-lg-7">
-					<div class="info-text">
-						<h2>We’re here to help</h2>
-						<h5>Monday to Thursday (8am to 7pm), and Friday (8am to 5pm).</h5>
-						<p>Swift & Efficient:Gain approval within minutes and receive funding in as little as 24 hours. Our streamlined application process minimizes paperwork, ensuring prompt delivery of funds. 💼💼💼 💰 Secure access to funds up to 5,000,000 for diverse Flexible & Economical: financial requirements, with repayment terms extending up to 40 years. Take charge of your monthly payments for utmost affordability</p>
-						<ul>
-							<li>Whatsapp +27678998831</li>
-							<li>oysterfinanceltd@gmail.com / oysterfinance@finmail.com</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Info Section end -->
-
-	<!-- Score Section end -->
-	<section class="score-section text-white set-bg" data-setbg="img/score-bg.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-6 col-lg-8">
-					<h2>Calculate my Score</h2>
-					<h4>Check if you can qualify for a loan, it won't affect your Credit History.</h4>
-					<a href="#" class="site-btn sb-big">show my score</a>
-				</div>
-			</div>
-			<img src="img/hand.png" alt="" class="hand-img">
-		</div>
-	</section>
-	<!-- Score Section end -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Persistent Popup Notification</title>
-    <style>
-        /* Popup container */
-        .popup {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #28a745;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            font-size: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            z-index: 1000;
-        }
-
-        /* Show popup */
-        .popup.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Popup message -->
-    <div id="popup" class="popup"></div>
-
-    <script>
-        // Messages array (Full List)
-        const messages = [
-            "Ms G Loan amount of 40,000 Paid out Successfully.",
-            "Your loan application for 25,000 is being processed.",
-            "Reminder: Your next repayment is due in 3 days.",
-            "Dewald.Y : Your loan application for 178,000 has been approved.",
-            "Pieter.V : just applied for a loan amount of 57,000.",
-            "Frederik.B : just applied for a loan amount of 47,000.",
-            "Charlize.K : Your loan application for 31,000 has been approved.",
-            "Thabo.M : Your loan application for 175,000 has been approved.",
-            "Roelof.J : Your loan application for 106,000 has been approved.",
-            "Cornelius.V : Your approved loan amount of 19,000 was paid out successfully.",
-            "Gugu.N : Your approved loan amount of 12,000 was paid out successfully.",
-            "Themba.L : Your approved loan amount of 190,000 was paid out successfully.",
-            "Mpho.S : Your approved loan amount of 164,000 was paid out successfully.",
-            "Hendrik.D : just applied for a loan amount of 165,000.",
-            "Charlize.R : just applied for a loan amount of 110,000.",
-            "Zanele.P : Your approved loan amount of 31,000 was paid out successfully.",
-            "Sipho.T : Your approved loan amount of 36,000 was paid out successfully.",
-            "Gerrit.H : Your loan application for 85,000 has been approved.",
-            "Xolani.B : Your approved loan amount of 134,000 was paid out successfully.",
-            "Jacobus.W : just applied for a loan amount of 88,000.",
-            "Lerato.M : Your loan application for 52,000 has been approved.",
-            "Bongiwe.K : Your approved loan amount of 60,000 was paid out successfully.",
-            "Jan-Hendrik.S : Your loan application for 137,000 has been approved.",
-            "Mandla.Z : Your approved loan amount of 54,000 was paid out successfully.",
-            "Anika.F : just applied for a loan amount of 123,000.",
-            "Bonang.L : Your approved loan amount of 76,000 was paid out successfully.",
-            "Nomvula.D : Your loan application for 98,000 has been approved.",
-            "Dineo.C : Your loan application for 54,000 has been approved.",
-            "Sibusiso.K : Your loan application for 30,000 has been approved.",
-            "Wilhelmina.V : Your loan application for 72,000 has been approved.",
-            "Cornelius.J : just applied for a loan amount of 95,000.",
-            "Thandeka.O : Your approved loan amount of 140,000 was paid out successfully.",
-            "Roelof.M : Your approved loan amount of 50,000 was paid out successfully.",
-            "Annemarie.D : Your loan application for 61,000 has been approved.",
-            "Stefan.N : Your loan application for 144,000 has been approved.",
-            "Kobus.P : Your approved loan amount of 26,000 was paid out successfully.",
-            "Madelief.H : Your loan application for 128,000 has been approved.",
-            "Mandla.R : Your loan application for 143,000 has been approved.",
-            "Mieke.V : Your loan application for 93,000 has been approved.",
-            "Thabo.K : Your approved loan amount of 39,000 was paid out successfully.",
-            "Pieter.J : Your approved loan amount of 14,000 was paid out successfully.",
-            "Tshepo.S : Your approved loan amount of 48,000 was paid out successfully.",
-            "Leandri.W : just applied for a loan amount of 179,000.",
-            "Kobus.M : Your loan application for 112,000 has been approved.",
-            "Noluthando.P : Your loan application for 132,000 has been approved.",
-            "Wilhelmina.J : Your approved loan amount of 23,000 was paid out successfully.",
-            "Zanele.F : Your loan application for 64,000 has been approved.",
-            "Bongiwe.R : Your loan application for 115,000 has been approved.",
-            "Themba.C : Your loan application for 47,000 has been approved.",
-            "Anika.H : Your approved loan amount of 43,000 was paid out successfully.",
-            "Sipho.V : Your loan application for 126,000 has been approved.",
-            "Gugu.O : Your approved loan amount of 57,000 was paid out successfully.",
-            "Elzabeth.M : just applied for a loan amount of 132,000.",
-            "Simphiwe.N : Your approved loan amount of 29,000 was paid out successfully.",
-            "Simphiwe.L : Your approved loan amount of 119,000 was paid out successfully.",
-            "Frederik.K : Your approved loan amount of 32,000 was paid out successfully.",
-            "Mieke.T : Your loan application for 28,000 has been approved.",
-            "Dineo.S : Your approved loan amount of 145,000 was paid out successfully.",
-            "Xolani.P : Your approved loan amount of 59,000 was paid out successfully.",
-            "Marthinus.G : Your approved loan amount of 46,000 was paid out successfully.",
-            "Stefan.C : Your approved loan amount of 17,000 was paid out successfully."
-        ];
-
-        let currentIndex = localStorage.getItem("popupIndex") ? parseInt(localStorage.getItem("popupIndex"), 10) : 0;
-
-        function showPopup() {
-            const popup = document.getElementById("popup");
-            popup.textContent = messages[currentIndex]; 
-
-            popup.classList.add("show");
-
-            setTimeout(() => {
-                popup.classList.remove("show");
-            }, 15000); // Hide after 15 seconds
-
-            currentIndex = (currentIndex + 1) % messages.length; // Loop messages
-
-            localStorage.setItem("popupIndex", currentIndex); // Save last message index
-        }
-
-        setInterval(showPopup, 15000); // Change every 15 seconds
-        showPopup(); // Show first message immediately
-    </script>
-
-</body>
-</html>
-
-	<!-- Footer Section -->
-	<footer class="footer-section">
-		<div class="container">
-			<a href="index.html" class="footer-logo">
-				<img src="img/logo.png" alt="">
-			</a>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget">
-						<h2>What we do</h2>
-						<ul>
-							<li><a href="#">Personal Loans</a></li>
-							<li><a href="#">Car loans</a></li>
-							<li><a href="#">Debt consolidation loans</a></li>
-							<li><a href="#">Home improvement loans</a></li>
-							<li><a href="#"> Wedding loans</a></li>
-							<li><a href="#">Medical Finance ISA</a></li>
-							<li><a href="#">Innovative Finance ISA</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget">
-						<h2>About us</h2>
-						<ul>
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Our story</a></li>
-							<li><a href="#">Meet the board</a></li>
-							<li><a href="#">Meet the leadership team</a></li>
-							<li><a href="#">Awards</a></li>
-							<li><a href="#">Careers</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget">
-						<h2>Legal</h2>
-						<ul>
-							<li><a href="#">Privacy policy</a></li>
-							<li><a href="#">Loans2go principles</a></li>
-							<li><a href="#">Website terms</a></li>
-							<li><a href="#">Cookie policy</a></li>
-							<li><a href="#">Conflicts policy</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget">
-						<h2>Site Info</h2>
-						<ul>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">Sitemap</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">Contact us</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<p>Oyster Personal Finance is committed to helping you achieve your financial goals with fast, flexible, and reliable loan solutions.</p>
-                <p>&copy; 2025 Oyster Personal Finance. All Rights Reserved.</p>
-			<div class=Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by OYSTER FINANCE</a>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <p>Processing your request...</p>
+    </div>
 </div>
-	</footer>
-	<!-- Footer Section end -->
-	
-	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/main.js"></script>
 
-	</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulsing Image Popup</title>
-    <style>
-        /* Container for the image popup */
-        .popup-container {
-            position: fixed;
-            top: 50%;
-            right: 20px; /* Adjust for positioning */
-            transform: translateY(-50%);
-            z-index: 9999;
+<!-- JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Navigation
+        const navItems = document.querySelectorAll('.nav-item');
+        const pages = document.querySelectorAll('.page');
+        
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const pageId = this.getAttribute('data-page');
+                
+                // Update active nav item
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show selected page
+                pages.forEach(page => page.classList.remove('active'));
+                document.getElementById(pageId).classList.add('active');
+                
+                // Scroll to top
+                document.querySelector('.app-content').scrollTop = 0;
+            });
+        });
+        
+        // WhatsApp Button
+        document.getElementById('whatsappButton').addEventListener('click', function() {
+            window.open('https://wa.me/+27698480097', '_blank');
+        });
+        
+        document.getElementById('submitToWhatsapp').addEventListener('click', function() {
+            window.open('https://wa.me/+27698480097', '_blank');
+        });
+        
+        // Application Form Steps
+        const applyProgress = document.getElementById('applyProgress');
+        
+        document.getElementById('nextStep1')?.addEventListener('click', function() {
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+            applyProgress.style.width = '33%';
+        });
+        
+        document.getElementById('prevStep2')?.addEventListener('click', function() {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step1').classList.add('active');
+            applyProgress.style.width = '0%';
+        });
+        
+        document.getElementById('nextStep2')?.addEventListener('click', function() {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step3').classList.add('active');
+            applyProgress.style.width = '66%';
+        });
+        
+        document.getElementById('prevStep3')?.addEventListener('click', function() {
+            document.getElementById('step3').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+            applyProgress.style.width = '33%';
+        });
+        
+        document.getElementById('submitApplication')?.addEventListener('click', function() {
+            // Show loader
+            document.getElementById('loader').classList.add('show');
+            
+            // Simulate processing
+            setTimeout(function() {
+                // Hide loader
+                document.getElementById('loader').classList.remove('show');
+                
+                // Reset form
+                document.getElementById('step3').classList.remove('active');
+                document.getElementById('step1').classList.add('active');
+                applyProgress.style.width = '0%';
+                
+                // Show success notification
+                const popup = document.getElementById('popupNotification');
+                document.getElementById('popupText').textContent = 'Your application has been submitted successfully!';
+                popup.classList.add('show');
+                
+                // Hide notification after 5 seconds
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                }, 5000);
+                
+                // Navigate to home page
+                navItems.forEach(nav => nav.classList.remove('active'));
+                document.querySelector('[data-page="home"]').classList.add('active');
+                
+                pages.forEach(page => page.classList.remove('active'));
+                document.getElementById('home').classList.add('active');
+            }, 2000);
+        });
+        
+        // Animated Counters
+        function animateCounter(elementId, targetValue, duration) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+            
+            let startValue = 0;
+            const increment = targetValue / (duration / 16);
+            
+            const timer = setInterval(() => {
+                startValue += increment;
+                if (startValue >= targetValue) {
+                    element.textContent = targetValue.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(startValue).toLocaleString();
+                }
+            }, 16);
         }
-
-        /* The pulsing image */
-        .popup-image {
-            width: 100px; /* Adjust size */
-            height: auto;
-            cursor: pointer;
-            animation: pulse 1.5s infinite ease-in-out;
+        
+        // Start counter animations
+        animateCounter('paidOutCounter', 15000000, 2000);
+        animateCounter('approvedCounter', 60000, 2000);
+        animateCounter('onlineCounter', 78, 2000);
+        
+        // Popup Notifications
+        const messages = [
+            "Ms G: Loan amount of R40,000 paid out successfully.",
+            "Dewald Y: Loan application for R178,000 approved.",
+            "Pieter V: Just applied for a loan amount of R57,000.",
+            "Frederik B: Just applied for a loan amount of R47,000.",
+            "Charlize K: Loan application for R31,000 approved.",
+            "Thabo M: Loan application for R175,000 approved.",
+            "Roelof J: Loan application for R106,000 approved."
+        ];
+        
+        function showRandomNotification() {
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            const popup = document.getElementById('popupNotification');
+            document.getElementById('popupText').textContent = randomMessage;
+            popup.classList.add('show');
+            
+            setTimeout(function() {
+                popup.classList.remove('show');
+            }, 5000);
         }
-
-        /* Heartbeat pulse animation */
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-            100% { transform: scale(1); opacity: 1; }
+        
+        // Show random notification every 15 seconds
+        setInterval(showRandomNotification, 15000);
+        
+        // Show first notification after 5 seconds
+        setTimeout(showRandomNotification, 5000);
+        
+        // Add swipe gestures for page navigation
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+        
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, false);
+        
+        function handleSwipe() {
+            const currentPageIndex = Array.from(navItems).findIndex(item => item.classList.contains('active'));
+            
+            if (touchEndX < touchStartX - 70) {
+                // Swipe left - go to next page
+                const nextIndex = Math.min(currentPageIndex + 1, navItems.length - 1);
+                navItems[nextIndex].click();
+            }
+            
+            if (touchEndX > touchStartX + 70) {
+                // Swipe right - go to previous page
+                const prevIndex = Math.max(currentPageIndex - 1, 0);
+                navItems[prevIndex].click();
+            }
         }
-    </style>
-</head>
-<body>
-
-    <!-- Image Popup -->
-    <div class="popup-container">
-        <a href="https://wa.me/+27698480097" target="_blank">
-            <img src="img/4f0bee74-d093-4acf-a185-ddc3a0d167a7_removalai_preview.png" alt="Pulsing Popup" class="popup-image">
-        </a>
-    </div>
-
+        
+        // Pull to refresh animation
+        const appContent = document.querySelector('.app-content');
+        let startY = 0;
+        let refreshing = false;
+        
+        appContent.addEventListener('touchstart', e => {
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+        
+        appContent.addEventListener('touchmove', e => {
+            const y = e.touches[0].clientY;
+            const scrollTop = appContent.scrollTop;
+            
+            // Only trigger pull-to-refresh when at the top of the content
+            if (scrollTop <= 0 && y > startY && !refreshing) {
+                e.preventDefault();
+                const pullDistance = Math.min((y - startY) / 2, 100);
+                
+                if (pullDistance > 70) {
+                    refreshing = true;
+                    // Show loader
+                    document.getElementById('loader').classList.add('show');
+                    
+                    // Simulate refresh
+                    setTimeout(() => {
+                        document.getElementById('loader').classList.remove('show');
+                        refreshing = false;
+                        
+                        // Show success notification
+                        const popup = document.getElementById('popupNotification');
+                        document.getElementById('popupText').textContent = 'Page refreshed successfully!';
+                        popup.classList.add('show');
+                        
+                        setTimeout(() => {
+                            popup.classList.remove('show');
+                        }, 3000);
+                    }, 1500);
+                }
+            }
+        }, { passive: false });
+        
+        // Testimonial Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const slidesContainer = document.getElementById('testimonialSlides');
+        
+        function showSlide(index) {
+            if (!slidesContainer) return;
+            
+            slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            currentSlide = index;
+        }
+        
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            if (!slides || slides.length === 0) return;
+            
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);
+        
+        // Add touch events for slider
+        let sliderStartX = 0;
+        let sliderEndX = 0;
+        
+        if (slidesContainer) {
+            slidesContainer.addEventListener('touchstart', e => {
+                sliderStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            
+            slidesContainer.addEventListener('touchend', e => {
+                sliderEndX = e.changedTouches[0].screenX;
+                
+                // Calculate slide direction
+                if (sliderEndX < sliderStartX - 50) {
+                    // Swipe left - next slide
+                    currentSlide = Math.min(currentSlide + 1, slides.length - 1);
+                    showSlide(currentSlide);
+                }
+                
+                if (sliderEndX > sliderStartX + 50) {
+                    // Swipe right - previous slide
+                    currentSlide = Math.max(currentSlide - 1, 0);
+                    showSlide(currentSlide);
+                }
+            }, { passive: true });
+        }
+        
+        // Initialize dots click events
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+         // Loan Calculator
+            const loanAmountSlider = document.getElementById('loanAmountSlider');
+            const loanTermSlider = document.getElementById('loanTermSlider');
+            const interestRateSlider = document.getElementById('interestRateSlider');
+            const loanAmountValue = document.getElementById('loanAmountValue');
+            const loanTermValue = document.getElementById('loanTermValue');
+            const interestRateValue = document.getElementById('interestRateValue');
+            const monthlyPayment = document.getElementById('monthlyPayment');
+            const totalRepayment = document.getElementById('totalRepayment');
+            
+            function updateCalculator() {
+                if (!loanAmountSlider || !loanTermSlider || !interestRateSlider) return;
+                
+                const amount = parseInt(loanAmountSlider.value);
+                const term = parseInt(loanTermSlider.value);
+                const rate = parseFloat(interestRateSlider.value) / 100 / 3;
+                
+                loanAmountValue.textContent = 'R' + amount.toLocaleString();
+                loanTermValue.textContent = term;
+                interestRateValue.textContent = interestRateSlider.value + '%';
+                
+                // Calculate monthly payment
+                const x = Math.pow(1 + rate, term);
+                const monthly = (amount * x * rate) / (x - 1);
+                const total = monthly * term;
+                
+                monthlyPayment.textContent = 'R' + monthly.toFixed(0).toLocaleString();
+                totalRepayment.textContent = 'R' + total.toFixed(0).toLocaleString();
+            }
+            
+            if (loanAmountSlider && loanTermSlider && interestRateSlider) {
+                loanAmountSlider.addEventListener('input', updateCalculator);
+                loanTermSlider.addEventListener('input', updateCalculator);
+                interestRateSlider.addEventListener('input', updateCalculator);
+                updateCalculator();
+            }
+            
+        
+        // Add tap feedback to buttons
+        const buttons = document.querySelectorAll('.btn, .card, .feature-icon-item, .feature-card');
+        buttons.forEach(button => {
+            button.addEventListener('touchstart', () => {
+                button.style.transform = 'scale(0.97)';
+            }, { passive: true });
+            
+            button.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    button.style.transform = '';
+                }, 200);
+            }, { passive: true });
+        });
+    });
+</script>
 </body>
 </html>
