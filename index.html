@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="apple-touch-icon" href="img/logo-removebg-preview.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
@@ -76,7 +76,7 @@
     .app-header {
         height: calc(var(--header-height) + var(--safe-area-top));
         padding-top: var(--safe-area-top);
-        background: var(--primary-gradient);
+        background: #0d59bd;
         color: white;
         display: flex;
         align-items: center;
@@ -399,7 +399,7 @@
 
     .hero-image {
         width: 100%;
-        max-width: 300px;
+        max-width: 700px;
         z-index: 4;
         filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.25));
         animation: float 6s ease-in-out infinite;
@@ -2131,95 +2131,8 @@
                     <div class="progress-bar" id="applyProgress"></div>
                 </div>
                 
-                <div class="form-step active" id="step1">
-                    <div class="form-group">
-                        <label class="form-label">Loan Amount</label>
-                        <input type="text" class="form-control" placeholder="R1,000 - R200,000">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Loan Purpose</label>
-                        <select class="form-control">
-                            <option>Personal Loan</option>
-                            <option>Debt Consolidation</option>
-                            <option>Home Improvement</option>
-                            <option>Business Loan</option>
-                            <option>Education</option>
-                            <option>Medical Expenses</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Loan Term</label>
-                        <select class="form-control">
-                            <option>3 months</option>
-                            <option>6 months</option>
-                            <option>12 months</option>
-                            <option>24 months</option>
-                            <option>36 months</option>
-                            <option>48 months</option>
-                            <option>60 months</option>
-                        </select>
-                    </div>
-                    <div class="form-navigation">
-                        <button class="btn btn-outline" disabled>Back</button>
-                        <button class="btn btn-primary" id="nextStep1">Next</button>
-                    </div>
-                </div>
-                
-                <div class="form-step" id="step2">
-                    <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" placeholder="Your full name">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">ID Number</label>
-                        <input type="text" class="form-control" placeholder="Your ID number">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Mobile Number</label>
-                        <input type="tel" class="form-control" placeholder="Your mobile number">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Email Address</label>
-                        <input type="email" class="form-control" placeholder="Your email address">
-                    </div>
-                    <div class="form-navigation">
-                        <button class="btn btn-outline" id="prevStep2">Back</button>
-                        <button class="btn btn-primary" id="nextStep2">Next</button>
-                    </div>
-                </div>
-                
-                <div class="form-step" id="step3">
-                    <div class="form-group">
-                        <label class="form-label">Employment Status</label>
-                        <select class="form-control">
-                            <option>Full-time employed</option>
-                            <option>Part-time employed</option>
-                            <option>Self-employed</option>
-                            <option>Unemployed</option>
-                            <option>Retired</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Monthly Income</label>
-                        <input type="text" class="form-control" placeholder="Your monthly income">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Bank Name</label>
-                        <select class="form-control">
-                            <option>ABSA</option>
-                            <option>Standard Bank</option>
-                            <option>FNB</option>
-                            <option>Nedbank</option>
-                            <option>Capitec</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="form-navigation">
-                        <button class="btn btn-outline" id="prevStep3">Back</button>
-                        <button class="btn btn-primary" id="submitApplication">Submit Application</button>
-                    </div>
-                </div>
-            </div>
+                <iframe data-tally-src="https://tally.so/embed/mYqXx5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100" frameborder="0" marginheight="0" marginwidth="0" title="Oyster Finance Loan Service"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 
             <div class="card">
                 <div class="card-title with-line">Application Process</div>
@@ -2606,9 +2519,6 @@
             window.open('https://wa.me/+27698480097', '_blank');
         });
         
-        document.getElementById('submitToWhatsapp').addEventListener('click', function() {
-            window.open('https://wa.me/+27698480097', '_blank');
-        });
         
         // Application Form Steps
         const applyProgress = document.getElementById('applyProgress');
