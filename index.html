@@ -1361,33 +1361,35 @@
         font-weight: 500;
     }
 
-    /* Floating Action Button */
-    .fab {
+    /* WhatsApp Button - Fixed and Improved */
+    #whatsapp-button {
         position: fixed;
         bottom: calc(var(--bottom-nav-height) + var(--safe-area-bottom) + 20px);
         right: 20px;
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: var(--success-gradient);
+        background: #25D366; /* WhatsApp brand color */
         color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 10px 25px rgba(0, 204, 102, 0.3);
-        z-index: 90;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 999; /* Very high z-index */
         cursor: pointer;
         transition: all 0.3s;
         animation: pulse 2s infinite;
+        border: none;
+        outline: none;
     }
 
-    .fab:active {
+    #whatsapp-button:active {
         transform: scale(0.95);
-        box-shadow: 0 5px 15px rgba(0, 204, 102, 0.2);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    .fab i {
-        font-size: 26px;
+    #whatsapp-button i {
+        font-size: 30px;
     }
 
     /* Animated Progress Bar */
@@ -1902,7 +1904,7 @@
                     </button>
                 </div>
             </div>
- <!-- Loan Calculator Section -->
+<!-- Loan Calculator Section -->
                 <div class="calculator-container">
                     <div class="calculator-card">
                         <div class="calculator-title">Loan Calculator</div>
@@ -2023,7 +2025,7 @@
                         <p>Every smart money move earns you points. Redeem for cash, loan payments, and more.</p>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-block mt-20">EAST FAST LOANS!</button>
+                <button class="btn btn-primary btn-block mt-20">EASY FAST LOANS!</button>
             </div>
 
             <div class="testimonial-slider">
@@ -2465,10 +2467,10 @@
         </div>
     </div>
 
-    <!-- Floating WhatsApp Button -->
-    <div class="fab" id="whatsappButton">
-        <i class="fas fa-whatsapp"></i>
-    </div>
+    <!-- WhatsApp Button - New Implementation -->
+    <button id="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </button>
 
     <!-- Popup Notification -->
     <div class="popup-notification" id="popupNotification">
@@ -2524,8 +2526,8 @@
             document.querySelector('.app-content').scrollTop = 0;
         });
         
-        // WhatsApp Button
-        document.getElementById('whatsappButton').addEventListener('click', function() {
+        // WhatsApp Button - New Implementation
+        document.getElementById('whatsapp-button').addEventListener('click', function() {
             window.open('https://wa.me/+27698480097', '_blank');
         });
         
@@ -2776,43 +2778,42 @@
             });
         });
         
-         // Loan Calculator
-            const loanAmountSlider = document.getElementById('loanAmountSlider');
-            const loanTermSlider = document.getElementById('loanTermSlider');
-            const interestRateSlider = document.getElementById('interestRateSlider');
-            const loanAmountValue = document.getElementById('loanAmountValue');
-            const loanTermValue = document.getElementById('loanTermValue');
-            const interestRateValue = document.getElementById('interestRateValue');
-            const monthlyPayment = document.getElementById('monthlyPayment');
-            const totalRepayment = document.getElementById('totalRepayment');
+        // Loan Calculator
+        const loanAmountSlider = document.getElementById('loanAmountSlider');
+        const loanTermSlider = document.getElementById('loanTermSlider');
+        const interestRateSlider = document.getElementById('interestRateSlider');
+        const loanAmountValue = document.getElementById('loanAmountValue');
+        const loanTermValue = document.getElementById('loanTermValue');
+        const interestRateValue = document.getElementById('interestRateValue');
+        const monthlyPayment = document.getElementById('monthlyPayment');
+        const totalRepayment = document.getElementById('totalRepayment');
+        
+        function updateCalculator() {
+            if (!loanAmountSlider || !loanTermSlider || !interestRateSlider) return;
             
-            function updateCalculator() {
-                if (!loanAmountSlider || !loanTermSlider || !interestRateSlider) return;
-                
-                const amount = parseInt(loanAmountSlider.value);
-                const term = parseInt(loanTermSlider.value);
-                const rate = parseFloat(interestRateSlider.value) / 100 / 3;
-                
-                loanAmountValue.textContent = 'R' + amount.toLocaleString();
-                loanTermValue.textContent = term;
-                interestRateValue.textContent = interestRateSlider.value + '%';
-                
-                // Calculate monthly payment
-                const x = Math.pow(1 + rate, term);
-                const monthly = (amount * x * rate) / (x - 1);
-                const total = monthly * term;
-                
-                monthlyPayment.textContent = 'R' + monthly.toFixed(0).toLocaleString();
-                totalRepayment.textContent = 'R' + total.toFixed(0).toLocaleString();
-            }
+            const amount = parseInt(loanAmountSlider.value);
+            const term = parseInt(loanTermSlider.value);
+            const rate = parseFloat(interestRateSlider.value) / 100 / 3;
             
-            if (loanAmountSlider && loanTermSlider && interestRateSlider) {
-                loanAmountSlider.addEventListener('input', updateCalculator);
-                loanTermSlider.addEventListener('input', updateCalculator);
-                interestRateSlider.addEventListener('input', updateCalculator);
-                updateCalculator();
-            }
+            loanAmountValue.textContent = 'R' + amount.toLocaleString();
+            loanTermValue.textContent = term;
+            interestRateValue.textContent = interestRateSlider.value + '%';
             
+            // Calculate monthly payment
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            
+            monthlyPayment.textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            totalRepayment.textContent = 'R' + total.toFixed(0).toLocaleString();
+        }
+        
+        if (loanAmountSlider && loanTermSlider && interestRateSlider) {
+            loanAmountSlider.addEventListener('input', updateCalculator);
+            loanTermSlider.addEventListener('input', updateCalculator);
+            interestRateSlider.addEventListener('input', updateCalculator);
+            updateCalculator();
+        }
         
         // Add tap feedback to buttons
         const buttons = document.querySelectorAll('.btn, .card, .feature-icon-item, .feature-card');
