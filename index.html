@@ -1995,6 +1995,528 @@ textarea.form-control {
     cursor: pointer;
     padding: 5px;
 }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    margin-right: 15px;
+}
+
+.header-nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.header-nav-link.active, .header-nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
+}
+
+.loan-products-section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--dark);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-gradient);
+    border-radius: 3px;
+}
+
+.loan-products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.loan-product-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s;
+}
+
+.loan-product-card:active {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.loan-product-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.2);
+}
+
+.loan-product-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.loan-product-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--gray-light);
+    font-size: 14px;
+}
+
+.loan-product-detail:last-of-type {
+    margin-bottom: 15px;
+}
+
+.detail-label {
+    color: var(--gray);
+}
+
+.detail-value {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.eligibility-list {
+    padding: 10px 0;
+}
+
+.eligibility-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.eligibility-item:last-child {
+    margin-bottom: 0;
+}
+
+.eligibility-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--success-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 3px 10px rgba(0, 204, 102, 0.2);
+}
+
+.eligibility-text {
+    font-size: 15px;
+    color: var(--gray-dark);
+}
+
+.faq-list {
+    margin-bottom: 10px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.faq-question {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+    color: var(--primary);
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+    padding: 0 0 15px;
+    color: var(--gray);
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.security-section {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.security-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.security-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(50% - 15px);
+    padding: 15px;
+    background-color: var(--light);
+    border-radius: 15px;
+}
+
+.security-badge-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.2);
+}
+
+.security-badge-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    text-align: center;
+}
+
+.security-text {
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+.newsletter-section {
+    margin: 0 20px 30px;
+    background: var(--primary-gradient);
+    border-radius: 20px;
+    padding: 25px 20px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.newsletter-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.newsletter-content {
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.newsletter-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter-button {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 10px 10px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.newsletter-button:active {
+    background-color: var(--secondary-dark);
+}
+
+.newsletter-disclaimer {
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.footer-section {
+    background-color: var(--dark);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 20px 20px 0 0;
+    margin-top: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.footer-logo img {
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.footer-links-column h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-links-column a {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.footer-links-column a:hover {
+    color: white;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 10px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:active {
+    background-color: var(--primary);
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+.mid-page-cta {
+    background: var(--primary-gradient);
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin: 30px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.mid-page-cta::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.cta-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.cta-text {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+.cta-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.cta-stat-item {
+    text-align: center;
+}
+
+.cta-stat-number {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.cta-stat-label {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px 20px 30px;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    z-index: 10;
+}
+
+.trust-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trust-badge img {
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.star-rating {
+    color: var(--warning);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.trust-badge span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-dark);
+}
 </style>
 </head>
 <body>
@@ -2005,9 +2527,16 @@ textarea.form-control {
             <img src="img/logo.png" alt="Oyster Finance">
         </div>
         <h1>Oyster Finance</h1>
-        <div class="header-icon">
-            <i class="fas fa-bell"></i>
-            <div class="badge">3</div>
+        <div class="header-actions">
+            <div class="header-nav">
+                <a href="#" class="header-nav-link active">Home</a>
+                <a href="#" class="header-nav-link">Apply</a>
+                <a href="#" class="header-nav-link">About</a>
+            </div>
+            <div class="header-icon">
+                <i class="fas fa-bell"></i>
+                <div class="badge">3</div>
+            </div>
         </div>
     </div>
 
@@ -2068,6 +2597,22 @@ textarea.form-control {
                 </div>
             </div>
 
+<div class="trust-badges">
+                <div class="trust-badge">
+                    <img src="img/trust-badge-1.png" alt="Trusted">
+                    <span>NCR Registered</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="star-rating">★★★★★</div>
+                    <span>4.8/5 Rating</span>
+                </div>
+                <div class="trust-badge">
+                    <img src="img/trust-badge-2.png" alt="Secure">
+                    <span>256-bit Secure</span>
+                </div>
+            </div>
+
+            
             <div class="loan-form-container">
                 <div class="loan-form">
                     <h3 class="loan-form-title">LOAN APPLICATION FORM</h3>
@@ -2164,6 +2709,26 @@ textarea.form-control {
                 </div>
                 <button class="btn btn-primary btn-block mt-20">QUICK LOANS!</button>
             </div>
+
+            <div class="mid-page-cta">
+                <h2 class="cta-title">Ready to get started?</h2>
+                <p class="cta-text">Join thousands of satisfied customers who have transformed their financial lives with Oyster Finance.</p>
+                <button class="btn btn-primary btn-lg">Calculate Your Loan</button>
+                <div class="cta-stats">
+                    <div class="cta-stat-item">
+                        <div class="cta-stat-number">10,000+</div>
+                        <div class="cta-stat-label">Happy Borrowers</div>
+                    </div>
+                    <div class="cta-stat-item">
+                        <div class="cta-stat-number">4.8/5</div>
+                        <div class="cta-stat-label">Customer Rating</div>
+                    </div>
+                    <div class="cta-stat-item">
+                        <div class="cta-stat-number">R500M+</div>
+                        <div class="cta-stat-label">Loans Disbursed</div>
+                    </div>
+                </div>
+            </div>
                 
             <div class="stats-section">
                 <div class="stat-box">
@@ -2180,52 +2745,304 @@ textarea.form-control {
                 </div>
             </div>
 
-            <div class="promo-card">
-                <div class="promo-content">
-                    <h3 class="promo-title">Special Offer!</h3>
-                    <p class="promo-text">Apply now and get reduced interest rates for the first 3 months!</p>
-                    <button class="promo-button">Learn More</button>
+            <div class="card">
+                <div class="card-title with-line">How It Works</div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Apply Online</h4>
+                            <p>Fill out our simple application form in just 5 minutes</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Quick Verification</h4>
+                            <p>We verify your information within minutes, not days</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Instant Approval</h4>
+                            <p>Get your loan approved in as little as 1 hour</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Receive Funds</h4>
+                            <p>Money deposited directly to your bank account</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="promo-image">
-                    <img src="img/screenshot-2025-03-19-10-04-04-removebg-preview (1).png" alt="Special offer">
-                </div>
-                <div class="promo-pattern"></div>
             </div>
 
-            <div class="testimonial-slider">
-                <div class="testimonial-slides" id="testimonialSlides">
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-avatar">JD</div>
-                            <div class="testimonial-stars">★★★★★</div>
-                            <p class="testimonial-text">"I received my loan within just 45 minutes after approval. The process was incredibly smooth and hassle-free."</p>
-                            <h4 class="testimonial-name">John Doe</h4>
-                            <p class="testimonial-date">15 minutes ago</p>
+            <div class="loan-products-section">
+                <h2 class="section-title">Our Loan Products</h2>
+                <div class="loan-products-grid">
+                    <div class="loan-product-card">
+                        <div class="loan-product-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="loan-product-title">Personal Loan</h3>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Interest Rate:</span>
+                            <span class="detail-value">From 3%</span>
+                        </div>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Amount:</span>
+                            <span class="detail-value">Up to R200,000</span>
+                        </div>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Term:</span>
+                            <span class="detail-value">3-60 months</span>
+                        </div>
+                        <button class="btn btn-outline btn-block">Learn More</button>
+                    </div>
+                    
+                    <div class="loan-product-card">
+                        <div class="loan-product-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="loan-product-title">Education Loan</h3>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Interest Rate:</span>
+                            <span class="detail-value">From 3.5%</span>
+                        </div>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Amount:</span>
+                            <span class="detail-value">Up to R150,000</span>
+                        </div>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Term:</span>
+                            <span class="detail-value">6-84 months</span>
+                        </div>
+                        <button class="btn btn-outline btn-block">Learn More</button>
+                    </div>
+                    
+                    <div class="loan-product-card">
+                        <div class="loan-product-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="loan-product-title">Business Loan</h3>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Interest Rate:</span>
+                            <span class="detail-value">From 4%</span>
+                        </div>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Amount:</span>
+                            <span class="detail-value">Up to R500,000</span>
+                        </div>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Term:</span>
+                            <span class="detail-value">12-120 months</span>
+                        </div>
+                        <button class="btn btn-outline btn-block">Learn More</button>
+                    </div>
+                    
+                    <div class="loan-product-card">
+                        <div class="loan-product-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="loan-product-title">Vehicle Finance</h3>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Interest Rate:</span>
+                            <span class="detail-value">From 3.75%</span>
+                        </div>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Amount:</span>
+                            <span class="detail-value">Up to R350,000</span>
+                        </div>
+                        <div class="loan-product-detail">
+                            <span class="detail-label">Term:</span>
+                            <span class="detail-value">12-72 months</span>
+                        </div>
+                        <button class="btn btn-outline btn-block">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title with-line">Eligibility Criteria</div>
+                <div class="eligibility-list">
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="eligibility-text">Age 18-65 years</div>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="eligibility-text">South African citizen or permanent resident</div>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="eligibility-text">Valid ID document</div>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="eligibility-text">Proof of income (minimum R3,500 per month)</div>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="eligibility-text">3 months bank statements</div>
+                    </div>
+                    <div class="eligibility-item">
+                        <div class="eligibility-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="eligibility-text">Active bank account</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title with-line">Frequently Asked Questions</div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>How long does it take to get approved?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our approval process is incredibly fast. Most applications are approved within 1 hour during business hours. Once approved, funds can be disbursed to your account within the same day.</p>
                         </div>
                     </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-avatar">MS</div>
-                            <div class="testimonial-stars">★★★★★</div>
-                            <p class="testimonial-text">"Fantastic service! I couldn't believe how quickly they processed my application and transferred the funds."</p>
-                            <h4 class="testimonial-name">Maria Smith</h4>
-                            <p class="testimonial-date">25 minutes ago</p>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>What documents do I need to apply?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You'll need a valid South African ID, proof of income (payslips or bank statements), and 3 months of bank statements. All documents can be uploaded directly through our secure application form.</p>
                         </div>
                     </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-avatar">RJ</div>
-                            <div class="testimonial-stars">★★★★★</div>
-                            <p class="testimonial-text">"The customer service is exceptional. They guided me through every step and made sure I understood everything."</p>
-                            <h4 class="testimonial-name">Robert Johnson</h4>
-                            <p class="testimonial-date">1 hour ago</p>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>How much can I borrow?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Loan amounts range from R1,000 to R200,000 depending on your income, credit score, and other factors. Use our loan calculator to estimate how much you may qualify for.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>What are the repayment terms?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Repayment terms range from 3 to 160 months depending on the loan amount and type. We offer flexible repayment options to suit your financial situation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Are there any hidden fees?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, we believe in complete transparency. All fees and charges are clearly disclosed before you accept the loan. There are no hidden fees or surprise charges.</p>
                         </div>
                     </div>
                 </div>
-                <div class="slider-dots">
-                    <div class="slider-dot active"></div>
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
+                <div class="text-center mt-20">
+                    <a href="#" class="btn btn-outline">View All FAQs</a>
+                </div>
+            </div>
+
+            <div class="security-section">
+                <h2 class="section-title">Your Security is Our Priority</h2>
+                <div class="security-badges">
+                    <div class="security-badge">
+                        <div class="security-badge-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="security-badge-text">256-bit SSL Encryption</div>
+                    </div>
+                    <div class="security-badge">
+                        <div class="security-badge-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="security-badge-text">Data Protection</div>
+                    </div>
+                    <div class="security-badge">
+                        <div class="security-badge-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="security-badge-text">NCR Registered</div>
+                    </div>
+                    <div class="security-badge">
+                        <div class="security-badge-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="security-badge-text">POPIA Compliant</div>
+                    </div>
+                </div>
+                <p class="security-text">Oyster Finance is a registered credit provider (NCRCP12345) and complies with all South African financial regulations. Your personal and financial information is protected with industry-leading security measures.</p>
+            </div>
+
+            <div class="newsletter-section">
+                <div class="newsletter-content">
+                    <h3 class="newsletter-title">Stay Updated</h3>
+                    <p class="newsletter-text">Subscribe to our newsletter for financial tips, loan offers, and updates.</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address">
+                        <button class="newsletter-button">Subscribe</button>
+                    </div>
+                    <p class="newsletter-disclaimer">We respect your privacy. No spam, just valuable information.</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Oyster Finance" width="40">
+                    <span>Oyster Finance</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Products</h4>
+                        <a href="#">Personal Loans</a>
+                        <a href="#">Business Loans</a>
+                        <a href="#">Education Loans</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Resources</h4>
+                        <a href="#">Blog</a>
+                        <a href="#">FAQs</a>
+                        <a href="#">Loan Calculator</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Legal</h4>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Complaints</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 Oyster Finance. All rights reserved. Oyster Finance is a registered credit provider (NCRCP12345).</p>
+                    <p>Address: 20 Georgian Crescent, Bryanston East Hampton Office Park, Johannesburg 2191</p>
                 </div>
             </div>
         </div>
@@ -2296,7 +3113,7 @@ textarea.form-control {
                     <div class="form-step" id="step2">
                         <h4>Employment Details</h4>
                         <div class="form-group">
-                            <label class="form-label">Are you Employed or Not Emplyed</label>
+                            <label class="form-label">Employer Name</label>
                             <input type="text" class="form-control" id="employerName" required>
                         </div>
                         <div class="form-group">
@@ -3178,36 +3995,7 @@ document.addEventListener('DOMContentLoaded', function() {
         applyProgress.style.width = '33%';
     });
     
-    // File Upload Handling
-    document.getElementById('idCopy')?.addEventListener('change', function(e) {
-        const fileName = e.target.files[0]?.name || '';
-        if (fileName) {
-            document.getElementById('idCopyName').textContent = fileName;
-            document.getElementById('idCopyPreview').style.display = 'flex';
-        } else {
-            document.getElementById('idCopyPreview').style.display = 'none';
-        }
-    });
-    
-    document.getElementById('idCopyRemove')?.addEventListener('click', function() {
-        document.getElementById('idCopy').value = '';
-        document.getElementById('idCopyPreview').style.display = 'none';
-    });
-    
-    document.getElementById('bankStatement')?.addEventListener('change', function(e) {
-        const fileName = e.target.files[0]?.name || '';
-        if (fileName) {
-            document.getElementById('bankStatementName').textContent = fileName;
-            document.getElementById('bankStatementPreview').style.display = 'flex';
-        } else {
-            document.getElementById('bankStatementPreview').style.display = 'none';
-        }
-    });
-    
-    document.getElementById('bankStatementRemove')?.addEventListener('click', function() {
-        document.getElementById('bankStatement').value = '';
-        document.getElementById('bankStatementPreview').style.display = 'none';
-    });
+
     
     // Application Form Submission
     document.getElementById('submitApplication')?.addEventListener('click', function() {
@@ -3314,38 +4102,311 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         });
     });
-});
 
-// File Upload Handling
-document.getElementById('idCopy')?.addEventListener('change', function(e) {
-    const fileName = e.target.files[0]?.name || '';
-    if (fileName) {
-        document.getElementById('idCopyName').textContent = fileName;
-        document.getElementById('idCopyPreview').style.display = 'flex';
-    } else {
-        document.getElementById('idCopyPreview').style.display = 'none';
+ // Client Portal Login
+        document.getElementById('loginButton')?.addEventListener('click', function() {
+            const loginId = document.getElementById('loginId').value;
+            const loginName = document.getElementById('loginName').value;
+            
+            // Check if there's saved application data
+            const savedData = localStorage.getItem('loanApplication');
+            
+            if (savedData) {
+                const applicationData = JSON.parse(savedData);
+                
+                // Simple validation (in a real app, this would be server-side)
+                if (loginId === applicationData.idNumber && loginName.toLowerCase() === applicationData.fullName.toLowerCase()) {
+                    // Show portal section
+                    document.getElementById('login-section').style.display = 'none';
+                    document.getElementById('portal-section').style.display = 'block';
+                    
+                    // Populate application details
+                    document.getElementById('detailName').textContent = applicationData.fullName;
+                    document.getElementById('detailId').textContent = applicationData.idNumber;
+                    document.getElementById('detailPhone').textContent = applicationData.contactNumber;
+                    document.getElementById('detailEmail').textContent = applicationData.emailAddress;
+                    document.getElementById('detailAmount').textContent = 'R' + parseInt(applicationData.loanAmount).toLocaleString();
+                    document.getElementById('detailTerm').textContent = applicationData.loanTerm + ' months';
+                    document.getElementById('detailPurpose').textContent = applicationData.loanPurpose;
+                    
+                    // Set application date
+                    document.getElementById('applicationDate').textContent = applicationData.applicationDate || new Date().toISOString().split('T')[0];
+                    
+                    // Set progress bar
+                    document.getElementById('applicationProgress').style.width = '30%';
+                    document.getElementById('progressPercentage').textContent = '30%';
+                    
+                    // Show success notification
+                    const popup = document.getElementById('popupNotification');
+                    document.getElementById('popupText').textContent = 'Login successful! Welcome back, ' + applicationData.fullName;
+                    popup.classList.add('show');
+                    
+                    // Hide notification after 5 seconds
+                    setTimeout(function() {
+                        popup.classList.remove('show');
+                    }, 5000);
+                } else {
+                    // Show error notification
+                    const popup = document.getElementById('popupNotification');
+                    popup.style.background = 'var(--secondary-gradient)';
+                    document.getElementById('popupText').textContent = 'Invalid credentials. Please try again.';
+                    popup.classList.add('show');
+                    
+                    // Hide notification after 5 seconds
+                    setTimeout(function() {
+                        popup.classList.remove('show');
+                        popup.style.background = 'var(--success-gradient)';
+                    }, 5000);
+                }
+            } else {
+                // Show error notification
+                const popup = document.getElementById('popupNotification');
+                popup.style.background = 'var(--secondary-gradient)';
+                document.getElementById('popupText').textContent = 'No application found. Please apply for a loan first.';
+                popup.classList.add('show');
+                
+                // Hide notification after 5 seconds
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                    popup.style.background = 'var(--success-gradient)';
+                }, 5000);
+            }
+        });
+    // Counter animations
+    function animateCounter(elementId, targetValue) {
+        const element = document.getElementById(elementId);
+        if (!element) return;
+        
+        const duration = 2000; // 2 seconds
+        const startTime = performance.now();
+        const startValue = 0;
+        
+        function updateCounter(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            
+            const currentValue = Math.floor(progress * (targetValue - startValue) + startValue);
+            
+            if (elementId === 'paidOutCounter') {
+                element.textContent = 'R' + currentValue.toLocaleString();
+            } else {
+                element.textContent = currentValue.toLocaleString();
+            }
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            }
+        }
+        
+        requestAnimationFrame(updateCounter);
     }
-});
 
-document.getElementById('idCopyRemove')?.addEventListener('click', function() {
-    document.getElementById('idCopy').value = '';
-    document.getElementById('idCopyPreview').style.display = 'none';
-});
+    // Start counter animations when they come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter('paidOutCounter', 500000000);
+                animateCounter('approvedCounter', 25000);
+                animateCounter('onlineCounter', 1250);
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.1 });
 
-document.getElementById('bankStatement')?.addEventListener('change', function(e) {
-    const fileName = e.target.files[0]?.name || '';
-    if (fileName) {
-        document.getElementById('bankStatementName').textContent = fileName;
-        document.getElementById('bankStatementPreview').style.display = 'flex';
-    } else {
-        document.getElementById('bankStatementPreview').style.display = 'none';
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+        observer.observe(statsSection);
     }
+
+    // Testimonial slider
+    let currentSlide = 0;
+    const testimonialSlides = document.getElementById('testimonialSlides');
+    const sliderDots = document.querySelectorAll('.slider-dot');
+
+    function showSlide(index) {
+        if (!testimonialSlides) return;
+        
+        const slideWidth = document.querySelector('.testimonial-slide')?.offsetWidth || 0;
+        testimonialSlides.style.transform = `translateX(-${index * slideWidth}px)`;
+        
+        // Update dots
+        sliderDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        
+        currentSlide = index;
+    }
+
+    // Add click event to dots
+    sliderDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSlide(index));
+    });
+
+    // Auto slide
+    function autoSlide() {
+        if (!testimonialSlides) return;
+        
+        const slideCount = document.querySelectorAll('.testimonial-slide').length;
+        currentSlide = (currentSlide + 1) % slideCount;
+        showSlide(currentSlide);
+    }
+
+    // Start auto sliding
+    let slideInterval = setInterval(autoSlide, 5000);
+
+    // Pause auto sliding when user interacts with the slider
+    testimonialSlides?.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+
+    testimonialSlides?.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(autoSlide, 5000);
+    });
+
+    // Header navigation
+    document.querySelectorAll('.header-nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Update active nav link
+            document.querySelectorAll('.header-nav-link').forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Get the page id from the link text
+            const pageId = this.textContent.toLowerCase();
+            
+            // Find the corresponding bottom nav item and trigger its click event
+            const navItem = document.querySelector(`.nav-item[data-page="${pageId}"]`);
+            if (navItem) {
+                navItem.click();
+            } else if (pageId === 'about') {
+                // Handle About page (could redirect to a separate page or show a modal)
+                const popup = document.getElementById('popupNotification');
+                document.getElementById('popupText').textContent = 'About page coming soon!';
+                popup.classList.add('show');
+                
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                }, 3000);
+            }
+        });
+    });
+
+    // Add scroll to top button functionality
+    const appContent = document.querySelector('.app-content');
+    appContent?.addEventListener('scroll', function() {
+        const scrollTop = this.scrollTop;
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        if (scrollTop > 300) {
+            if (!scrollToTopBtn) {
+                const btn = document.createElement('button');
+                btn.id = 'scrollToTopBtn';
+                btn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+                btn.style.position = 'fixed';
+                btn.style.bottom = 'calc(var(--bottom-nav-height) + var(--safe-area-bottom) + 90px)';
+                btn.style.right = '20px';
+                btn.style.width = '40px';
+                btn.style.height = '40px';
+                btn.style.borderRadius = '50%';
+                btn.style.backgroundColor = 'var(--primary)';
+                btn.style.color = 'white';
+                btn.style.border = 'none';
+                btn.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+                btn.style.zIndex = '99';
+                btn.style.display = 'flex';
+                btn.style.alignItems = 'center';
+                btn.style.justifyContent = 'center';
+                btn.style.cursor = 'pointer';
+                btn.style.transition = 'all 0.3s';
+                
+                btn.addEventListener('click', function() {
+                    appContent.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                document.body.appendChild(btn);
+            } else {
+                scrollToTopBtn.style.display = 'flex';
+            }
+        } else if (scrollToTopBtn) {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Mid-page CTA button
+    document.querySelector('.mid-page-cta .btn-lg')?.addEventListener('click', function() {
+        // Scroll to calculator
+        const calculator = document.querySelector('.calculator-container');
+        if (calculator) {
+            const appContent = document.querySelector('.app-content');
+            const calculatorPosition = calculator.getBoundingClientRect().top + appContent.scrollTop;
+            
+            appContent.scrollTo({
+                top: calculatorPosition - 20,
+                behavior: 'smooth'
+            });
+        }
+    });
 });
 
-document.getElementById('bankStatementRemove')?.addEventListener('click', function() {
-    document.getElementById('bankStatement').value = '';
-    document.getElementById('bankStatementPreview').style.display = 'none';
+// FAQ Toggle Function
+function toggleFaq(element) {
+    element.classList.toggle('active');
+    const answer = element.nextElementSibling;
+    
+    if (element.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+        answer.style.maxHeight = "0";
+    }
+}
+
+// Initialize FAQ items
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all FAQ answers to be collapsed
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+        answer.style.maxHeight = "0";
+    });
 });
+const idCopyInput = document.getElementById('idCopy');
+  const idCopyPreview = document.getElementById('idCopyPreview');
+  const idCopyName = document.getElementById('idCopyName');
+  const idCopyRemove = document.getElementById('idCopyRemove');
+
+  idCopyInput.addEventListener('change', function () {
+    if (idCopyInput.files.length > 0) {
+      const file = idCopyInput.files[0];
+      idCopyName.textContent = file.name;
+      idCopyPreview.style.display = 'flex';
+    }
+  });
+
+  idCopyRemove.addEventListener('click', function () {
+    idCopyInput.value = ''; // Clear the file input
+    idCopyName.textContent = '';
+    idCopyPreview.style.display = 'none';
+  });
+   const bankInput = document.getElementById('bankStatement');
+  const bankPreview = document.getElementById('bankStatementPreview');
+  const bankName = document.getElementById('bankStatementName');
+  const bankRemove = document.getElementById('bankStatementRemove');
+
+  bankInput.addEventListener('change', function () {
+    if (bankInput.files.length > 0) {
+      bankName.textContent = bankInput.files[0].name;
+      bankPreview.style.display = 'flex';
+    }
+  });
+
+  bankRemove.addEventListener('click', function () {
+    bankInput.value = '';
+    bankName.textContent = '';
+    bankPreview.style.display = 'none';
+  });
+  
 </script>
 </body>
 </html>
