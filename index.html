@@ -950,12 +950,6 @@
         margin-right: 10px;
     }
 
-    .btn-disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
-        pointer-events: none;
-    }
-
     /* Stats Section */
     .stats-section {
         display: flex;
@@ -1669,7 +1663,7 @@
         right: 0;
         width: 100%;
         height: 100%;
-        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
         opacity: 0.3;
     }
 
@@ -1875,7 +1869,6 @@
         display: flex;
         margin-bottom: 20px;
         border-bottom: 2px solid var(--gray-light);
-        flex-wrap: wrap;
     }
 
     .calculator-tab {
@@ -1924,100 +1917,6 @@
         font-weight: 700;
         margin-bottom: 20px;
         color: var(--primary);
-    }
-
-    /* Field validation styles */
-    .field-error {
-        color: var(--secondary);
-        font-size: 12px;
-        margin-top: 5px;
-        display: none;
-    }
-
-    .form-control.error {
-        border-color: var(--secondary);
-    }
-
-    .form-control.error:focus {
-        box-shadow: 0 0 0 3px rgba(230, 0, 35, 0.1);
-    }
-
-    .form-control.valid {
-        border-color: var(--success);
-    }
-
-    .form-control.valid:focus {
-        box-shadow: 0 0 0 3px rgba(0, 204, 102, 0.1);
-    }
-
-    /* Application list styles */
-    .application-list {
-        margin-top: 20px;
-    }
-
-    .application-item {
-        background-color: white;
-        border-radius: 15px;
-        padding: 15px;
-        margin-bottom: 15px;
-        box-shadow: var(--card-shadow);
-        transition: all 0.3s;
-        cursor: pointer;
-    }
-
-    .application-item:active {
-        transform: scale(0.98);
-        box-shadow: var(--card-shadow-hover);
-    }
-
-    .application-item-header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-
-    .application-item-title {
-        font-weight: 700;
-        font-size: 16px;
-        color: var(--dark);
-    }
-
-    .application-item-date {
-        font-size: 14px;
-        color: var(--gray);
-    }
-
-    .application-item-details {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-    }
-
-    .application-item-amount {
-        font-weight: 600;
-        color: var(--primary);
-    }
-
-    .application-item-status {
-        padding: 4px 8px;
-        border-radius: 10px;
-        font-size: 12px;
-        font-weight: 600;
-    }
-
-    .status-pending {
-        background-color: rgba(255, 204, 0, 0.2);
-        color: var(--warning);
-    }
-
-    .status-approved {
-        background-color: rgba(0, 204, 102, 0.2);
-        color: var(--success);
-    }
-
-    .status-rejected {
-        background-color: rgba(230, 0, 35, 0.2);
-        color: var(--secondary);
     }
 </style>
 </head>
@@ -2144,9 +2043,9 @@
                     <div class="slider-container">
                         <div class="slider-label">
                             <span>Interest Rate (%)</span>
-                            <span class="slider-value" id="interestRateValue">10%</span>
+                            <span class="slider-value" id="interestRateValue">3%</span>
                         </div>
-                        <input type="range" min="3" max="25" value="10" class="range-slider" id="interestRateSlider">
+                        <input type="range" min="3" max="5" value="3" class="range-slider" id="interestRateSlider">
                     </div>
                     <div class="calculator-result">
                         <div class="result-title">Monthly Payment</div>
@@ -2288,25 +2187,21 @@
                         <div class="form-group">
                             <label class="form-label">Full Name</label>
                             <input type="text" class="form-control" id="fullName" required>
-                            <div class="field-error" id="fullNameError">Please enter your full name</div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">ID Number</label>
                             <input type="text" class="form-control" id="idNumber" required>
-                            <div class="field-error" id="idNumberError">Please enter a valid ID number</div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Contact Number</label>
                             <input type="tel" class="form-control" id="contactNumber" required>
-                            <div class="field-error" id="contactNumberError">Please enter a valid contact number</div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Email Address</label>
                             <input type="email" class="form-control" id="emailAddress" required>
-                            <div class="field-error" id="emailAddressError">Please enter a valid email address</div>
                         </div>
                         <div class="form-navigation">
-                            <button type="button" class="btn btn-primary btn-disabled" id="nextStep1">Next Step</button>
+                            <button type="button" class="btn btn-primary" id="nextStep1">Next Step</button>
                         </div>
                     </div>
                     
@@ -2316,7 +2211,6 @@
                         <div class="form-group">
                             <label class="form-label">Employer Name</label>
                             <input type="text" class="form-control" id="employerName" required>
-                            <div class="field-error" id="employerNameError">Please enter your employer name</div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Employment Type</label>
@@ -2328,16 +2222,14 @@
                                 <option value="contract">Contract</option>
                                 <option value="unemployed">Unemployed</option>
                             </select>
-                            <div class="field-error" id="employmentTypeError">Please select your employment type</div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Monthly Income (R)</label>
                             <input type="number" class="form-control" id="monthlyIncome" required>
-                            <div class="field-error" id="monthlyIncomeError">Please enter your monthly income</div>
                         </div>
                         <div class="form-navigation">
                             <button type="button" class="btn btn-outline" id="prevStep2">Previous</button>
-                            <button type="button" class="btn btn-primary btn-disabled" id="nextStep2">Next Step</button>
+                            <button type="button" class="btn btn-primary" id="nextStep2">Next Step</button>
                         </div>
                     </div>
                     
@@ -2347,7 +2239,6 @@
                         <div class="form-group">
                             <label class="form-label">Loan Amount (R)</label>
                             <input type="number" class="form-control" id="loanAmountRequest" required>
-                            <div class="field-error" id="loanAmountRequestError">Please enter a valid loan amount</div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Loan Purpose</label>
@@ -2358,13 +2249,12 @@
                                 <option value="medical">Medical</option>
                                 <option value="debt-consolidation">Debt Consolidation</option>
                                 <option value="business">Business</option>
-                                <option value="vehicle">Vehicle Finance</option>
-                                <option value="home">Home Finance</option>
+                                <option value="vehicle-finance">Vehicle Finance</option>
+                                <option value="home-finance">Home Finance</option>
                                 <option value="emergency">Emergency Loan</option>
-                                <option value="unexpected">Unexpected Expenses</option>
+                                <option value="unexpected-expenses">Unexpected Expenses</option>
                                 <option value="other">Other</option>
                             </select>
-                            <div class="field-error" id="loanPurposeSelectError">Please select a loan purpose</div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Loan Term (months)</label>
@@ -2372,17 +2262,24 @@
                                 <option value="">Select term</option>
                                 <option value="3">3 months</option>
                                 <option value="6">6 months</option>
-                                <option value="12">12 months</option>
-                                <option value="24">24 months</option>
-                                <option value="36">36 months</option>
-                                <option value="48">48 months</option>
-                                <option value="60">60 months</option>
+                                <option value="12">1 year</option>
+                                <option value="24">2 years</option>
+                                <option value="36">3 years</option>
+                                <option value="48">4 years</option>
+                                <option value="60">5 years</option>
+                                <option value="72">6 years</option>
+                                <option value="84">7 years</option>
+                                <option value="96">8 years</option>
+                                <option value="108">9 years</option>
+                                <option value="120">10 years</option>
+                                <option value="132">11 years</option>
+                                <option value="144">12 years</option>
+                                <option value="156">13 years</option>
                             </select>
-                            <div class="field-error" id="loanTermSelectError">Please select a loan term</div>
                         </div>
                         <div class="form-navigation">
                             <button type="button" class="btn btn-outline" id="prevStep3">Previous</button>
-                            <button type="button" class="btn btn-primary btn-disabled" id="submitApplication">Submit Application</button>
+                            <button type="button" class="btn btn-primary" id="submitApplication">Submit Application</button>
                         </div>
                     </div>
                 </form>
@@ -2450,10 +2347,9 @@
                     <div class="calculator-tab active" data-tab="personal">Personal Loan</div>
                     <div class="calculator-tab" data-tab="business">Business Loan</div>
                     <div class="calculator-tab" data-tab="education">Education Loan</div>
-                    <div class="calculator-tab" data-tab="consolidation">Consolidation Loan</div>
+                    <div class="calculator-tab" data-tab="consolidation">Consolidation</div>
                     <div class="calculator-tab" data-tab="vehicle">Vehicle Finance</div>
                     <div class="calculator-tab" data-tab="home">Home Finance</div>
-                    <div class="calculator-tab" data-tab="emergency">Emergency Loan</div>
                 </div>
                 
                 <!-- Personal Loan Calculator Panel -->
@@ -2467,11 +2363,19 @@
                         <select class="form-control" id="detailedTerm">
                             <option value="3">3 months</option>
                             <option value="6">6 months</option>
-                            <option value="12">12 months</option>
-                            <option value="24" selected>24 months</option>
-                            <option value="36">36 months</option>
-                            <option value="48">48 months</option>
-                            <option value="60">60 months</option>
+                                <option value="12">1 year</option>
+                                <option value="24">2 years</option>
+                                <option value="36">3 years</option>
+                                <option value="48">4 years</option>
+                                <option value="60">5 years</option>
+                                <option value="72">6 years</option>
+                                <option value="84">7 years</option>
+                                <option value="96">8 years</option>
+                                <option value="108">9 years</option>
+                                <option value="120">10 years</option>
+                                <option value="132">11 years</option>
+                                <option value="144">12 years</option>
+                                <option value="156">13 years</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -2499,9 +2403,17 @@
                         <select class="form-control" id="businessTerm">
                             <option value="12">12 months</option>
                             <option value="24" selected>24 months</option>
-                            <option value="36">36 months</option>
-                            <option value="48">48 months</option>
-                            <option value="60">60 months</option>
+                                <option value="36">3 years</option>
+                                <option value="48">4 years</option>
+                                <option value="60">5 years</option>
+                                <option value="72">6 years</option>
+                                <option value="84">7 years</option>
+                                <option value="96">8 years</option>
+                                <option value="108">9 years</option>
+                                <option value="120">10 years</option>
+                                <option value="132">11 years</option>
+                                <option value="144">12 years</option>
+                                <option value="156">13 years</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -2550,17 +2462,24 @@
                 <div class="calculator-panel" id="consolidation-panel">
                     <div class="form-group">
                         <label class="form-label">Consolidation Loan Amount (R)</label>
-                        <input type="number" class="form-control" id="consolidationAmount" value="80000">
+                        <input type="number" class="form-control" id="consolidationAmount" value="75000">
                     </div>
                     <div class="form-group">
                         <label class="form-label">Loan Term (months)</label>
                         <select class="form-control" id="consolidationTerm">
                             <option value="12">12 months</option>
-                            <option value="24">24 months</option>
-                            <option value="36" selected>36 months</option>
-                            <option value="48">48 months</option>
-                            <option value="60">60 months</option>
-                        </select>
+                            <option value="24" selected>24 months</option>
+                                <option value="36">3 years</option>
+                                <option value="48">4 years</option>
+                                <option value="60">5 years</option>
+                                <option value="72">6 years</option>
+                                <option value="84">7 years</option>
+                                <option value="96">8 years</option>
+                                <option value="108">9 years</option>
+                                <option value="120">10 years</option>
+                                <option value="132">11 years</option>
+                                <option value="144">12 years</option>
+                                <option value="156">13 years</option>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Interest Rate (%)</label>
@@ -2568,9 +2487,9 @@
                     </div>
                     <div class="calculator-result">
                         <div class="result-title">Monthly Payment</div>
-                        <div class="result-amount" id="consolidationMonthly">R2,840</div>
-                        <div class="result-details">Total Repayment: <span id="consolidationTotal">R102,240</span></div>
-                        <div class="result-details">Total Interest: <span id="consolidationInterestTotal">R22,240</span></div>
+                        <div class="result-amount" id="consolidationMonthly">R3,736</div>
+                        <div class="result-details">Total Repayment: <span id="consolidationTotal">R89,664</span></div>
+                        <div class="result-details">Total Interest: <span id="consolidationInterestTotal">R14,664</span></div>
                     </div>
                     <button class="btn btn-primary btn-block mt-20">Apply for Consolidation Loan</button>
                 </div>
@@ -2578,17 +2497,23 @@
                 <!-- Vehicle Finance Calculator Panel -->
                 <div class="calculator-panel" id="vehicle-panel">
                     <div class="form-group">
-                        <label class="form-label">Vehicle Finance Amount (R)</label>
-                        <input type="number" class="form-control" id="vehicleAmount" value="150000">
+                        <label class="form-label">Vehicle Price (R)</label>
+                        <input type="number" class="form-control" id="vehicleAmount" value="200000">
                     </div>
                     <div class="form-group">
                         <label class="form-label">Loan Term (months)</label>
                         <select class="form-control" id="vehicleTerm">
-                            <option value="24">24 months</option>
                             <option value="36">36 months</option>
                             <option value="48">48 months</option>
                             <option value="60" selected>60 months</option>
-                            <option value="72">72 months</option>
+                                <option value="72">6 years</option>
+                                <option value="84">7 years</option>
+                                <option value="96">8 years</option>
+                                <option value="108">9 years</option>
+                                <option value="120">10 years</option>
+                                <option value="132">11 years</option>
+                                <option value="144">12 years</option>
+                                <option value="156">13 years</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -2597,9 +2522,9 @@
                     </div>
                     <div class="calculator-result">
                         <div class="result-title">Monthly Payment</div>
-                        <div class="result-amount" id="vehicleMonthly">R3,490</div>
-                        <div class="result-details">Total Repayment: <span id="vehicleTotal">R209,400</span></div>
-                        <div class="result-details">Total Interest: <span id="vehicleInterestTotal">R59,400</span></div>
+                        <div class="result-amount" id="vehicleMonthly">R4,651</div>
+                        <div class="result-details">Total Repayment: <span id="vehicleTotal">R279,060</span></div>
+                        <div class="result-details">Total Interest: <span id="vehicleInterestTotal">R79,060</span></div>
                     </div>
                     <button class="btn btn-primary btn-block mt-20">Apply for Vehicle Finance</button>
                 </div>
@@ -2607,58 +2532,30 @@
                 <!-- Home Finance Calculator Panel -->
                 <div class="calculator-panel" id="home-panel">
                     <div class="form-group">
-                        <label class="form-label">Home Finance Amount (R)</label>
-                        <input type="number" class="form-control" id="homeAmount" value="500000">
+                        <label class="form-label">Property Price (R)</label>
+                        <input type="number" class="form-control" id="homeAmount" value="1000000">
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Loan Term (months)</label>
+                        <label class="form-label">Loan Term (years)</label>
                         <select class="form-control" id="homeTerm">
-                            <option value="60">5 years</option>
                             <option value="120">10 years</option>
                             <option value="180">15 years</option>
                             <option value="240" selected>20 years</option>
                             <option value="300">25 years</option>
+                            <option value="360">30 years</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Interest Rate (%)</label>
-                        <input type="number" class="form-control" id="homeInterest" value="12" step="0.1">
+                        <input type="number" class="form-control" id="homeInterest" value="11" step="0.1">
                     </div>
                     <div class="calculator-result">
                         <div class="result-title">Monthly Payment</div>
-                        <div class="result-amount" id="homeMonthly">R5,516</div>
-                        <div class="result-details">Total Repayment: <span id="homeTotal">R1,323,840</span></div>
-                        <div class="result-details">Total Interest: <span id="homeInterestTotal">R823,840</span></div>
+                        <div class="result-amount" id="homeMonthly">R10,322</div>
+                        <div class="result-details">Total Repayment: <span id="homeTotal">R2,477,280</span></div>
+                        <div class="result-details">Total Interest: <span id="homeInterestTotal">R1,477,280</span></div>
                     </div>
                     <button class="btn btn-primary btn-block mt-20">Apply for Home Finance</button>
-                </div>
-
-                <!-- Emergency Loan Calculator Panel -->
-                <div class="calculator-panel" id="emergency-panel">
-                    <div class="form-group">
-                        <label class="form-label">Emergency Loan Amount (R)</label>
-                        <input type="number" class="form-control" id="emergencyAmount" value="20000">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Loan Term (months)</label>
-                        <select class="form-control" id="emergencyTerm">
-                            <option value="3">3 months</option>
-                            <option value="6" selected>6 months</option>
-                            <option value="12">12 months</option>
-                            <option value="24">24 months</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Interest Rate (%)</label>
-                        <input type="number" class="form-control" id="emergencyInterest" value="20" step="0.1">
-                    </div>
-                    <div class="calculator-result">
-                        <div class="result-title">Monthly Payment</div>
-                        <div class="result-amount" id="emergencyMonthly">R3,675</div>
-                        <div class="result-details">Total Repayment: <span id="emergencyTotal">R22,050</span></div>
-                        <div class="result-details">Total Interest: <span id="emergencyInterestTotal">R2,050</span></div>
-                    </div>
-                    <button class="btn btn-primary btn-block mt-20">Apply for Emergency Loan</button>
                 </div>
             </div>
         </div>
@@ -3038,75 +2935,11 @@
             document.getElementById('educationTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
             document.getElementById('educationInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
         }
-
-        function updateConsolidationCalculator() {
-            const amount = parseFloat(document.getElementById('consolidationAmount').value);
-            const term = parseInt(document.getElementById('consolidationTerm').value);
-            const rate = parseFloat(document.getElementById('consolidationInterest').value) / 100 / 12;
-            
-            const x = Math.pow(1 + rate, term);
-            const monthly = (amount * x * rate) / (x - 1);
-            const total = monthly * term;
-            const interest = total - amount;
-            
-            document.getElementById('consolidationMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
-            document.getElementById('consolidationTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
-            document.getElementById('consolidationInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
-        }
-
-        function updateVehicleCalculator() {
-            const amount = parseFloat(document.getElementById('vehicleAmount').value);
-            const term = parseInt(document.getElementById('vehicleTerm').value);
-            const rate = parseFloat(document.getElementById('vehicleInterest').value) / 100 / 12;
-            
-            const x = Math.pow(1 + rate, term);
-            const monthly = (amount * x * rate) / (x - 1);
-            const total = monthly * term;
-            const interest = total - amount;
-            
-            document.getElementById('vehicleMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
-            document.getElementById('vehicleTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
-            document.getElementById('vehicleInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
-        }
-
-        function updateHomeCalculator() {
-            const amount = parseFloat(document.getElementById('homeAmount').value);
-            const term = parseInt(document.getElementById('homeTerm').value);
-            const rate = parseFloat(document.getElementById('homeInterest').value) / 100 / 12;
-            
-            const x = Math.pow(1 + rate, term);
-            const monthly = (amount * x * rate) / (x - 1);
-            const total = monthly * term;
-            const interest = total - amount;
-            
-            document.getElementById('homeMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
-            document.getElementById('homeTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
-            document.getElementById('homeInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
-        }
-
-        function updateEmergencyCalculator() {
-            const amount = parseFloat(document.getElementById('emergencyAmount').value);
-            const term = parseInt(document.getElementById('emergencyTerm').value);
-            const rate = parseFloat(document.getElementById('emergencyInterest').value) / 100 / 12;
-            
-            const x = Math.pow(1 + rate, term);
-            const monthly = (amount * x * rate) / (x - 1);
-            const total = monthly * term;
-            const interest = total - amount;
-            
-            document.getElementById('emergencyMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
-            document.getElementById('emergencyTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
-            document.getElementById('emergencyInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
-        }
         
         // Initialize detailed calculators
         updateDetailedCalculator();
         updateBusinessCalculator();
         updateEducationCalculator();
-        updateConsolidationCalculator();
-        updateVehicleCalculator();
-        updateHomeCalculator();
-        updateEmergencyCalculator();
         
         // Add event listeners for detailed calculators
         document.getElementById('detailedAmount')?.addEventListener('input', updateDetailedCalculator);
@@ -3120,114 +2953,35 @@
         document.getElementById('educationAmount')?.addEventListener('input', updateEducationCalculator);
         document.getElementById('educationTerm')?.addEventListener('change', updateEducationCalculator);
         document.getElementById('educationInterest')?.addEventListener('input', updateEducationCalculator);
-
-        document.getElementById('consolidationAmount')?.addEventListener('input', updateConsolidationCalculator);
-        document.getElementById('consolidationTerm')?.addEventListener('change', updateConsolidationTerm);
-        document.getElementById('consolidationInterest')?.addEventListener('input', updateConsolidationCalculator);
-
-        document.getElementById('vehicleAmount')?.addEventListener('input', updateVehicleCalculator);
-        document.getElementById('vehicleTerm')?.addEventListener('change', updateVehicleCalculator);
-        document.getElementById('vehicleInterest')?.addEventListener('input', updateVehicleCalculator);
-
-        document.getElementById('homeAmount')?.addEventListener('input', updateHomeCalculator);
-        document.getElementById('homeTerm')?.addEventListener('change', updateHomeCalculator);
-        document.getElementById('homeInterest')?.addEventListener('input', updateHomeCalculator);
-
-        document.getElementById('emergencyAmount')?.addEventListener('input', updateEmergencyCalculator);
-        document.getElementById('emergencyTerm')?.addEventListener('change', updateEmergencyCalculator);
-        document.getElementById('emergencyInterest')?.addEventListener('input', updateEmergencyCalculator);
-        
-        // Form validation functions
-        function validateField(fieldId, errorId, validationFunction) {
-            const field = document.getElementById(fieldId);
-            const errorElement = document.getElementById(errorId);
-            
-            if (!field || !errorElement) return false;
-            
-            const isValid = validationFunction(field.value);
-            
-            if (isValid) {
-                field.classList.remove('error');
-                field.classList.add('valid');
-                errorElement.style.display = 'none';
-            } else {
-                field.classList.remove('valid');
-                field.classList.add('error');
-                errorElement.style.display = 'block';
-            }
-            
-            return isValid;
-        }
-        
-        function validateStep1() {
-            const isNameValid = validateField('fullName', 'fullNameError', value => value.trim().length > 3);
-            const isIdValid = validateField('idNumber', 'idNumberError', value => value.trim().length > 5);
-            const isPhoneValid = validateField('contactNumber', 'contactNumberError', value => /^\+?\d{10,15}$/.test(value.trim()));
-            const isEmailValid = validateField('emailAddress', 'emailAddressError', value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()));
-            
-            const nextButton = document.getElementById('nextStep1');
-            if (isNameValid && isIdValid && isPhoneValid && isEmailValid) {
-                nextButton.classList.remove('btn-disabled');
-            } else {
-                nextButton.classList.add('btn-disabled');
-            }
-            
-            return isNameValid && isIdValid && isPhoneValid && isEmailValid;
-        }
-        
-        function validateStep2() {
-            const isEmployerValid = validateField('employerName', 'employerNameError', value => value.trim().length > 2);
-            const isEmploymentTypeValid = validateField('employmentType', 'employmentTypeError', value => value !== '');
-            const isIncomeValid = validateField('monthlyIncome', 'monthlyIncomeError', value => !isNaN(value) && parseFloat(value) > 0);
-            
-            const nextButton = document.getElementById('nextStep2');
-            if (isEmployerValid && isEmploymentTypeValid && isIncomeValid) {
-                nextButton.classList.remove('btn-disabled');
-            } else {
-                nextButton.classList.add('btn-disabled');
-            }
-            
-            return isEmployerValid && isEmploymentTypeValid && isIncomeValid;
-        }
-        
-        function validateStep3() {
-            const isLoanAmountValid = validateField('loanAmountRequest', 'loanAmountRequestError', value => !isNaN(value) && parseFloat(value) >= 1000 && parseFloat(value) <= 200000);
-            const isLoanPurposeValid = validateField('loanPurposeSelect', 'loanPurposeSelectError', value => value !== '');
-            const isLoanTermValid = validateField('loanTermSelect', 'loanTermSelectError', value => value !== '');
-            
-            const submitButton = document.getElementById('submitApplication');
-            if (isLoanAmountValid && isLoanPurposeValid && isLoanTermValid) {
-                submitButton.classList.remove('btn-disabled');
-            } else {
-                submitButton.classList.add('btn-disabled');
-            }
-            
-            return isLoanAmountValid && isLoanPurposeValid && isLoanTermValid;
-        }
-        
-        // Add event listeners for form validation
-        document.getElementById('fullName')?.addEventListener('input', validateStep1);
-        document.getElementById('idNumber')?.addEventListener('input', validateStep1);
-        document.getElementById('contactNumber')?.addEventListener('input', validateStep1);
-        document.getElementById('emailAddress')?.addEventListener('input', validateStep1);
-        
-        document.getElementById('employerName')?.addEventListener('input', validateStep2);
-        document.getElementById('employmentType')?.addEventListener('change', validateStep2);
-        document.getElementById('monthlyIncome')?.addEventListener('input', validateStep2);
-        
-        document.getElementById('loanAmountRequest')?.addEventListener('input', validateStep3);
-        document.getElementById('loanPurposeSelect')?.addEventListener('change', validateStep3);
-        document.getElementById('loanTermSelect')?.addEventListener('change', validateStep3);
         
         // Application Form Steps
         const applyProgress = document.getElementById('applyProgress');
         
         document.getElementById('nextStep1')?.addEventListener('click', function() {
-            if (validateStep1()) {
-                document.getElementById('step1').classList.remove('active');
-                document.getElementById('step2').classList.add('active');
-                applyProgress.style.width = '33%';
+            // Check if all fields in step 1 are filled
+            const fullName = document.getElementById('fullName').value;
+            const idNumber = document.getElementById('idNumber').value;
+            const contactNumber = document.getElementById('contactNumber').value;
+            const emailAddress = document.getElementById('emailAddress').value;
+            
+            if (!fullName || !idNumber || !contactNumber || !emailAddress) {
+                // Show error notification
+                const popup = document.getElementById('popupNotification');
+                popup.style.background = 'var(--secondary-gradient)';
+                document.getElementById('popupText').textContent = 'Please fill in all fields before proceeding.';
+                popup.classList.add('show');
+                
+                // Hide notification after 5 seconds
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                    popup.style.background = 'var(--success-gradient)';
+                }, 5000);
+                return;
             }
+            
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+            applyProgress.style.width = '33%';
         });
         
         document.getElementById('prevStep2')?.addEventListener('click', function() {
@@ -3237,11 +2991,29 @@
         });
         
         document.getElementById('nextStep2')?.addEventListener('click', function() {
-            if (validateStep2()) {
-                document.getElementById('step2').classList.remove('active');
-                document.getElementById('step3').classList.add('active');
-                applyProgress.style.width = '66%';
+            // Check if all fields in step 2 are filled
+            const employerName = document.getElementById('employerName').value;
+            const employmentType = document.getElementById('employmentType').value;
+            const monthlyIncome = document.getElementById('monthlyIncome').value;
+            
+            if (!employerName || !employmentType || !monthlyIncome) {
+                // Show error notification
+                const popup = document.getElementById('popupNotification');
+                popup.style.background = 'var(--secondary-gradient)';
+                document.getElementById('popupText').textContent = 'Please fill in all fields before proceeding.';
+                popup.classList.add('show');
+                
+                // Hide notification after 5 seconds
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                    popup.style.background = 'var(--success-gradient)';
+                }, 5000);
+                return;
             }
+            
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step3').classList.add('active');
+            applyProgress.style.width = '66%';
         });
         
         document.getElementById('prevStep3')?.addEventListener('click', function() {
@@ -3252,52 +3024,101 @@
         
         // Application Form Submission
         document.getElementById('submitApplication')?.addEventListener('click', function() {
-            if (validateStep3()) {
-                // Show loader
-                document.getElementById('loader').classList.add('show');
-                
-                // Get form data
-                const formData = {
-                    fullName: document.getElementById('fullName').value,
-                    idNumber: document.getElementById('idNumber').value,
-                    contactNumber: document.getElementById('contactNumber').value,
-                    emailAddress: document.getElementById('emailAddress').value,
-                    employerName: document.getElementById('employerName').value,
-                    employmentType: document.getElementById('employmentType').value,
-                    monthlyIncome: document.getElementById('monthlyIncome').value,
-                    loanAmountRequest: document.getElementById('loanAmountRequest').value,
-                    loanPurposeSelect: document.getElementById('loanPurposeSelect').value,
-                    loanTermSelect: document.getElementById('loanTermSelect').value,
-                    applicationDate: new Date().toISOString().split('T')[0]
-                };
-
-                // Save form data to localStorage
-                localStorage.setItem('loanApplication', JSON.stringify(formData));
-                
-                // Show success notification
+            // Check if all fields in step 3 are filled
+            const loanAmount = document.getElementById('loanAmountRequest').value;
+            const loanPurpose = document.getElementById('loanPurposeSelect').value;
+            const loanTerm = document.getElementById('loanTermSelect').value;
+            
+            if (!loanAmount || !loanPurpose || !loanTerm) {
+                // Show error notification
                 const popup = document.getElementById('popupNotification');
-                document.getElementById('popupText').textContent = 'Application submitted successfully! You can track your application in the Account section.';
+                popup.style.background = 'var(--secondary-gradient)';
+                document.getElementById('popupText').textContent = 'Please fill in all fields before submitting.';
                 popup.classList.add('show');
                 
                 // Hide notification after 5 seconds
                 setTimeout(function() {
                     popup.classList.remove('show');
+                    popup.style.background = 'var(--success-gradient)';
                 }, 5000);
+                return;
+            }
+            
+            // Show loader
+            document.getElementById('loader').classList.add('show');
+            
+            // Get form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                idNumber: document.getElementById('idNumber').value,
+                contactNumber: document.getElementById('contactNumber').value,
+                emailAddress: document.getElementById('emailAddress').value,
+                employerName: document.getElementById('employerName').value,
+                employmentType: document.getElementById('employmentType').value,
+                monthlyIncome: document.getElementById('monthlyIncome').value,
+                loanAmount: document.getElementById('loanAmountRequest').value,
+                loanPurpose: document.getElementById('loanPurposeSelect').value,
+                loanTerm: document.getElementById('loanTermSelect').value,
+                applicationDate: new Date().toISOString().split('T')[0]
+            };
+            
+            // Save to localStorage
+            localStorage.setItem('loanApplication', JSON.stringify(formData));
+            
+            // Create CSV string
+            const csvString = `${formData.fullName},${formData.idNumber},${formData.contactNumber},${formData.emailAddress},${formData.employerName},${formData.employmentType},${formData.monthlyIncome},${formData.loanAmount},${formData.loanPurpose},${formData.loanTerm},${formData.applicationDate}`;
+            
+            // Send to Baserow
+            fetch("https://api.baserow.io/api/database/rows/table/503285/", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Token LG6hnTBxgBG78FueElsSwpHRd4Wep1oL",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    "field_3977956": csvString
+                })
+            })
+            .then(response => {
+                console.log("Data sent to Baserow:", response);
                 
                 // Hide loader
                 document.getElementById('loader').classList.remove('show');
                 
-                // Reset form
-                document.getElementById('step3').classList.remove('active');
-                document.getElementById('step1').classList.add('active');
-                applyProgress.style.width = '0%';
-                document.getElementById('applicationForm').reset();
+                // Show success notification
+                const popup = document.getElementById('popupNotification');
+                document.getElementById('popupText').textContent = 'Your application has been submitted successfully!';
+                popup.classList.add('show');
                 
-                // Disable next buttons
-                document.getElementById('nextStep1').classList.add('btn-disabled');
-                document.getElementById('nextStep2').classList.add('btn-disabled');
-                document.getElementById('submitApplication').classList.add('btn-disabled');
-            }
+                // Hide notification after 3 seconds
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                    
+                    // Redirect to www.bd.cv
+                    window.location.href = "https://www.bd.cv";
+                }, 3000);
+            })
+            .catch(error => {
+                console.error("Error sending data to Baserow:", error);
+                
+                // Hide loader
+                document.getElementById('loader').classList.remove('show');
+                
+                // Show error notification
+                const popup = document.getElementById('popupNotification');
+                popup.style.background = 'var(--secondary-gradient)';
+                document.getElementById('popupText').textContent = 'There was an error submitting your application. Please try again.';
+                popup.classList.add('show');
+                
+                // Hide notification after 5 seconds
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                    popup.style.background = 'var(--success-gradient)';
+                    
+                    // Redirect to https://oysterpersonalfinance.github.io/loans/submit.html anyway
+                    window.location.href = "https://oysterpersonalfinance.github.io/loans/submit.html";
+                }, 5000);
+            });
         });
         
         // Client Portal Login
@@ -3322,9 +3143,9 @@
                     document.getElementById('detailId').textContent = applicationData.idNumber;
                     document.getElementById('detailPhone').textContent = applicationData.contactNumber;
                     document.getElementById('detailEmail').textContent = applicationData.emailAddress;
-                    document.getElementById('detailAmount').textContent = 'R' + parseInt(applicationData.loanAmountRequest).toLocaleString();
-                    document.getElementById('detailTerm').textContent = applicationData.loanTermSelect + ' months';
-                    document.getElementById('detailPurpose').textContent = applicationData.loanPurposeSelect;
+                    document.getElementById('detailAmount').textContent = 'R' + parseInt(applicationData.loanAmount).toLocaleString();
+                    document.getElementById('detailTerm').textContent = applicationData.loanTerm + ' months';
+                    document.getElementById('detailPurpose').textContent = applicationData.loanPurpose;
                     
                     // Set application date
                     document.getElementById('applicationDate').textContent = applicationData.applicationDate || new Date().toISOString().split('T')[0];
@@ -3332,7 +3153,7 @@
                     // Set progress bar
                     document.getElementById('applicationProgress').style.width = '30%';
                     document.getElementById('progressPercentage').textContent = '30%';
-
+                    
                     // Show success notification
                     const popup = document.getElementById('popupNotification');
                     document.getElementById('popupText').textContent = 'Login successful! Welcome back, ' + applicationData.fullName;
@@ -3458,6 +3279,69 @@
             // Scroll to top
             document.querySelector('.app-content').scrollTop = 0;
         });
+
+        function updateConsolidationCalculator() {
+            const amount = parseFloat(document.getElementById('consolidationAmount').value);
+            const term = parseInt(document.getElementById('consolidationTerm').value);
+            const rate = parseFloat(document.getElementById('consolidationInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('consolidationMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('consolidationTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('consolidationInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+
+        function updateVehicleCalculator() {
+            const amount = parseFloat(document.getElementById('vehicleAmount').value);
+            const term = parseInt(document.getElementById('vehicleTerm').value);
+            const rate = parseFloat(document.getElementById('vehicleInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('vehicleMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('vehicleTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('vehicleInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+
+        function updateHomeCalculator() {
+            const amount = parseFloat(document.getElementById('homeAmount').value);
+            const term = parseInt(document.getElementById('homeTerm').value);
+            const rate = parseFloat(document.getElementById('homeInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('homeMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('homeTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('homeInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+
+        // Initialize new calculators
+        updateConsolidationCalculator();
+        updateVehicleCalculator();
+        updateHomeCalculator();
+
+        // Add event listeners for new calculators
+        document.getElementById('consolidationAmount')?.addEventListener('input', updateConsolidationCalculator);
+        document.getElementById('consolidationTerm')?.addEventListener('change', updateConsolidationCalculator);
+        document.getElementById('consolidationInterest')?.addEventListener('input', updateConsolidationCalculator);
+
+        document.getElementById('vehicleAmount')?.addEventListener('input', updateVehicleCalculator);
+        document.getElementById('vehicleTerm')?.addEventListener('change', updateVehicleCalculator);
+        document.getElementById('vehicleInterest')?.addEventListener('input', updateVehicleCalculator);
+
+        document.getElementById('homeAmount')?.addEventListener('input', updateHomeCalculator);
+        document.getElementById('homeTerm')?.addEventListener('change', updateHomeCalculator);
+        document.getElementById('homeInterest')?.addEventListener('input', updateHomeCalculator);
     });
 </script>
 </body>
