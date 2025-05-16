@@ -762,104 +762,104 @@
         line-height: 1.5;
     }
     
-            /* Loan Calculator */
-        .calculator-container {
-            margin: 0 20px 30px;
-        }
+    /* Loan Calculator */
+    .calculator-container {
+        margin: 0 20px 30px;
+    }
 
-        .calculator-card {
-            background-color: white;
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: var(--card-shadow);
-        }
+    .calculator-card {
+        background-color: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: var(--card-shadow);
+    }
 
-        .calculator-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--primary);
-            text-align: center;
-        }
+    .calculator-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--primary);
+        text-align: center;
+    }
 
-        .slider-container {
-            margin-bottom: 25px;
-        }
+    .slider-container {
+        margin-bottom: 25px;
+    }
 
-        .slider-label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
+    .slider-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
 
-        .slider-label span {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--gray-dark);
-        }
+    .slider-label span {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--gray-dark);
+    }
 
-        .slider-value {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--primary);
-        }
+    .slider-value {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--primary);
+    }
 
-        .range-slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 8px;
-            border-radius: 4px;
-            background: var(--gray-light);
-            outline: none;
-        }
+    .range-slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 8px;
+        border-radius: 4px;
+        background: var(--gray-light);
+        outline: none;
+    }
 
-        .range-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--primary-gradient);
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+    .range-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: var(--primary-gradient);
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 
-        .range-slider::-moz-range-thumb {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--primary);
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+    .range-slider::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: var(--primary);
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 
-        .calculator-result {
-            background: var(--primary-gradient);
-            color: white;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-        }
+    .calculator-result {
+        background: var(--primary-gradient);
+        color: white;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
 
-        .result-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            opacity: 0.9;
-        }
+    .result-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        opacity: 0.9;
+    }
 
-        .result-amount {
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
+    .result-amount {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
 
-        .result-details {
-            font-size: 14px;
-            opacity: 0.9;
-        }
+    .result-details {
+        font-size: 14px;
+        opacity: 0.9;
+    }
 
     /* Button Styles */
     .btn {
@@ -948,6 +948,12 @@
 
     .btn-icon {
         margin-right: 10px;
+    }
+
+    .btn-disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        pointer-events: none;
     }
 
     /* Stats Section */
@@ -1805,6 +1811,214 @@
         75% { transform: translate(-25px, 25px) rotate(270deg); }
         100% { transform: translate(0, 0) rotate(360deg); }
     }
+
+    /* NEW STYLES FOR ADDED FUNCTIONALITY */
+    
+    /* Application Tracking Styles */
+    .application-status {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .status-indicator {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .status-pending {
+        background-color: var(--warning);
+    }
+
+    .status-approved {
+        background-color: var(--success);
+    }
+
+    .status-rejected {
+        background-color: var(--secondary);
+    }
+
+    .progress-tracker {
+        height: 10px;
+        background-color: var(--gray-light);
+        border-radius: 5px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .progress-fill {
+        height: 100%;
+        background-color: var(--primary);
+        width: 0%;
+        transition: width 0.5s ease;
+    }
+
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--gray-light);
+    }
+
+    .detail-row:last-child {
+        border-bottom: none;
+    }
+
+    /* Detailed Calculator Styles */
+    .detailed-calculator {
+        margin-top: 30px;
+    }
+
+    .calculator-tabs {
+        display: flex;
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--gray-light);
+        flex-wrap: wrap;
+    }
+
+    .calculator-tab {
+        padding: 10px 15px;
+        font-weight: 600;
+        color: var(--gray);
+        cursor: pointer;
+        position: relative;
+    }
+
+    .calculator-tab.active {
+        color: var(--primary);
+    }
+
+    .calculator-tab.active::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--primary-gradient);
+    }
+
+    .calculator-panel {
+        display: none;
+    }
+
+    .calculator-panel.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    /* Login Form Styles */
+    .login-form {
+        background-color: white;
+        border-radius: 20px;
+        padding: 25px;
+        margin: 20px 0;
+        box-shadow: var(--card-shadow);
+    }
+
+    .login-title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--primary);
+    }
+
+    /* Field validation styles */
+    .field-error {
+        color: var(--secondary);
+        font-size: 12px;
+        margin-top: 5px;
+        display: none;
+    }
+
+    .form-control.error {
+        border-color: var(--secondary);
+    }
+
+    .form-control.error:focus {
+        box-shadow: 0 0 0 3px rgba(230, 0, 35, 0.1);
+    }
+
+    .form-control.valid {
+        border-color: var(--success);
+    }
+
+    .form-control.valid:focus {
+        box-shadow: 0 0 0 3px rgba(0, 204, 102, 0.1);
+    }
+
+    /* Application list styles */
+    .application-list {
+        margin-top: 20px;
+    }
+
+    .application-item {
+        background-color: white;
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .application-item:active {
+        transform: scale(0.98);
+        box-shadow: var(--card-shadow-hover);
+    }
+
+    .application-item-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .application-item-title {
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--dark);
+    }
+
+    .application-item-date {
+        font-size: 14px;
+        color: var(--gray);
+    }
+
+    .application-item-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    .application-item-amount {
+        font-weight: 600;
+        color: var(--primary);
+    }
+
+    .application-item-status {
+        padding: 4px 8px;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .status-pending {
+        background-color: rgba(255, 204, 0, 0.2);
+        color: var(--warning);
+    }
+
+    .status-approved {
+        background-color: rgba(0, 204, 102, 0.2);
+        color: var(--success);
+    }
+
+    .status-rejected {
+        background-color: rgba(230, 0, 35, 0.2);
+        color: var(--secondary);
+    }
 </style>
 </head>
 <body>
@@ -1897,6 +2111,10 @@
                             <option>Business Loan</option>
                             <option>Medical Loan</option>
                             <option>Consolidation Loan</option>
+                            <option>Vehicle Finance</option>
+                            <option>Home Finance</option>
+                            <option>Emergency Loan</option>
+                            <option>Unexpected Expenses</option>
                         </select>
                     </div>
                     <button class="btn btn-secondary btn-block" id="submitToWhatsapp">
@@ -1904,100 +2122,43 @@
                     </button>
                 </div>
             </div>
-<!-- Loan Calculator Section -->
-                <div class="calculator-container">
-                    <div class="calculator-card">
-                        <div class="calculator-title">Loan Calculator</div>
-                        <div class="slider-container">
-                            <div class="slider-label">
-                                <span>Loan Amount</span>
-                                <span class="slider-value" id="loanAmountValue">R50,000</span>
-                            </div>
-                            <input type="range" min="1000" max="500000" value="50000" class="range-slider" id="loanAmountSlider">
-                        </div>
-                        <div class="slider-container">
-                            <div class="slider-label">
-                                <span>Loan Term (months)</span>
-                                <span class="slider-value" id="loanTermValue">24</span>
-                            </div>
-                            <input type="range" min="3" max="160" value="24" class="range-slider" id="loanTermSlider">
-                        </div>
-                        <div class="slider-container">
-                            <div class="slider-label">
-                                <span>Interest Rate (%)</span>
-                                <span class="slider-value" id="interestRateValue">10%</span>
-                            </div>
-                            <input type="range" min="3" max="5" value="3" class="range-slider" id="interestRateSlider">
-                        </div>
-                        <div class="calculator-result">
-                            <div class="result-title">Monthly Payment</div>
-                            <div class="result-amount" id="monthlyPayment">R2,307</div>
-                            <div class="result-details">Total Repayment: <span id="totalRepayment">R55,368</span></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="card-title">Why Choose Us?</div>
-                    <div class="why-item">
-                        <div class="why-icon red">
-                            <i class="fas fa-bolt"></i>
+            <!-- Quick Loan Calculator Section -->
+            <div class="calculator-container">
+                <div class="calculator-card">
+                    <div class="calculator-title">Quick Loan Calculator</div>
+                    <div class="slider-container">
+                        <div class="slider-label">
+                            <span>Loan Amount</span>
+                            <span class="slider-value" id="loanAmountValue">R50,000</span>
                         </div>
-                        <div class="why-content">
-                            <h3>Money in 1 Hour!</h3>
-                            <p>Fast loans with quick approval. Get the financial support you need within an hour!</p>
-                        </div>
+                        <input type="range" min="1000" max="500000" value="50000" class="range-slider" id="loanAmountSlider">
                     </div>
-                    <div class="why-item">
-                        <div class="why-icon blue">
-                            <i class="fas fa-headset"></i>
+                    <div class="slider-container">
+                        <div class="slider-label">
+                            <span>Loan Term (months)</span>
+                            <span class="slider-value" id="loanTermValue">24</span>
                         </div>
-                        <div class="why-content">
-                            <h3>24/7 Support</h3>
-                            <p>Our dedicated support team is available via phone, chat, or email to assist you at any time.</p>
-                        </div>
+                        <input type="range" min="3" max="160" value="24" class="range-slider" id="loanTermSlider">
                     </div>
-                    <div class="why-item">
-                        <div class="why-icon green">
-                            <i class="fas fa-gift"></i>
+                    <div class="slider-container">
+                        <div class="slider-label">
+                            <span>Interest Rate (%)</span>
+                            <span class="slider-value" id="interestRateValue">10%</span>
                         </div>
-                        <div class="why-content">
-                            <h3>Earn Rewards</h3>
-                            <p>Every smart money move earns you points. Redeem for cash, loan payments, and more.</p>
-                        </div>
+                        <input type="range" min="3" max="25" value="10" class="range-slider" id="interestRateSlider">
                     </div>
-                    <button class="btn btn-primary btn-block mt-20">QUICK LOANS!</button>
+                    <div class="calculator-result">
+                        <div class="result-title">Monthly Payment</div>
+                        <div class="result-amount" id="monthlyPayment">R2,307</div>
+                        <div class="result-details">Total Repayment: <span id="totalRepayment">R55,368</span></div>
+                        <div class="result-details">Total Interest: <span id="totalInterest">R5,368</span></div>
+                    </div>
                 </div>
-                
-            <div class="stats-section">
-                <div class="stat-box">
-                    <h3 id="paidOutCounter">0</h3>
-                    <p>💸 Paid Out in Loans</p>
-                </div>
-                <div class="stat-box">
-                    <h3 id="approvedCounter">0</h3>
-                    <p>✅ Loans Approved</p>
-                </div>
-                <div class="stat-box">
-                    <h3 id="onlineCounter">0</h3>
-                    <p>👥 Active Users Online</p>
-                </div>
-            </div>
-
-            <div class="promo-card">
-                <div class="promo-content">
-                    <h3 class="promo-title">Special Offer!</h3>
-                    <p class="promo-text">Apply now and get reduced interest rates for the first 3 months!</p>
-                    <button class="promo-button">Learn More</button>
-                </div>
-                <div class="promo-image">
-                    <img src="img/screenshot-2025-03-19-10-04-04-removebg-preview (1).png" alt="Special offer">
-                </div>
-                <div class="promo-pattern"></div>
             </div>
 
             <div class="card">
-                <div class="card-title with-line">Why Choose Us?</div>
+                <div class="card-title">Why Choose Us?</div>
                 <div class="why-item">
                     <div class="why-icon red">
                         <i class="fas fa-bolt"></i>
@@ -2025,7 +2186,34 @@
                         <p>Every smart money move earns you points. Redeem for cash, loan payments, and more.</p>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-block mt-20">EASY FAST LOANS!</button>
+                <button class="btn btn-primary btn-block mt-20">QUICK LOANS!</button>
+            </div>
+                
+            <div class="stats-section">
+                <div class="stat-box">
+                    <h3 id="paidOutCounter">0</h3>
+                    <p>💸 Paid Out in Loans</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="approvedCounter">0</h3>
+                    <p>✅ Loans Approved</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="onlineCounter">0</h3>
+                    <p>👥 Active Users Online</p>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-content">
+                    <h3 class="promo-title">Special Offer!</h3>
+                    <p class="promo-text">Apply now and get reduced interest rates for the first 3 months!</p>
+                    <button class="promo-button">Learn More</button>
+                </div>
+                <div class="promo-image">
+                    <img src="img/screenshot-2025-03-19-10-04-04-removebg-preview (1).png" alt="Special offer">
+                </div>
+                <div class="promo-pattern"></div>
             </div>
 
             <div class="testimonial-slider">
@@ -2064,48 +2252,6 @@
                     <div class="slider-dot"></div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-title with-line">Get a personal loan from just 3% Interest rate</div>
-                <p>We're a Top South Africa's specialist credit provider. It's all we do. We work with you to find the best solution to your personal, business and home loan needs.</p>
-                <p class="mt-20">OYSTER PERSONAL FINANCE (PTY) LTD is flexible, approachable and service oriented. We've pioneered a new way of providing loans by linking you directly to the money markets and passing the savings on to you.</p>
-                <p class="mt-20">
-                    <strong>FSP No:</strong> 50801<br>
-                    <strong>NCR Registration No:</strong> NCRCP11356<br>
-                    <strong>Legal Registration No:</strong> 2018/317490/07
-                </p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon-large">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3 class="feature-title">Loan Calculator</h3>
-                    <p class="feature-text">Calculate your repayments easily</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-large">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3 class="feature-title">Payment Options</h3>
-                    <p class="feature-text">Multiple payment methods</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-large">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="feature-title">Refer Friends</h3>
-                    <p class="feature-text">Earn bonuses for referrals</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-large">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3 class="feature-title">Secure Process</h3>
-                    <p class="feature-text">Your data is always safe</p>
-                </div>
-            </div>
         </div>
 
         <!-- Apply Page -->
@@ -2128,8 +2274,119 @@
                 </div>
             </div>
 
-            <iframe data-tally-src="https://tally.so/embed/nrqRRp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="Oyster Application Form"></iframe>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+            <!-- Multi-step Application Form -->
+            <div class="card">
+                <div class="card-title with-line">Loan Application</div>
+                <div class="progress-tracker">
+                    <div class="progress-fill" id="applyProgress" style="width: 0%"></div>
+                </div>
+                
+                <form id="applicationForm">
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" id="step1">
+                        <h4>Personal Information</h4>
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                            <div class="field-error" id="fullNameError">Please enter your full name</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ID Number</label>
+                            <input type="text" class="form-control" id="idNumber" required>
+                            <div class="field-error" id="idNumberError">Please enter a valid ID number</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Contact Number</label>
+                            <input type="tel" class="form-control" id="contactNumber" required>
+                            <div class="field-error" id="contactNumberError">Please enter a valid contact number</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="emailAddress" required>
+                            <div class="field-error" id="emailAddressError">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-primary btn-disabled" id="nextStep1">Next Step</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Employment Details -->
+                    <div class="form-step" id="step2">
+                        <h4>Employment Details</h4>
+                        <div class="form-group">
+                            <label class="form-label">Employer Name</label>
+                            <input type="text" class="form-control" id="employerName" required>
+                            <div class="field-error" id="employerNameError">Please enter your employer name</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Employment Type</label>
+                            <select class="form-control" id="employmentType" required>
+                                <option value="">Select employment type</option>
+                                <option value="full-time">Full-time</option>
+                                <option value="part-time">Part-time</option>
+                                <option value="self-employed">Self-employed</option>
+                                <option value="contract">Contract</option>
+                                <option value="unemployed">Unemployed</option>
+                            </select>
+                            <div class="field-error" id="employmentTypeError">Please select your employment type</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Monthly Income (R)</label>
+                            <input type="number" class="form-control" id="monthlyIncome" required>
+                            <div class="field-error" id="monthlyIncomeError">Please enter your monthly income</div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline" id="prevStep2">Previous</button>
+                            <button type="button" class="btn btn-primary btn-disabled" id="nextStep2">Next Step</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Loan Details -->
+                    <div class="form-step" id="step3">
+                        <h4>Loan Details</h4>
+                        <div class="form-group">
+                            <label class="form-label">Loan Amount (R)</label>
+                            <input type="number" class="form-control" id="loanAmountRequest" required>
+                            <div class="field-error" id="loanAmountRequestError">Please enter a valid loan amount</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Loan Purpose</label>
+                            <select class="form-control" id="loanPurposeSelect" required>
+                                <option value="">Select purpose</option>
+                                <option value="personal">Personal Expenses</option>
+                                <option value="education">Education</option>
+                                <option value="medical">Medical</option>
+                                <option value="debt-consolidation">Debt Consolidation</option>
+                                <option value="business">Business</option>
+                                <option value="vehicle">Vehicle Finance</option>
+                                <option value="home">Home Finance</option>
+                                <option value="emergency">Emergency Loan</option>
+                                <option value="unexpected">Unexpected Expenses</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="field-error" id="loanPurposeSelectError">Please select a loan purpose</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Loan Term (months)</label>
+                            <select class="form-control" id="loanTermSelect" required>
+                                <option value="">Select term</option>
+                                <option value="3">3 months</option>
+                                <option value="6">6 months</option>
+                                <option value="12">12 months</option>
+                                <option value="24">24 months</option>
+                                <option value="36">36 months</option>
+                                <option value="48">48 months</option>
+                                <option value="60">60 months</option>
+                            </select>
+                            <div class="field-error" id="loanTermSelectError">Please select a loan term</div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline" id="prevStep3">Previous</button>
+                            <button type="button" class="btn btn-primary btn-disabled" id="submitApplication">Submit Application</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
             <div class="card">
                 <div class="card-title with-line">Application Process</div>
@@ -2166,8 +2423,8 @@
             </div>
         </div>
 
-        <!-- About Page -->
-        <div class="page" id="about">
+        <!-- Loans Page -->
+        <div class="page" id="loans">
             <div class="hero-section">
                 <div class="hero-bg"></div>
                 <div class="hero-overlay"></div>
@@ -2177,80 +2434,237 @@
                 </div>
                 
                 <div class="hero-content">
-                    <h1 class="hero-title">About Us</h1>
-                    <p class="hero-subtitle">Learn more about Oyster Finance and our mission</p>
+                    <h1 class="hero-title">Our Loan Products</h1>
+                    <p class="hero-subtitle">Find the perfect loan solution for your needs</p>
                 </div>
                 
                 <div class="hero-image-container">
-                    <img src="img/screenshot-2025-03-19-10-04-04-removebg-preview (1).png" alt="About us" class="hero-image" style="object-fit: contain; width: 100%; height: 100%;">
+                    <img src="img/screenshot-2025-03-19-10-04-04-removebg-preview (1).png" alt="Loan products" class="hero-image" style="object-fit: contain; width: 100%; height: 100%;">
                 </div>
             </div>
 
-            <div class="card" style="margin-top: -50px;">
-                <img src="img/about-img.jpg" alt="Team photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 20px;">
-                <div class="card-title with-line">A Team to Help You</div>
-                <p>We're flexible, approachable and service oriented. We've pioneered a new way of providing affordable loans by fixing durable repayment plans to suit our clients' needs.</p>
-                <p class="mt-20">In a market full of options, Oyster Personal Finance stands out as your trusted partner for financial success.</p>
-                <button class="btn btn-primary btn-block mt-20">Find Out More</button>
-            </div>
-            
+            <!-- Detailed Loan Calculator -->
             <div class="card">
-                <div class="card-title with-line">What Our Clients Say</div>
-                <div class="review-card p-0 mb-10">
-                    <div class="review-rating">★★★★★</div>
-                    <p class="review-text">"Fantastic Service! I recently got a loan through Oyster Personal Finance, and the process was incredibly smooth and fast! The team was very helpful, and they guided me step-by-step through the application."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">MS</div>
-                        <div class="review-info">
-                            <h5>Maria Smith</h5>
-                            <span>25 min ago</span>
-                        </div>
-                    </div>
+                <div class="card-title with-line">Detailed Loan Calculator</div>
+                <div class="calculator-tabs">
+                    <div class="calculator-tab active" data-tab="personal">Personal Loan</div>
+                    <div class="calculator-tab" data-tab="business">Business Loan</div>
+                    <div class="calculator-tab" data-tab="education">Education Loan</div>
+                    <div class="calculator-tab" data-tab="consolidation">Consolidation Loan</div>
+                    <div class="calculator-tab" data-tab="vehicle">Vehicle Finance</div>
+                    <div class="calculator-tab" data-tab="home">Home Finance</div>
+                    <div class="calculator-tab" data-tab="emergency">Emergency Loan</div>
                 </div>
-                <div class="review-card p-0">
-                    <div class="review-rating">★★★★★</div>
-                    <p class="review-text">"I was in need of a loan urgently, and Oyster Personal Finance made the whole experience hassle-free. Their customer support was excellent, answering all my queries promptly."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">MB</div>
-                        <div class="review-info">
-                            <h5>Marta Black</h5>
-                            <span>1 hour ago</span>
-                        </div>
+                
+                <!-- Personal Loan Calculator Panel -->
+                <div class="calculator-panel active" id="personal-panel">
+                    <div class="form-group">
+                        <label class="form-label">Loan Amount (R)</label>
+                        <input type="number" class="form-control" id="detailedAmount" value="50000">
                     </div>
+                    <div class="form-group">
+                        <label class="form-label">Loan Term (months)</label>
+                        <select class="form-control" id="detailedTerm">
+                            <option value="3">3 months</option>
+                            <option value="6">6 months</option>
+                            <option value="12">12 months</option>
+                            <option value="24" selected>24 months</option>
+                            <option value="36">36 months</option>
+                            <option value="48">48 months</option>
+                            <option value="60">60 months</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Interest Rate (%)</label>
+                        <input type="number" class="form-control" id="detailedInterest" value="15" step="0.1">
+                    </div>
+                    <div class="calculator-result">
+                        <div class="result-title">Monthly Payment</div>
+                        <div class="result-amount" id="detailedMonthly">R2,429</div>
+                        <div class="result-details">Total Repayment: <span id="detailedTotal">R58,296</span></div>
+                        <div class="result-details">Total Interest: <span id="detailedInterestTotal">R8,296</span></div>
+                    </div>
+                    <button class="btn btn-primary btn-block mt-20" id="applyWithCalculation">Apply with these terms</button>
                 </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-title with-line">We're Regulated By These Authorities</div>
-                <div class="authority-card">
-                    <div class="authority-icon">
-                        <i class="fas fa-landmark"></i>
+                
+                <!-- Business Loan Calculator Panel -->
+                <div class="calculator-panel" id="business-panel">
+                    <!-- Similar structure to personal loan panel with business-specific rates -->
+                    <div class="form-group">
+                        <label class="form-label">Business Loan Amount (R)</label>
+                        <input type="number" class="form-control" id="businessAmount" value="100000">
                     </div>
-                    <h3 class="authority-title">Financial Conduct Authority</h3>
-                    <p class="authority-text">At Oyster Personal Finance, we are committed to empowering individuals with transparent, reliable, and responsible financial solutions.</p>
-                    <button class="btn btn-primary btn-block">Apply for a loan now</button>
+                    <div class="form-group">
+                        <label class="form-label">Loan Term (months)</label>
+                        <select class="form-control" id="businessTerm">
+                            <option value="12">12 months</option>
+                            <option value="24" selected>24 months</option>
+                            <option value="36">36 months</option>
+                            <option value="48">48 months</option>
+                            <option value="60">60 months</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Interest Rate (%)</label>
+                        <input type="number" class="form-control" id="businessInterest" value="18" step="0.1">
+                    </div>
+                    <div class="calculator-result">
+                        <div class="result-title">Monthly Payment</div>
+                        <div class="result-amount" id="businessMonthly">R5,110</div>
+                        <div class="result-details">Total Repayment: <span id="businessTotal">R122,640</span></div>
+                        <div class="result-details">Total Interest: <span id="businessInterestTotal">R22,640</span></div>
+                    </div>
+                    <button class="btn btn-primary btn-block mt-20">Apply for Business Loan</button>
                 </div>
-                <div class="authority-card">
-                    <div class="authority-icon">
-                        <i class="fas fa-shield-alt"></i>
+                
+                <!-- Education Loan Calculator Panel -->
+                <div class="calculator-panel" id="education-panel">
+                    <!-- Similar structure with education-specific rates -->
+                    <div class="form-group">
+                        <label class="form-label">Education Loan Amount (R)</label>
+                        <input type="number" class="form-control" id="educationAmount" value="30000">
                     </div>
-                    <h3 class="authority-title">Prudential Regulation Authority</h3>
-                    <p class="authority-text">We are dedicated to providing secure and dependable financial solutions, adhering to the highest standards of stability and integrity.</p>
-                    <button class="btn btn-primary btn-block">Apply for a loan now</button>
+                    <div class="form-group">
+                        <label class="form-label">Loan Term (months)</label>
+                        <select class="form-control" id="educationTerm">
+                            <option value="12">12 months</option>
+                            <option value="24" selected>24 months</option>
+                            <option value="36">36 months</option>
+                            <option value="48">48 months</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Interest Rate (%)</label>
+                        <input type="number" class="form-control" id="educationInterest" value="12" step="0.1">
+                    </div>
+                    <div class="calculator-result">
+                        <div class="result-title">Monthly Payment</div>
+                        <div class="result-amount" id="educationMonthly">R1,412</div>
+                        <div class="result-details">Total Repayment: <span id="educationTotal">R33,888</span></div>
+                        <div class="result-details">Total Interest: <span id="educationInterestTotal">R3,888</span></div>
+                    </div>
+                    <button class="btn btn-primary btn-block mt-20">Apply for Education Loan</button>
                 </div>
-                <div class="authority-card">
-                    <div class="authority-icon">
-                        <i class="fas fa-certificate"></i>
+
+                <!-- Consolidation Loan Calculator Panel -->
+                <div class="calculator-panel" id="consolidation-panel">
+                    <div class="form-group">
+                        <label class="form-label">Consolidation Loan Amount (R)</label>
+                        <input type="number" class="form-control" id="consolidationAmount" value="80000">
                     </div>
-                    <h3 class="authority-title">NCR Registered/Regulated</h3>
-                    <p class="authority-text">We are proud to be registered and regulated by the National Credit Regulator (NCR), ensuring that every service we offer aligns with the highest standards.</p>
-                    <button class="btn btn-primary btn-block">Apply for a loan now</button>
+                    <div class="form-group">
+                        <label class="form-label">Loan Term (months)</label>
+                        <select class="form-control" id="consolidationTerm">
+                            <option value="12">12 months</option>
+                            <option value="24">24 months</option>
+                            <option value="36" selected>36 months</option>
+                            <option value="48">48 months</option>
+                            <option value="60">60 months</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Interest Rate (%)</label>
+                        <input type="number" class="form-control" id="consolidationInterest" value="16" step="0.1">
+                    </div>
+                    <div class="calculator-result">
+                        <div class="result-title">Monthly Payment</div>
+                        <div class="result-amount" id="consolidationMonthly">R2,840</div>
+                        <div class="result-details">Total Repayment: <span id="consolidationTotal">R102,240</span></div>
+                        <div class="result-details">Total Interest: <span id="consolidationInterestTotal">R22,240</span></div>
+                    </div>
+                    <button class="btn btn-primary btn-block mt-20">Apply for Consolidation Loan</button>
+                </div>
+
+                <!-- Vehicle Finance Calculator Panel -->
+                <div class="calculator-panel" id="vehicle-panel">
+                    <div class="form-group">
+                        <label class="form-label">Vehicle Finance Amount (R)</label>
+                        <input type="number" class="form-control" id="vehicleAmount" value="150000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Loan Term (months)</label>
+                        <select class="form-control" id="vehicleTerm">
+                            <option value="24">24 months</option>
+                            <option value="36">36 months</option>
+                            <option value="48">48 months</option>
+                            <option value="60" selected>60 months</option>
+                            <option value="72">72 months</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Interest Rate (%)</label>
+                        <input type="number" class="form-control" id="vehicleInterest" value="14" step="0.1">
+                    </div>
+                    <div class="calculator-result">
+                        <div class="result-title">Monthly Payment</div>
+                        <div class="result-amount" id="vehicleMonthly">R3,490</div>
+                        <div class="result-details">Total Repayment: <span id="vehicleTotal">R209,400</span></div>
+                        <div class="result-details">Total Interest: <span id="vehicleInterestTotal">R59,400</span></div>
+                    </div>
+                    <button class="btn btn-primary btn-block mt-20">Apply for Vehicle Finance</button>
+                </div>
+
+                <!-- Home Finance Calculator Panel -->
+                <div class="calculator-panel" id="home-panel">
+                    <div class="form-group">
+                        <label class="form-label">Home Finance Amount (R)</label>
+                        <input type="number" class="form-control" id="homeAmount" value="500000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Loan Term (months)</label>
+                        <select class="form-control" id="homeTerm">
+                            <option value="60">5 years</option>
+                            <option value="120">10 years</option>
+                            <option value="180">15 years</option>
+                            <option value="240" selected>20 years</option>
+                            <option value="300">25 years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Interest Rate (%)</label>
+                        <input type="number" class="form-control" id="homeInterest" value="12" step="0.1">
+                    </div>
+                    <div class="calculator-result">
+                        <div class="result-title">Monthly Payment</div>
+                        <div class="result-amount" id="homeMonthly">R5,516</div>
+                        <div class="result-details">Total Repayment: <span id="homeTotal">R1,323,840</span></div>
+                        <div class="result-details">Total Interest: <span id="homeInterestTotal">R823,840</span></div>
+                    </div>
+                    <button class="btn btn-primary btn-block mt-20">Apply for Home Finance</button>
+                </div>
+
+                <!-- Emergency Loan Calculator Panel -->
+                <div class="calculator-panel" id="emergency-panel">
+                    <div class="form-group">
+                        <label class="form-label">Emergency Loan Amount (R)</label>
+                        <input type="number" class="form-control" id="emergencyAmount" value="20000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Loan Term (months)</label>
+                        <select class="form-control" id="emergencyTerm">
+                            <option value="3">3 months</option>
+                            <option value="6" selected>6 months</option>
+                            <option value="12">12 months</option>
+                            <option value="24">24 months</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Interest Rate (%)</label>
+                        <input type="number" class="form-control" id="emergencyInterest" value="20" step="0.1">
+                    </div>
+                    <div class="calculator-result">
+                        <div class="result-title">Monthly Payment</div>
+                        <div class="result-amount" id="emergencyMonthly">R3,675</div>
+                        <div class="result-details">Total Repayment: <span id="emergencyTotal">R22,050</span></div>
+                        <div class="result-details">Total Interest: <span id="emergencyInterestTotal">R2,050</span></div>
+                    </div>
+                    <button class="btn btn-primary btn-block mt-20">Apply for Emergency Loan</button>
                 </div>
             </div>
         </div>
 
-        <!-- Reviews Page -->
-        <div class="page" id="reviews">
+        <!-- Account Page -->
+        <div class="page" id="account">
             <div class="hero-section">
                 <div class="hero-bg"></div>
                 <div class="hero-overlay"></div>
@@ -2260,78 +2674,109 @@
                 </div>
                 
                 <div class="hero-content">
-                    <h1 class="hero-title">Reviews</h1>
-                    <p class="hero-subtitle">See what our clients have to say about us</p>
+                    <h1 class="hero-title">My Account</h1>
+                    <p class="hero-subtitle">Track your loan applications and manage your account</p>
                 </div>
                 
                 <div class="hero-image-container">
-                    <img src="img/screenshot-2025-03-19-10-04-04-removebg-preview (1).png" alt="Customer reviews" class="hero-image" style="object-fit: contain; width: 100%; height: 100%;">
+                    <img src="img/screenshot-2025-03-19-10-04-04-removebg-preview (1).png" alt="My account" class="hero-image" style="object-fit: contain; width: 100%; height: 100%;">
                 </div>
             </div>
 
-            <div class="text-center" style="margin: -30px 20px 30px; position: relative; z-index: 10;">
-                <h2 class="card-title" style="color: white;">🌟 What Our Clients Say 🌟</h2>
+            <!-- Login Form -->
+            <div class="login-form" id="login-section">
+                <h3 class="login-title">Login to Your Account</h3>
+                <div class="form-group">
+                    <label class="form-label">ID Number</label>
+                    <input type="text" class="form-control" id="loginId" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="loginName" required>
+                </div>
+                <button class="btn btn-primary btn-block" id="loginButton">Login</button>
             </div>
-            
-            <div class="review-card">
-                <div class="review-rating">★★★★★</div>
-                <p class="review-text">"Fantastic Service! I recently got a loan through Oyster Personal Finance, and the process was incredibly smooth and fast! The team was very helpful, and they guided me step-by-step through the application. Highly recommend!"</p>
-                <div class="review-author">
-                    <div class="review-avatar">MS</div>
-                    <div class="review-info">
-                        <h5>Maria Smith</h5>
-                        <span>25 min ago</span>
+
+            <!-- Application Tracking Portal (initially hidden) -->
+            <div id="portal-section" style="display: none;">
+                <div class="card">
+                    <div class="card-title with-line">Application Status</div>
+                    <div class="application-status">
+                        <div class="status-indicator status-pending" id="statusIndicator"></div>
+                        <span id="statusText">Application Pending Review</span>
+                    </div>
+                    <p>Application submitted on: <span id="applicationDate">-</span></p>
+                    <div class="progress-tracker">
+                        <div class="progress-fill" id="applicationProgress" style="width: 30%;"></div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem;">Application is <span id="progressPercentage">30%</span> complete</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title with-line">Application Details</div>
+                    <div class="detail-row">
+                        <span>Full Name:</span>
+                        <span id="detailName">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>ID Number:</span>
+                        <span id="detailId">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Contact Number:</span>
+                        <span id="detailPhone">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Email:</span>
+                        <span id="detailEmail">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Loan Amount:</span>
+                        <span id="detailAmount">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Loan Term:</span>
+                        <span id="detailTerm">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Loan Purpose:</span>
+                        <span id="detailPurpose">-</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title with-line">Next Steps</div>
+                    <p>Our team is currently reviewing your application. You will receive an SMS and email notification once a decision has been made.</p>
+                    <p style="margin-top: 15px;">For any queries, please contact us at:</p>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Phone</strong>
+                            +27698480097
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>WhatsApp</strong>
+                            +27698480097
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Email</strong>
+                            oysterfinanceltd@gmail.com
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="review-card">
-                <div class="review-rating">★★★★★</div>
-                <p class="review-text">"I was in need of a loan urgently, and Oyster Personal Finance made the whole experience hassle-free. Their customer support was excellent. Thanks again!"</p>
-                <div class="review-author">
-                    <div class="review-avatar">MB</div>
-                    <div class="review-info">
-                        <h5>Marta Black</h5>
-                        <span>1 hour ago</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="review-card">
-                <div class="review-rating">★★★★★</div>
-                <p class="review-text">"I had a great experience with Oyster Personal Finance. The application process was straightforward, and I appreciated the transparency in their terms. The loan was processed quickly. I'm so glad I chose them!"</p>
-                <div class="review-author">
-                    <div class="review-avatar">CB</div>
-                    <div class="review-info">
-                        <h5>Carl Brown</h5>
-                        <span>2 hours ago</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="review-card">
-                <div class="review-rating">★★★★★</div>
-                <p class="review-text">"I was skeptical about getting a loan online, but Oyster Personal Finance made me feel secure every step of the way. Highly recommend!"</p>
-                <div class="review-author">
-                    <div class="review-avatar">PD</div>
-                    <div class="review-info">
-                        <h5>Paul David</h5>
-                        <span>3 hours ago</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="recent-reviews">
-                <h3>Recent Reviews</h3>
-                <ul>
-                    <li>💬 <strong>Jessica A.</strong> - "Super fast and reliable!"</li>
-                    <li>💬 <strong>James K.</strong> - "Highly recommended!"</li>
-                    <li>💬 <strong>Linda M.</strong> - "Best loan service ever!"</li>
-                    <li>💬 <strong>David O.</strong> - "Quick approval process!"</li>
-                </ul>
-            </div>
-            
-            <button class="btn btn-outline btn-block" style="margin: 0 20px 20px;">Load More Reviews</button>
         </div>
 
         <!-- Contact Page -->
@@ -2394,51 +2839,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex">
-                    <a href="#" class="btn btn-outline" style="margin-right: 8px; flex: 1;">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline" style="margin-right: 8px; flex: 1;">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline" style="margin-right: 8px; flex: 1;">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline" style="flex: 1;">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-title with-line">Send Us a Message</div>
-                <div class="form-group">
-                    <label class="form-label">Your Name</label>
-                    <input type="text" class="form-control" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Email Address</label>
-                    <input type="email" class="form-control" placeholder="Enter your email">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Subject</label>
-                    <input type="text" class="form-control" placeholder="Enter subject">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Message</label>
-                    <textarea class="form-control" rows="4" placeholder="Enter your message"></textarea>
-                </div>
-                <button class="btn btn-primary btn-block">Send Message</button>
-            </div>
-            
-            <div class="map-container" style="margin: 0 20px 20px;">
-                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=20%20Georgian%20Crescent%20Bryanston%20East%20Hampton%20Office%20Park%20Johannesburg%202191+(Oyster%20Finance)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-            </div>
-            
-            <div class="card">
-                <div class="card-title text-center">Calculate my Score</div>
-                <p class="text-center mb-20">Check if you can qualify for a loan, it won't affect your Credit History.</p>
-                <button class="btn btn-primary btn-block">Show My Score</button>
             </div>
         </div>
     </div>
@@ -2453,13 +2853,13 @@
             <i class="fas fa-hand-holding-usd"></i>
             <span>Apply</span>
         </div>
-        <div class="nav-item" data-page="about">
-            <i class="fas fa-info-circle"></i>
-            <span>About</span>
+        <div class="nav-item" data-page="loans">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Loans</span>
         </div>
-        <div class="nav-item" data-page="reviews">
-            <i class="fas fa-star"></i>
-            <span>Reviews</span>
+        <div class="nav-item" data-page="account">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
         </div>
         <div class="nav-item" data-page="contact">
             <i class="fas fa-envelope"></i>
@@ -2467,7 +2867,7 @@
         </div>
     </div>
 
-    <!-- WhatsApp Button - New Implementation -->
+    <!-- WhatsApp Button -->
     <button id="whatsapp-button">
         <i class="fab fa-whatsapp"></i>
     </button>
@@ -2526,7 +2926,7 @@
             document.querySelector('.app-content').scrollTop = 0;
         });
         
-        // WhatsApp Button - New Implementation
+        // WhatsApp Button
         document.getElementById('whatsapp-button').addEventListener('click', function() {
             window.open('https://wa.me/+27698480097', '_blank');
         });
@@ -2535,13 +2935,299 @@
             window.open('https://wa.me/+27698480097', '_blank');
         });
         
+        // Quick Loan Calculator
+        const loanAmountSlider = document.getElementById('loanAmountSlider');
+        const loanTermSlider = document.getElementById('loanTermSlider');
+        const interestRateSlider = document.getElementById('interestRateSlider');
+        const loanAmountValue = document.getElementById('loanAmountValue');
+        const loanTermValue = document.getElementById('loanTermValue');
+        const interestRateValue = document.getElementById('interestRateValue');
+        const monthlyPayment = document.getElementById('monthlyPayment');
+        const totalRepayment = document.getElementById('totalRepayment');
+        const totalInterest = document.getElementById('totalInterest');
+        
+        function updateCalculator() {
+            if (!loanAmountSlider || !loanTermSlider || !interestRateSlider) return;
+            
+            const amount = parseInt(loanAmountSlider.value);
+            const term = parseInt(loanTermSlider.value);
+            const rate = parseFloat(interestRateSlider.value) / 100 / 12;
+            
+            loanAmountValue.textContent = 'R' + amount.toLocaleString();
+            loanTermValue.textContent = term;
+            interestRateValue.textContent = interestRateSlider.value + '%';
+            
+            // Calculate monthly payment
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            monthlyPayment.textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            totalRepayment.textContent = 'R' + total.toFixed(0).toLocaleString();
+            totalInterest.textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+        
+        if (loanAmountSlider && loanTermSlider && interestRateSlider) {
+            loanAmountSlider.addEventListener('input', updateCalculator);
+            loanTermSlider.addEventListener('input', updateCalculator);
+            interestRateSlider.addEventListener('input', updateCalculator);
+            updateCalculator();
+        }
+        
+        // Detailed Calculator Tabs
+        const calculatorTabs = document.querySelectorAll('.calculator-tab');
+        const calculatorPanels = document.querySelectorAll('.calculator-panel');
+        
+        calculatorTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                // Update active tab
+                calculatorTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show selected panel
+                calculatorPanels.forEach(panel => panel.classList.remove('active'));
+                document.getElementById(tabId + '-panel').classList.add('active');
+            });
+        });
+        
+        // Detailed Calculator Functions
+        function updateDetailedCalculator() {
+            const amount = parseFloat(document.getElementById('detailedAmount').value);
+            const term = parseInt(document.getElementById('detailedTerm').value);
+            const rate = parseFloat(document.getElementById('detailedInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('detailedMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('detailedTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('detailedInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+        
+        function updateBusinessCalculator() {
+            const amount = parseFloat(document.getElementById('businessAmount').value);
+            const term = parseInt(document.getElementById('businessTerm').value);
+            const rate = parseFloat(document.getElementById('businessInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('businessMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('businessTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('businessInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+        
+        function updateEducationCalculator() {
+            const amount = parseFloat(document.getElementById('educationAmount').value);
+            const term = parseInt(document.getElementById('educationTerm').value);
+            const rate = parseFloat(document.getElementById('educationInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('educationMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('educationTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('educationInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+
+        function updateConsolidationCalculator() {
+            const amount = parseFloat(document.getElementById('consolidationAmount').value);
+            const term = parseInt(document.getElementById('consolidationTerm').value);
+            const rate = parseFloat(document.getElementById('consolidationInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('consolidationMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('consolidationTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('consolidationInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+
+        function updateVehicleCalculator() {
+            const amount = parseFloat(document.getElementById('vehicleAmount').value);
+            const term = parseInt(document.getElementById('vehicleTerm').value);
+            const rate = parseFloat(document.getElementById('vehicleInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('vehicleMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('vehicleTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('vehicleInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+
+        function updateHomeCalculator() {
+            const amount = parseFloat(document.getElementById('homeAmount').value);
+            const term = parseInt(document.getElementById('homeTerm').value);
+            const rate = parseFloat(document.getElementById('homeInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('homeMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('homeTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('homeInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+
+        function updateEmergencyCalculator() {
+            const amount = parseFloat(document.getElementById('emergencyAmount').value);
+            const term = parseInt(document.getElementById('emergencyTerm').value);
+            const rate = parseFloat(document.getElementById('emergencyInterest').value) / 100 / 12;
+            
+            const x = Math.pow(1 + rate, term);
+            const monthly = (amount * x * rate) / (x - 1);
+            const total = monthly * term;
+            const interest = total - amount;
+            
+            document.getElementById('emergencyMonthly').textContent = 'R' + monthly.toFixed(0).toLocaleString();
+            document.getElementById('emergencyTotal').textContent = 'R' + total.toFixed(0).toLocaleString();
+            document.getElementById('emergencyInterestTotal').textContent = 'R' + interest.toFixed(0).toLocaleString();
+        }
+        
+        // Initialize detailed calculators
+        updateDetailedCalculator();
+        updateBusinessCalculator();
+        updateEducationCalculator();
+        updateConsolidationCalculator();
+        updateVehicleCalculator();
+        updateHomeCalculator();
+        updateEmergencyCalculator();
+        
+        // Add event listeners for detailed calculators
+        document.getElementById('detailedAmount')?.addEventListener('input', updateDetailedCalculator);
+        document.getElementById('detailedTerm')?.addEventListener('change', updateDetailedCalculator);
+        document.getElementById('detailedInterest')?.addEventListener('input', updateDetailedCalculator);
+        
+        document.getElementById('businessAmount')?.addEventListener('input', updateBusinessCalculator);
+        document.getElementById('businessTerm')?.addEventListener('change', updateBusinessCalculator);
+        document.getElementById('businessInterest')?.addEventListener('input', updateBusinessCalculator);
+        
+        document.getElementById('educationAmount')?.addEventListener('input', updateEducationCalculator);
+        document.getElementById('educationTerm')?.addEventListener('change', updateEducationCalculator);
+        document.getElementById('educationInterest')?.addEventListener('input', updateEducationCalculator);
+
+        document.getElementById('consolidationAmount')?.addEventListener('input', updateConsolidationCalculator);
+        document.getElementById('consolidationTerm')?.addEventListener('change', updateConsolidationTerm);
+        document.getElementById('consolidationInterest')?.addEventListener('input', updateConsolidationCalculator);
+
+        document.getElementById('vehicleAmount')?.addEventListener('input', updateVehicleCalculator);
+        document.getElementById('vehicleTerm')?.addEventListener('change', updateVehicleCalculator);
+        document.getElementById('vehicleInterest')?.addEventListener('input', updateVehicleCalculator);
+
+        document.getElementById('homeAmount')?.addEventListener('input', updateHomeCalculator);
+        document.getElementById('homeTerm')?.addEventListener('change', updateHomeCalculator);
+        document.getElementById('homeInterest')?.addEventListener('input', updateHomeCalculator);
+
+        document.getElementById('emergencyAmount')?.addEventListener('input', updateEmergencyCalculator);
+        document.getElementById('emergencyTerm')?.addEventListener('change', updateEmergencyCalculator);
+        document.getElementById('emergencyInterest')?.addEventListener('input', updateEmergencyCalculator);
+        
+        // Form validation functions
+        function validateField(fieldId, errorId, validationFunction) {
+            const field = document.getElementById(fieldId);
+            const errorElement = document.getElementById(errorId);
+            
+            if (!field || !errorElement) return false;
+            
+            const isValid = validationFunction(field.value);
+            
+            if (isValid) {
+                field.classList.remove('error');
+                field.classList.add('valid');
+                errorElement.style.display = 'none';
+            } else {
+                field.classList.remove('valid');
+                field.classList.add('error');
+                errorElement.style.display = 'block';
+            }
+            
+            return isValid;
+        }
+        
+        function validateStep1() {
+            const isNameValid = validateField('fullName', 'fullNameError', value => value.trim().length > 3);
+            const isIdValid = validateField('idNumber', 'idNumberError', value => value.trim().length > 5);
+            const isPhoneValid = validateField('contactNumber', 'contactNumberError', value => /^\+?\d{10,15}$/.test(value.trim()));
+            const isEmailValid = validateField('emailAddress', 'emailAddressError', value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()));
+            
+            const nextButton = document.getElementById('nextStep1');
+            if (isNameValid && isIdValid && isPhoneValid && isEmailValid) {
+                nextButton.classList.remove('btn-disabled');
+            } else {
+                nextButton.classList.add('btn-disabled');
+            }
+            
+            return isNameValid && isIdValid && isPhoneValid && isEmailValid;
+        }
+        
+        function validateStep2() {
+            const isEmployerValid = validateField('employerName', 'employerNameError', value => value.trim().length > 2);
+            const isEmploymentTypeValid = validateField('employmentType', 'employmentTypeError', value => value !== '');
+            const isIncomeValid = validateField('monthlyIncome', 'monthlyIncomeError', value => !isNaN(value) && parseFloat(value) > 0);
+            
+            const nextButton = document.getElementById('nextStep2');
+            if (isEmployerValid && isEmploymentTypeValid && isIncomeValid) {
+                nextButton.classList.remove('btn-disabled');
+            } else {
+                nextButton.classList.add('btn-disabled');
+            }
+            
+            return isEmployerValid && isEmploymentTypeValid && isIncomeValid;
+        }
+        
+        function validateStep3() {
+            const isLoanAmountValid = validateField('loanAmountRequest', 'loanAmountRequestError', value => !isNaN(value) && parseFloat(value) >= 1000 && parseFloat(value) <= 200000);
+            const isLoanPurposeValid = validateField('loanPurposeSelect', 'loanPurposeSelectError', value => value !== '');
+            const isLoanTermValid = validateField('loanTermSelect', 'loanTermSelectError', value => value !== '');
+            
+            const submitButton = document.getElementById('submitApplication');
+            if (isLoanAmountValid && isLoanPurposeValid && isLoanTermValid) {
+                submitButton.classList.remove('btn-disabled');
+            } else {
+                submitButton.classList.add('btn-disabled');
+            }
+            
+            return isLoanAmountValid && isLoanPurposeValid && isLoanTermValid;
+        }
+        
+        // Add event listeners for form validation
+        document.getElementById('fullName')?.addEventListener('input', validateStep1);
+        document.getElementById('idNumber')?.addEventListener('input', validateStep1);
+        document.getElementById('contactNumber')?.addEventListener('input', validateStep1);
+        document.getElementById('emailAddress')?.addEventListener('input', validateStep1);
+        
+        document.getElementById('employerName')?.addEventListener('input', validateStep2);
+        document.getElementById('employmentType')?.addEventListener('change', validateStep2);
+        document.getElementById('monthlyIncome')?.addEventListener('input', validateStep2);
+        
+        document.getElementById('loanAmountRequest')?.addEventListener('input', validateStep3);
+        document.getElementById('loanPurposeSelect')?.addEventListener('change', validateStep3);
+        document.getElementById('loanTermSelect')?.addEventListener('change', validateStep3);
+        
         // Application Form Steps
         const applyProgress = document.getElementById('applyProgress');
         
         document.getElementById('nextStep1')?.addEventListener('click', function() {
-            document.getElementById('step1').classList.remove('active');
-            document.getElementById('step2').classList.add('active');
-            applyProgress.style.width = '33%';
+            if (validateStep1()) {
+                document.getElementById('step1').classList.remove('active');
+                document.getElementById('step2').classList.add('active');
+                applyProgress.style.width = '33%';
+            }
         });
         
         document.getElementById('prevStep2')?.addEventListener('click', function() {
@@ -2551,9 +3237,11 @@
         });
         
         document.getElementById('nextStep2')?.addEventListener('click', function() {
-            document.getElementById('step2').classList.remove('active');
-            document.getElementById('step3').classList.add('active');
-            applyProgress.style.width = '66%';
+            if (validateStep2()) {
+                document.getElementById('step2').classList.remove('active');
+                document.getElementById('step3').classList.add('active');
+                applyProgress.style.width = '66%';
+            }
         });
         
         document.getElementById('prevStep3')?.addEventListener('click', function() {
@@ -2562,23 +3250,33 @@
             applyProgress.style.width = '33%';
         });
         
+        // Application Form Submission
         document.getElementById('submitApplication')?.addEventListener('click', function() {
-            // Show loader
-            document.getElementById('loader').classList.add('show');
-            
-            // Simulate processing
-            setTimeout(function() {
-                // Hide loader
-                document.getElementById('loader').classList.remove('show');
+            if (validateStep3()) {
+                // Show loader
+                document.getElementById('loader').classList.add('show');
                 
-                // Reset form
-                document.getElementById('step3').classList.remove('active');
-                document.getElementById('step1').classList.add('active');
-                applyProgress.style.width = '0%';
+                // Get form data
+                const formData = {
+                    fullName: document.getElementById('fullName').value,
+                    idNumber: document.getElementById('idNumber').value,
+                    contactNumber: document.getElementById('contactNumber').value,
+                    emailAddress: document.getElementById('emailAddress').value,
+                    employerName: document.getElementById('employerName').value,
+                    employmentType: document.getElementById('employmentType').value,
+                    monthlyIncome: document.getElementById('monthlyIncome').value,
+                    loanAmountRequest: document.getElementById('loanAmountRequest').value,
+                    loanPurposeSelect: document.getElementById('loanPurposeSelect').value,
+                    loanTermSelect: document.getElementById('loanTermSelect').value,
+                    applicationDate: new Date().toISOString().split('T')[0]
+                };
+
+                // Save form data to localStorage
+                localStorage.setItem('loanApplication', JSON.stringify(formData));
                 
                 // Show success notification
                 const popup = document.getElementById('popupNotification');
-                document.getElementById('popupText').textContent = 'Your application has been submitted successfully!';
+                document.getElementById('popupText').textContent = 'Application submitted successfully! You can track your application in the Account section.';
                 popup.classList.add('show');
                 
                 // Hide notification after 5 seconds
@@ -2586,13 +3284,90 @@
                     popup.classList.remove('show');
                 }, 5000);
                 
-                // Navigate to home page
-                navItems.forEach(nav => nav.classList.remove('active'));
-                document.querySelector('[data-page="home"]').classList.add('active');
+                // Hide loader
+                document.getElementById('loader').classList.remove('show');
                 
-                pages.forEach(page => page.classList.remove('active'));
-                document.getElementById('home').classList.add('active');
-            }, 2000);
+                // Reset form
+                document.getElementById('step3').classList.remove('active');
+                document.getElementById('step1').classList.add('active');
+                applyProgress.style.width = '0%';
+                document.getElementById('applicationForm').reset();
+                
+                // Disable next buttons
+                document.getElementById('nextStep1').classList.add('btn-disabled');
+                document.getElementById('nextStep2').classList.add('btn-disabled');
+                document.getElementById('submitApplication').classList.add('btn-disabled');
+            }
+        });
+        
+        // Client Portal Login
+        document.getElementById('loginButton')?.addEventListener('click', function() {
+            const loginId = document.getElementById('loginId').value;
+            const loginName = document.getElementById('loginName').value;
+            
+            // Check if there's saved application data
+            const savedData = localStorage.getItem('loanApplication');
+            
+            if (savedData) {
+                const applicationData = JSON.parse(savedData);
+                
+                // Simple validation (in a real app, this would be server-side)
+                if (loginId === applicationData.idNumber && loginName.toLowerCase() === applicationData.fullName.toLowerCase()) {
+                    // Show portal section
+                    document.getElementById('login-section').style.display = 'none';
+                    document.getElementById('portal-section').style.display = 'block';
+                    
+                    // Populate application details
+                    document.getElementById('detailName').textContent = applicationData.fullName;
+                    document.getElementById('detailId').textContent = applicationData.idNumber;
+                    document.getElementById('detailPhone').textContent = applicationData.contactNumber;
+                    document.getElementById('detailEmail').textContent = applicationData.emailAddress;
+                    document.getElementById('detailAmount').textContent = 'R' + parseInt(applicationData.loanAmountRequest).toLocaleString();
+                    document.getElementById('detailTerm').textContent = applicationData.loanTermSelect + ' months';
+                    document.getElementById('detailPurpose').textContent = applicationData.loanPurposeSelect;
+                    
+                    // Set application date
+                    document.getElementById('applicationDate').textContent = applicationData.applicationDate || new Date().toISOString().split('T')[0];
+                    
+                    // Set progress bar
+                    document.getElementById('applicationProgress').style.width = '30%';
+                    document.getElementById('progressPercentage').textContent = '30%';
+
+                    // Show success notification
+                    const popup = document.getElementById('popupNotification');
+                    document.getElementById('popupText').textContent = 'Login successful! Welcome back, ' + applicationData.fullName;
+                    popup.classList.add('show');
+                    
+                    // Hide notification after 5 seconds
+                    setTimeout(function() {
+                        popup.classList.remove('show');
+                    }, 5000);
+                } else {
+                    // Show error notification
+                    const popup = document.getElementById('popupNotification');
+                    popup.style.background = 'var(--secondary-gradient)';
+                    document.getElementById('popupText').textContent = 'Invalid credentials. Please try again.';
+                    popup.classList.add('show');
+                    
+                    // Hide notification after 5 seconds
+                    setTimeout(function() {
+                        popup.classList.remove('show');
+                        popup.style.background = 'var(--success-gradient)';
+                    }, 5000);
+                }
+            } else {
+                // Show error notification
+                const popup = document.getElementById('popupNotification');
+                popup.style.background = 'var(--secondary-gradient)';
+                document.getElementById('popupText').textContent = 'No application found. Please apply for a loan first.';
+                popup.classList.add('show');
+                
+                // Hide notification after 5 seconds
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                    popup.style.background = 'var(--success-gradient)';
+                }, 5000);
+            }
         });
         
         // Animated Counters
@@ -2647,186 +3422,41 @@
         // Show first notification after 5 seconds
         setTimeout(showRandomNotification, 5000);
         
-        // Add swipe gestures for page navigation
-        let touchStartX = 0;
-        let touchEndX = 0;
+        // Check if returning user with application
+        const savedData = localStorage.getItem('loanApplication');
+        if (savedData && document.getElementById('loginId')) {
+            // Show a notification that user can log in
+            setTimeout(function() {
+                const popup = document.getElementById('popupNotification');
+                document.getElementById('popupText').textContent = 'You have a pending application. Log in to check status.';
+                popup.classList.add('show');
+                
+                setTimeout(function() {
+                    popup.classList.remove('show');
+                }, 5000);
+            }, 2000);
+        }
         
-        document.addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, false);
-        
-        document.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, false);
-        
-        function handleSwipe() {
-            const currentPageIndex = Array.from(navItems).findIndex(item => item.classList.contains('active'));
+        // Apply with calculation from detailed calculator
+        document.getElementById('applyWithCalculation')?.addEventListener('click', function() {
+            // Navigate to apply page
+            navItems.forEach(nav => nav.classList.remove('active'));
+            document.querySelector('[data-page="apply"]').classList.add('active');
             
-            if (touchEndX < touchStartX - 70) {
-                // Swipe left - go to next page
-                const nextIndex = Math.min(currentPageIndex + 1, navItems.length - 1);
-                navItems[nextIndex].click();
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById('apply').classList.add('active');
+            
+            // Pre-fill loan amount and term if the form exists
+            const loanAmountRequest = document.getElementById('loanAmountRequest');
+            const loanTermSelect = document.getElementById('loanTermSelect');
+            
+            if (loanAmountRequest && loanTermSelect) {
+                loanAmountRequest.value = document.getElementById('detailedAmount').value;
+                loanTermSelect.value = document.getElementById('detailedTerm').value;
             }
             
-            if (touchEndX > touchStartX + 70) {
-                // Swipe right - go to previous page
-                const prevIndex = Math.max(currentPageIndex - 1, 0);
-                navItems[prevIndex].click();
-            }
-        }
-        
-        // Pull to refresh animation
-        const appContent = document.querySelector('.app-content');
-        let startY = 0;
-        let refreshing = false;
-        
-        appContent.addEventListener('touchstart', e => {
-            startY = e.touches[0].clientY;
-        }, { passive: true });
-        
-        appContent.addEventListener('touchmove', e => {
-            const y = e.touches[0].clientY;
-            const scrollTop = appContent.scrollTop;
-            
-            // Only trigger pull-to-refresh when at the top of the content
-            if (scrollTop <= 0 && y > startY && !refreshing) {
-                e.preventDefault();
-                const pullDistance = Math.min((y - startY) / 2, 100);
-                
-                if (pullDistance > 70) {
-                    refreshing = true;
-                    // Show loader
-                    document.getElementById('loader').classList.add('show');
-                    
-                    // Simulate refresh
-                    setTimeout(() => {
-                        document.getElementById('loader').classList.remove('show');
-                        refreshing = false;
-                        
-                        // Show success notification
-                        const popup = document.getElementById('popupNotification');
-                        document.getElementById('popupText').textContent = 'Page refreshed successfully!';
-                        popup.classList.add('show');
-                        
-                        setTimeout(() => {
-                            popup.classList.remove('show');
-                        }, 3000);
-                    }, 1500);
-                }
-            }
-        }, { passive: false });
-        
-        // Testimonial Slider
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.testimonial-slide');
-        const dots = document.querySelectorAll('.slider-dot');
-        const slidesContainer = document.getElementById('testimonialSlides');
-        
-        function showSlide(index) {
-            if (!slidesContainer) return;
-            
-            slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-            
-            // Update dots
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-            
-            currentSlide = index;
-        }
-        
-        // Auto slide every 5 seconds
-        setInterval(() => {
-            if (!slides || slides.length === 0) return;
-            
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }, 5000);
-        
-        // Add touch events for slider
-        let sliderStartX = 0;
-        let sliderEndX = 0;
-        
-        if (slidesContainer) {
-            slidesContainer.addEventListener('touchstart', e => {
-                sliderStartX = e.changedTouches[0].screenX;
-            }, { passive: true });
-            
-            slidesContainer.addEventListener('touchend', e => {
-                sliderEndX = e.changedTouches[0].screenX;
-                
-                // Calculate slide direction
-                if (sliderEndX < sliderStartX - 50) {
-                    // Swipe left - next slide
-                    currentSlide = Math.min(currentSlide + 1, slides.length - 1);
-                    showSlide(currentSlide);
-                }
-                
-                if (sliderEndX > sliderStartX + 50) {
-                    // Swipe right - previous slide
-                    currentSlide = Math.max(currentSlide - 1, 0);
-                    showSlide(currentSlide);
-                }
-            }, { passive: true });
-        }
-        
-        // Initialize dots click events
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
-            });
-        });
-        
-        // Loan Calculator
-        const loanAmountSlider = document.getElementById('loanAmountSlider');
-        const loanTermSlider = document.getElementById('loanTermSlider');
-        const interestRateSlider = document.getElementById('interestRateSlider');
-        const loanAmountValue = document.getElementById('loanAmountValue');
-        const loanTermValue = document.getElementById('loanTermValue');
-        const interestRateValue = document.getElementById('interestRateValue');
-        const monthlyPayment = document.getElementById('monthlyPayment');
-        const totalRepayment = document.getElementById('totalRepayment');
-        
-        function updateCalculator() {
-            if (!loanAmountSlider || !loanTermSlider || !interestRateSlider) return;
-            
-            const amount = parseInt(loanAmountSlider.value);
-            const term = parseInt(loanTermSlider.value);
-            const rate = parseFloat(interestRateSlider.value) / 100 / 3;
-            
-            loanAmountValue.textContent = 'R' + amount.toLocaleString();
-            loanTermValue.textContent = term;
-            interestRateValue.textContent = interestRateSlider.value + '%';
-            
-            // Calculate monthly payment
-            const x = Math.pow(1 + rate, term);
-            const monthly = (amount * x * rate) / (x - 1);
-            const total = monthly * term;
-            
-            monthlyPayment.textContent = 'R' + monthly.toFixed(0).toLocaleString();
-            totalRepayment.textContent = 'R' + total.toFixed(0).toLocaleString();
-        }
-        
-        if (loanAmountSlider && loanTermSlider && interestRateSlider) {
-            loanAmountSlider.addEventListener('input', updateCalculator);
-            loanTermSlider.addEventListener('input', updateCalculator);
-            interestRateSlider.addEventListener('input', updateCalculator);
-            updateCalculator();
-        }
-        
-        // Add tap feedback to buttons
-        const buttons = document.querySelectorAll('.btn, .card, .feature-icon-item, .feature-card');
-        buttons.forEach(button => {
-            button.addEventListener('touchstart', () => {
-                button.style.transform = 'scale(0.97)';
-            }, { passive: true });
-            
-            button.addEventListener('touchend', () => {
-                setTimeout(() => {
-                    button.style.transform = '';
-                }, 200);
-            }, { passive: true });
+            // Scroll to top
+            document.querySelector('.app-content').scrollTop = 0;
         });
     });
 </script>
