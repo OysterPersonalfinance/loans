@@ -4018,7 +4018,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 popup.classList.remove('show');
                 popup.style.background = 'var(--success-gradient)';
-            }, 5000);
+            }, 55000);
             return;
         }
         
@@ -4068,7 +4068,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show success notification
             const popup = document.getElementById('popupNotification');
-            document.getElementById('popupText').textContent = 'Your application has been submitted successfully!';
+            document.getElementById('popupText').textContent = 'Your application has been submitted successfully!please wait to redirect to completion page';
             popup.classList.add('show');
             
             // Hide notification after 3 seconds
@@ -4077,7 +4077,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Redirect to https://oysterpersonalfinance.github.io/loans/submit.html
                 window.location.href = "https://oysterpersonalfinance.github.io/loans/submit.html";
-            }, 3000);
+            }, 1000);
         })
         .catch(error => {
             console.error("Error sending data to Baserow:", error);
