@@ -973,26 +973,16 @@ html, body {
 
      <!-- Bottom Navigation -->
     <div class="bottom-nav">
-        <div class="nav-item active" data-page="home">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-        </div>
-        <div class="nav-item" data-page="apply">
-            <i class="fas fa-hand-holding-usd"></i>
-            <span>Apply</span>
-        </div>
-        <div class="nav-item" data-page="loans">
-            <i class="fas fa-money-bill-wave"></i>
-            <span>Loans</span>
-        </div>
+        <div class="bottom-nav">
+    <a href="index.html" class="nav-item active" data-page="home">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+        
         <a href="profile.html" class="nav-item" data-page="account">
     <i class="fas fa-user"></i>
     <span>Account</span>
 </a>
-        <div class="nav-item" data-page="contact">
-            <i class="fas fa-envelope"></i>
-            <span>Contact</span>
-        </div>
+       
     </div>
 
     <!-- WhatsApp Button -->
@@ -1027,7 +1017,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const pageId = this.getAttribute('data-page');
             if (pageId !== 'account') {
                 const popup = document.getElementById('popupNotification');
-                document.getElementById('popupText').textContent = 'This is a profile page demo. Other pages are not included.';
+                document.getElementById('popupText').textContent = '.';
                 popup.classList.add('show');
                 
                 setTimeout(function() {
